@@ -1,9 +1,11 @@
 {
   "name": "hexo-site",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
+  "author": "xuegangliu",
+  "email": "1453860636@qq.com",
   "hexo": {
-    "version": ""
+    "version": "3.8.0"
   },
   "dependencies": {
     "hexo": "^3.7.0",
