@@ -5,6 +5,7 @@ updated: 2018-11-08 14:49:38
 tags: 
   - shell
   - python
+categories: python语言
 ---
 
 # python3
