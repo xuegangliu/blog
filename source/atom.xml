@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>   <!-- 定义了文档中使用的 XML 版本和字符编码 -->
+<rss version="2.0">      <!-- 标识此文档是一个 RSS 文档的 RSS 声明 -->
+    <channel>        <!-- 用于描述 RSS feed -->
+        <title>Person GitHub</title>
+        <link>https://github.com/xuegangliu</link>
+        <description>github</description>
+        <category>IT/Internet/Web development</category>  <!-- 类别(可选的) -->
+        <item>         <!-- 定义 RSS feed 中的一篇文章或 "story" -->
+            <title>Java开发</title>
+            <link>java</link>
+            <description>java</description>
+        </item>
+        <item>
+            <title>Linux</title>
+            <link>linux</link>
+            <description>linux</description>
+        </item>
+    </channel>
+</rss>
