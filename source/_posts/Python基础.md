@@ -1,11 +1,11 @@
----
-title: base_python
-date: 2018-11-08 14:49:38
-updated: 2018-11-08 14:49:38
+title: Python基础
+date: 2016-11-08 14:49:38
+updated: 2016-11-08 14:49:38
+comments: true
 tags: 
-  - shell
-  - python
-categories: python语言
+  - Shell
+  - Python
+categories: Python
 ---
 
 # python3
