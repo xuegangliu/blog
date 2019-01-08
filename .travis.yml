@@ -17,12 +17,12 @@ after_script:
   - git config user.email "1453860636@qq.com"
   - git add .
   - git commit -m "Update docs"
-  - git push --force --quiet "https://${token}@${GH_REF_ADDRESS}" master:gh-pages
+  - git push --force --quiet "https://${token}@${GH_REF}" template:gh-pages
 # E: Build LifeCycle
 
 branches:
   only:
-    - master
-env:
-  global:
-    - GH_REF_ADDRESS: github.com:xuegangliu/blog.git
+    - template
+#env:
+#  global:
+#    - GH_REF_ADDRESS: github.com:xuegangliu/blog.git
