@@ -5,7 +5,7 @@ node_js: stable
 install:
   - npm install
   #before_script:
-  # - npm install -g gulp
+# - npm install -g gulp
 
 script:
   - hexo g
@@ -25,4 +25,4 @@ branches:
     - template
 env:
   global:
-    - GH_REF: github.com/gl09025/hexo-blog.git
+    - GH_REF: github.com/xuegangliu/blog.git
