@@ -19,10 +19,11 @@ script:
 #  - git commit -m "Update docs"
 #  - git push --force --quiet "https://${token}@https://github.com/xuegangliu/blog.git" template:gh-pages
 ## E: Build LifeCycle
-#
-#branches:
-#  only:
-#    - template
+
+branches:
+  only:
+    - template
+
 #env:
 #  global:
 #    - GH_REF_ADDRESS: https://github.com/xuegangliu/blog.git
