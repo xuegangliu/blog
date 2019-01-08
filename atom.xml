@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>俩天的博客</title>
+  
+  <subtitle>日常记录</subtitle>
+  <link href="/blog/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/xuegangliu/blog/"/>
+  <updated>2019-01-08T16:52:37.000Z</updated>
+  <id>https://github.com/xuegangliu/blog/</id>
+  
+  <author>
+    <name>xuegangliu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>travis配置</title>
+    <link href="https://github.com/xuegangliu/blog/2019/01/08/travis%E6%9E%84%E5%BB%BA/"/>
+    <id>https://github.com/xuegangliu/blog/2019/01/08/travis构建/</id>
+    <published>2019-01-08T16:52:37.000Z</published>
+    <updated>2019-01-08T16:52:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="travis"><a href="#travis" class="headerlink" title="travis"></a>travis</h1><p>构建github代码库中的项目</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><code>travis.yml</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"># 选择项目的语言及版本</span><br><span class="line">language: python</span><br><span class="line">python:</span><br><span class="line">  - &quot;2.7&quot;</span><br><span class="line"></span><br><span class="line"># 打包之前的操作</span><br><span class="line">before_install: &quot;sudo apt-get update&quot;</span><br><span class="line"># 依赖安装等</span><br><span class="line">install: &quot;pip install -q -r requirements.txt --use-mirrors&quot;</span><br><span class="line"></span><br><span class="line"># 构建</span><br><span class="line">script: make html</span><br><span class="line"></span><br><span class="line"># 限制项目分支</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - mybranch</span><br><span class="line"></span><br><span class="line">## 构建完成之后的命令</span><br><span class="line">after_success:</span><br><span class="line">    &quot;find ./make/output -type f -exec curl --ftp-create-dirs -u $FTP_USER:$FTP_PASSWORD -T &#123;&#125; ftp://123.45.67.89/myproject/&#123;&#125; \\;&quot;</span><br><span class="line"></span><br><span class="line">#环境变量</span><br><span class="line">env:</span><br><span class="line">  global:</span><br><span class="line">    - &quot;FTP_USER=myusername&quot;</span><br><span class="line">    - &quot;FTP_PASSWORD=mypassword&quot;</span><br><span class="line"></span><br><span class="line"># 邮件通知</span><br><span class="line">notifications:</span><br><span class="line">  email:</span><br><span class="line">    recipients:</span><br><span class="line">        - 1453860636@qq.com</span><br><span class="line">    on_success: change</span><br><span class="line">    on_failure: always</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;travis&quot;&gt;&lt;a href=&quot;#travis&quot; class=&quot;headerlink&quot; title=&quot;travis&quot;&gt;&lt;/a&gt;travis&lt;/h1&gt;&lt;p&gt;构建github代码库中的项目&lt;/p&gt;
+&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;h
+      
+    
+    </summary>
+    
+      <category term="Travis" scheme="https://github.com/xuegangliu/blog/categories/Travis/"/>
+    
+    
+      <category term="build" scheme="https://github.com/xuegangliu/blog/tags/build/"/>
+    
+      <category term="Travis" scheme="https://github.com/xuegangliu/blog/tags/Travis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu结构</title>
+    <link href="https://github.com/xuegangliu/blog/2018/11/09/Ubuntu%E7%BB%93%E6%9E%84/"/>
+    <id>https://github.com/xuegangliu/blog/2018/11/09/Ubuntu结构/</id>
+    <published>2018-11-09T15:28:01.000Z</published>
+    <updated>2018-11-09T15:28:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p><img src="/images/linux/dir1.png" alt="目录结构1"><br><img src="/images/linux/dir2.png" alt="目录结构2"><br><img src="/images/linux/dir3.png" alt="目录结构2"><br><img src="/images/linux/dir4.png" alt="目录结构2"></p><h2 id="软件包管理"><a href="#软件包管理" class="headerlink" title="软件包管理"></a>软件包管理</h2><p>Ubuntu更新软件时的软件源配置文件是/etc/apt/sources.list。<br>ubuntu的官方软件源分为4类：</p><ul><li>main：这个是官方维护的基本库。</li><li>restricted：官方维护的其他自由软件。</li><li>universe：自由软件，但是官方不维护。</li><li>multiverse：非自由软件，官方不维护。</li></ul><p>apt<br>apt是一套完整的软件包管理方案。除了最常用apt-get之外，还包括了一系列的客户端和服务器软件。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-cache search gstreamer 搜索名字中包含gstreamer的软件包。</span><br><span class="line">sudo add-apt-repository ppa:tualatrix/ppa添加新的软件源。</span><br></pre></td></tr></table></figure></p><h3 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo  apt-get install foo</span><br><span class="line">dpkg -i *.deb</span><br><span class="line">wget http://*</span><br></pre></td></tr></table></figure><h3 id="卸载命令"><a href="#卸载命令" class="headerlink" title="卸载命令"></a>卸载命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get --purge remove foo</span><br><span class="line">sudo  apt-get remove  foo</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/linux/dir1.png&quot; alt=&quot;目录结构1&quot;&gt;&lt;br&gt;&lt;img src=&quot;/i
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://github.com/xuegangliu/blog/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://github.com/xuegangliu/blog/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="https://github.com/xuegangliu/blog/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM性能调优</title>
+    <link href="https://github.com/xuegangliu/blog/2018/11/09/JVM%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/"/>
+    <id>https://github.com/xuegangliu/blog/2018/11/09/JVM性能调优/</id>
+    <published>2018-11-09T15:19:01.000Z</published>
+    <updated>2018-11-09T15:19:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JVM性能调优"><a href="#JVM性能调优" class="headerlink" title="JVM性能调优"></a>JVM性能调优</h1><h2 id="一、JVM内存模型及垃圾收集算法"><a href="#一、JVM内存模型及垃圾收集算法" class="headerlink" title="一、JVM内存模型及垃圾收集算法"></a>一、JVM内存模型及垃圾收集算法</h2><h3 id="1-根据Java虚拟机规范，JVM将内存划分为："><a href="#1-根据Java虚拟机规范，JVM将内存划分为：" class="headerlink" title="1.根据Java虚拟机规范，JVM将内存划分为："></a>1.根据Java虚拟机规范，JVM将内存划分为：</h3><ul><li>New（年轻代)[启动分配堆内存]（-Xmx:3G）<br>  年轻代用来存放JVM刚分配的Java对象<ul><li>Eden：Eden用来存放JVM刚分配的对象</li><li>Survivor1</li><li>Survivro2：两个Survivor空间一样大，当Eden中的对象经过垃圾回收没有被回收掉时，会在两个Survivor之间来回Copy，当满足某个条件，比如Copy次数，就会被Copy到Tenured。显然，Survivor只是增加了对象在年轻代中的逗留时间，增加了被垃圾回收的可能性。</li></ul></li><li>Tenured（年老代）[启动分配堆内存]（-Xmx:3G）</li><li>永久代（Perm）[JVM分配内存] （-XX:PermSize -XX:MaxPermSize）</li></ul><h3 id="2-垃圾回收算法"><a href="#2-垃圾回收算法" class="headerlink" title="2.垃圾回收算法"></a>2.垃圾回收算法</h3><p>垃圾回收算法可以分为三类，都基于标记-清除（复制）算法：</p><ul><li>Serial算法（单线程）</li><li>并行算法</li><li>并发算法</li></ul><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://blog.csdn.net/chen77716/article/details/5695893" target="_blank" rel="noopener">JVM性能调优</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;JVM性能调优&quot;&gt;&lt;a href=&quot;#JVM性能调优&quot; class=&quot;headerlink&quot; title=&quot;JVM性能调优&quot;&gt;&lt;/a&gt;JVM性能调优&lt;/h1&gt;&lt;h2 id=&quot;一、JVM内存模型及垃圾收集算法&quot;&gt;&lt;a href=&quot;#一、JVM内存模型及垃圾收集算法&quot;
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://github.com/xuegangliu/blog/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
+    
+      <category term="JVM" scheme="https://github.com/xuegangliu/blog/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM命令工具</title>
+    <link href="https://github.com/xuegangliu/blog/2018/02/09/JVM%E5%91%BD%E4%BB%A4%E5%B7%A5%E5%85%B7/"/>
+    <id>https://github.com/xuegangliu/blog/2018/02/09/JVM命令工具/</id>
+    <published>2018-02-09T15:14:30.000Z</published>
+    <updated>2018-03-02T11:25:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="命令工具"><a href="#命令工具" class="headerlink" title="命令工具"></a>命令工具</h1><ul><li>jps：进程列表</li><li>jinfo：进程配置信息</li><li>jstat：内存配置信息</li><li>jstack：堆栈信息</li><li>jmap：dump堆内存快照</li><li>jhat：和jmap配合使用，分析堆内存快照文件</li></ul><h2 id="jps"><a href="#jps" class="headerlink" title="jps"></a>jps</h2><pre><code>-q 只输出LVMID，同进程pid-m 输出JVM启动时传给主类main()的参数。-l 输出主类全名。如果进程执行的是jar包，则输出包名。-v 输出JVM启动时JVM参数。</code></pre><p><img src="/images/java/jps.png" alt="jps"></p><h2 id="jinfo"><a href="#jinfo" class="headerlink" title="jinfo"></a>jinfo</h2><pre><code>-flag name 打印给定name对应的命令行参数值。-flag [+|-]name 更改boolean类型的命令行参数值-flag name=value 更改name对应的命令行参数值为value。-flags 打印传给JVM的命令参数值。-sysprops 打印系统属性值。</code></pre><p><img src="/images/java/jinfo.png" alt="jps"></p><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://blog.csdn.net/dream361/article/details/77975381" target="_blank" rel="noopener">介绍</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;命令工具&quot;&gt;&lt;a href=&quot;#命令工具&quot; class=&quot;headerlink&quot; title=&quot;命令工具&quot;&gt;&lt;/a&gt;命令工具&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;jps：进程列表&lt;/li&gt;
+&lt;li&gt;jinfo：进程配置信息&lt;/li&gt;
+&lt;li&gt;jstat：内存配置信息&lt;/li
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://github.com/xuegangliu/blog/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
+    
+      <category term="JVM" scheme="https://github.com/xuegangliu/blog/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tomcat调优</title>
+    <link href="https://github.com/xuegangliu/blog/2018/01/09/Tomcat%E8%B0%83%E4%BC%98/"/>
+    <id>https://github.com/xuegangliu/blog/2018/01/09/Tomcat调优/</id>
+    <published>2018-01-09T15:16:45.000Z</published>
+    <updated>2018-01-09T15:16:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-tomcat内存配置"><a href="#1-tomcat内存配置" class="headerlink" title="1.tomcat内存配置"></a>1.tomcat内存配置</h2><ul><li><p>案例：由于服务启动后，会有大量的excel文件进行生成，以及大量的定时任务在跑。导致服务抛出堆溢出。</p></li><li><p>解决办法：设置服务JVM参数</p><blockquote><p>JAVA_OPTS=’-Xms【初始化内存大小】 -Xmx【可以使用的最大内存】’<br>最大值设置为可用内存的最大值的80%</p></blockquote></li></ul><h2 id="2-tomcat线程优化"><a href="#2-tomcat线程优化" class="headerlink" title="2.tomcat线程优化"></a>2.tomcat线程优化</h2><h3 id="1、JDK内存优化"><a href="#1、JDK内存优化" class="headerlink" title="1、JDK内存优化"></a>1、JDK内存优化</h3><h3 id="2、连接器优化"><a href="#2、连接器优化" class="headerlink" title="2、连接器优化"></a>2、连接器优化</h3><pre><code>`maxThreads`：Tomcat使用线程来处理接收的每个请求。这个值表示Tomcat可创建的最大的线程数。默认值150。`acceptCount`：指定当所有可以使用的处理请求的线程数都被使用时，可以放到处理队列中的请求数，超过这个数的请求将不予处理。默认值10。`minSpareThreads`：Tomcat初始化时创建的线程数。默认值25。`maxSpareThreads`：一旦创建的线程超过这个值，Tomcat就会关闭不再需要的socket线程。默认值75。`enableLookups`：是否反查域名，默认值为true。为了提高处理能力，应设置为falseconnnectionTimeout：网络连接超时，默认值60000，单位：毫秒。设置为0表示永不超时，这样设置有隐患的。通常可设置为30000毫秒。`maxKeepAliveRequests`：保持请求数量，默认值100。`bufferSize`：输入流缓冲大小，默认值2048 bytes。`compression`：压缩传输，取值on/off/force，默认值off。其中和最大连接数相关的参数为maxThreads和acceptCount。如果要加大并发连接数，应同时加大这两个参数。web server允许的最大连接数还受制于*作系统的内核参数设置，通常Windows是2000个左右，Linux是1000个左右。</code></pre><h3 id="3-tomcat中如何禁止和允许列目录下的文件"><a href="#3-tomcat中如何禁止和允许列目录下的文件" class="headerlink" title="3.tomcat中如何禁止和允许列目录下的文件"></a>3.tomcat中如何禁止和允许列目录下的文件</h3><h3 id="4-tomcat中如何禁止和允许主机或IP地址访问"><a href="#4-tomcat中如何禁止和允许主机或IP地址访问" class="headerlink" title="4.tomcat中如何禁止和允许主机或IP地址访问"></a>4.tomcat中如何禁止和允许主机或IP地址访问</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-tomcat内存配置&quot;&gt;&lt;a href=&quot;#1-tomcat内存配置&quot; class=&quot;headerlink&quot; title=&quot;1.tomcat内存配置&quot;&gt;&lt;/a&gt;1.tomcat内存配置&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;案例：由于服务启动后，会有大量的excel
+      
+    
+    </summary>
+    
+      <category term="Tomcat" scheme="https://github.com/xuegangliu/blog/categories/Tomcat/"/>
+    
+    
+      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
+    
+      <category term="Tomcat" scheme="https://github.com/xuegangliu/blog/tags/Tomcat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM参数</title>
+    <link href="https://github.com/xuegangliu/blog/2018/01/09/JVM%E5%8F%82%E6%95%B0/"/>
+    <id>https://github.com/xuegangliu/blog/2018/01/09/JVM参数/</id>
+    <published>2018-01-09T10:13:23.000Z</published>
+    <updated>2018-01-09T10:13:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="jvm参数"><a href="#jvm参数" class="headerlink" title="jvm参数"></a>jvm参数</h1><h2 id="JVM-类型以及编译器模式"><a href="#JVM-类型以及编译器模式" class="headerlink" title="JVM 类型以及编译器模式"></a>JVM 类型以及编译器模式</h2><ul><li>类型：-server and -client</li><li>版本信息：-version and -showversion</li><li>编译器模式：-Xint（解释模式 执行所有【慢】）, -Xcomp（JIT 编译器少部分功能）, 和 -    Xmixed（混合模式）</li><li>参数分类和即时（JIT）编译器诊断</li><li>标准参数<ul><li>X参数</li><li>XX参数<ul><li>-XX:+PrintCompilation 输出一些关于从字节码转化成本地代码的编译过程</li><li>-XX:+CITime JVM 关闭时得到各种编译的统计信息</li><li>-XX:+PrintFlagsFinal and -XX:+PrintFlagsInitial 打印所有 XX 参数及值</li><li>-XX:+PrintCommandLineFlags打印出那些已经被用户或者 JVM 设置过的详细的 XX 参数的名称和值 </li><li>-XX:+HeapDumpOnOutOfMemoryError and -XX:HeapDumpPath 堆内存快照</li><li>-XX:OnOutOfMemoryError 当内存溢发生时，我们甚至可以可以执行一些指令</li><li>-XX:PermSize and -XX:MaxPermSize 永久代堆内存</li><li>-XX:InitialCodeCacheSize and -XX:ReservedCodeCacheSize代码缓存</li><li>-XX:+UseCodeCacheFlushing当代码缓存被填满时让 JVM 放弃一些编译代码<h2 id="内存调优"><a href="#内存调优" class="headerlink" title="内存调优"></a>内存调优</h2>所有已制定的 HotSpot 内存管理和垃圾回收算法都基于一个相同的堆内存划分：新生代（young generation）里存储着新分配的和较年轻的对象，老年代（old generation）里存储着长寿的对象。在此之外，永久代（permanent generation）存储着那些需要伴随整个 JVM 生命周期的对象，比如，已加载的对象的类定义或者 String 对象内部 Cache。接下来，我们将假设堆内存是按照新生代、老年代和永久代这一经典策略划分的。然而，其他的一些堆内存划分策略也是可行的，一个突出的例子就是新的 G1 垃圾回收器，它模糊了新生代和老年代之间的区别。此外，目前的开发进程似乎表明在未来的 HotSpot JVM 版本中，将不会区分老年代和永久代。</li></ul></li></ul></li><li>-Xms and -Xmx (or: -XX:InitialHeapSize and -XX:MaxHeapSize)指定 JVM 的初始和最大堆内存大小新生代垃圾回收</li><li>-XX:NewSize and -XX:MaxNewSize新生代只是整个堆的一部分，新生代设置的越大，老年代区域就会减少</li><li>-XX:NewRatio动态分配新生代与老生代比例</li><li>-XX:SurvivorRatio 动态分配新生代的伊甸园区与幸存区（伊甸园区大于幸存区【俩个幸存区大小相同】）</li><li>-XX:+PrintTenuringDistribution</li><li>-XX:InitialTenuringThreshold， -XX:MaxTenuringThreshold and -XX:TargetSurvivorRatio</li><li>-XX:+NeverTenure and -XX:+AlwaysTenure</li></ul><h2 id="GC-日志（垃圾收集）"><a href="#GC-日志（垃圾收集）" class="headerlink" title="GC 日志（垃圾收集）"></a>GC 日志（垃圾收集）</h2><p>作用：记录了每一次的 GC 的执行时间和执行结果，通过分析 GC 日志可以优化堆设置和 GC 设置，或者改进应用程序的对象分配模式</p><ul><li><p>-XX:+PrintGC（- verbose:gc） 简单日志模式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">每一次新生代（young generation）的 GC 和每一次的 Full GC 打印一行信息。</span><br><span class="line">[GC 246656K-&gt;243120K(376320K), 0.0929090 secs]</span><br><span class="line">gc类型 gc使用的前的堆空间 gc使用后的堆大小 当前堆容量 gc持续时间</span><br></pre></td></tr></table></figure></li><li><p>XX:PrintGCDetails 详细 GC 日志模式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[GC[PSYoungGen: 142816K-&gt;10752K(142848K)] 246648K-&gt;243136K(375296K), 0.0935090 secs]</span><br><span class="line">[Times: user=0.55 sys=0.10, real=0.09 secs]</span><br><span class="line"></span><br><span class="line">这是一次在 young generation 中的 GC，它将已使用的堆空间从 246648K 减少到了 243136K，用时 0.0935090 秒。此外我们还可以得到更多的信息：所使用的垃圾收集器（即 PSYoungGen）、young generation 的大小和使用情况（在这个例子中 “PSYoungGen” 垃圾收集器将 young generation 所使用的堆空间从 142816K 减少到 10752K）。</span><br><span class="line">CPU 时间信息 =用户空间+系统空间</span><br><span class="line">real gc运行真实时间</span><br></pre></td></tr></table></figure></li><li><p>-XX:+PrintGCTimeStamps 和 - XX:+PrintGCDateStamps【绝对时间】将时间和日期也加到 GC 日志中</p></li><li>-Xloggc（- XX:+PrintGC - XX:+PrintGCTimeStamps）输出到指定的文件</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;jvm参数&quot;&gt;&lt;a href=&quot;#jvm参数&quot; class=&quot;headerlink&quot; title=&quot;jvm参数&quot;&gt;&lt;/a&gt;jvm参数&lt;/h1&gt;&lt;h2 id=&quot;JVM-类型以及编译器模式&quot;&gt;&lt;a href=&quot;#JVM-类型以及编译器模式&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://github.com/xuegangliu/blog/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
+    
+      <category term="JVM" scheme="https://github.com/xuegangliu/blog/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="https://github.com/xuegangliu/blog/2017/07/19/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://github.com/xuegangliu/blog/2017/07/19/设计模式/</id>
+    <published>2017-07-19T13:33:02.000Z</published>
+    <updated>2017-07-13T15:33:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="设计模式-Design-pattern"><a href="#设计模式-Design-pattern" class="headerlink" title="设计模式(Design pattern)"></a>设计模式(Design pattern)</h1><h2 id="设计模式简介"><a href="#设计模式简介" class="headerlink" title="设计模式简介"></a>设计模式简介</h2><ol><li><strong>设计模式(Design pattern)</strong> 代表了最佳的实践，通常被有经验的面向对象的软件开发人员所采用。</li><li><strong>设计模式</strong>是软件开发人员在软件开发过程中面临的一般问题的解决方案。</li><li>这些解决方案是众多软件开发人员经过相当长的一段时间的试验和错误总结出来的。</li><li><strong>设计模式</strong>是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结。</li><li>使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 </li><li>毫无疑问，设计模式于己于他人于系统都是多赢的，设计模式使代码编制真正工程化，设计模式是软件工程的基石，如同大厦的一块块砖石一样。</li><li>项目中合理地运用设计模式可以完美地解决很多问题，每种模式在现实中都有相应的原理来与之对应，每种模式都描述了一个在我们周围不断重复发生的问题，以及该问题的核心解决方案，这也是设计模式能被广泛应用的原因。</li></ol><h2 id="设计模式原则"><a href="#设计模式原则" class="headerlink" title="设计模式原则"></a><strong>设计模式原则</strong></h2><ul><li><em>开闭原则（Open Close Principle）</em></li></ul><p>开闭原则的意思是：对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。简言之，是为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。</p><ul><li><em>里氏代换原则（Liskov Substitution Principle）</em></li></ul><p>里氏代换原则是面向对象设计的基本原则之一。 里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现。LSP 是继承复用的基石，只有当派生类可以替换掉基类，且软件单位的功能不受到影响时，基类才能真正被复用，而派生类也能够在基类的基础上增加新的行为。里氏代换原则是对开闭原则的补充。实现开闭原则的关键步骤就是抽象化，而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。</p><ul><li><em>依赖倒转原则（Dependence Inversion Principle）</em></li></ul><p>这个原则是开闭原则的基础，具体内容：针对接口编程，依赖于抽象而不依赖于具体。</p><ul><li><em>接口隔离原则（Interface Segregation Principle）</em></li></ul><p>这个原则的意思是：使用多个隔离的接口，比使用单个接口要好。它还有另外一个意思是：降低类之间的耦合度。由此可见，其实设计模式就是从大型软件架构出发、便于升级和维护的软件设计思想，它强调降低依赖，降低耦合。</p><ul><li><p><em>迪米特法则，又称最少知道原则（Demeter Principle）</em></p><p>最少知道原则是指：一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立。</p></li><li><p><em>合成复用原则（Composite Reuse Principle）</em></p><p>合成复用原则是指：尽量使用合成/聚合的方式，而不是使用继承。</p></li></ul><h2 id="设计模式的使用"><a href="#设计模式的使用" class="headerlink" title="设计模式的使用"></a>设计模式的使用</h2><ul><li>开发人员的共同平台</li></ul><p>设计模式提供了一个标准的术语系统，且具体到特定的情景。例如，单例设计模式意味着使用单个对象，这样所有熟悉单例设计模式的开发人员都能使用单个对象，并且可以通过这种方式告诉对方，程序使用的是单例模式。</p><ul><li>最佳的实践  </li></ul><p>设计模式已经经历了很长一段时间的发展，它们提供了软件开发过程中面临的一般问题的最佳解决方案。学习这些模式有助于经验不足的开发人员通过一种简单快捷的方式来学习软件设计。</p><hr><h1 id="设计模式类型"><a href="#设计模式类型" class="headerlink" title="设计模式类型"></a>设计模式类型</h1><p><strong>创建型模式</strong></p><p>这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用新的运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。</p><ul><li><em>工厂模式（Factory Pattern）</em></li><li><em>抽象工厂模式（Abstract Factory Pattern）</em>  </li><li><em>单例模式（Singleton Pattern）</em> </li><li><em>建造者模式（Builder Pattern）</em> </li><li><em>原型模式（Prototype Pattern）</em></li></ul><p><strong>结构型模式</strong></p><p>这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。    </p><ul><li><em>适配器模式（Adapter Pattern）</em>  </li><li><em>桥接模式（Bridge Pattern）</em></li><li><em>过滤器模式（Filter、Criteria Pattern）</em></li><li><em>组合模式（Composite Pattern）</em></li><li><em>装饰器模式（Decorator Pattern）</em></li><li><em>外观模式（Facade Pattern）</em></li><li><em>享元模式（Flyweight Pattern）</em></li><li><em>代理模式（Proxy Pattern）</em></li></ul><p><strong>行为型模式</strong></p><p>这些设计模式特别关注对象之间的通信。    </p><ul><li><em>责任链模式（Chain of Responsibility Pattern）</em></li><li><em>命令模式（Command Pattern）</em></li><li><em>解释器模式（Interpreter Pattern）</em></li><li><em>迭代器模式（Iterator Pattern）</em></li><li><em>中介者模式（Mediator Pattern）</em></li><li><em>备忘录模式（Memento Pattern）</em></li><li><em>观察者模式（Observer Pattern）</em></li><li><em>状态模式（State Pattern）</em></li><li><em>空对象模式（Null Object Pattern）</em></li><li><em>策略模式（Strategy Pattern）</em></li><li><em>模板模式（Template Pattern）</em></li><li><em>访问者模式（Visitor Pattern）</em></li></ul><p><strong>J2EE 模式</strong></p><p>这些设计模式特别关注表示层。这些模式是由 Sun Java Center 鉴定的。    </p><ul><li><em>MVC 模式（MVC Pattern）</em></li><li><em>业务代表模式（Business Delegate Pattern）</em></li><li><em>组合实体模式（Composite Entity Pattern）</em></li><li><em>数据访问对象模式（Data Access Object Pattern）</em></li><li><em>前端控制器模式（Front Controller Pattern）</em></li><li><em>拦截过滤器模式（Intercepting Filter Pattern）</em></li><li><em>服务定位器模式（Service Locator Pattern）</em></li><li><em>传输对象模式（Transfer Object Pattern）</em></li></ul><h2 id="设计模式直接的关系"><a href="#设计模式直接的关系" class="headerlink" title="设计模式直接的关系"></a>设计模式直接的关系</h2><p><img src="/images/java/design-patterns.jpg" alt="设计模式图"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;设计模式-Design-pattern&quot;&gt;&lt;a href=&quot;#设计模式-Design-pattern&quot; class=&quot;headerlink&quot; title=&quot;设计模式(Design pattern)&quot;&gt;&lt;/a&gt;设计模式(Design pattern)&lt;/h1&gt;&lt;h2
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://github.com/xuegangliu/blog/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
+    
+      <category term="设计模式" scheme="https://github.com/xuegangliu/blog/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker基础</title>
+    <link href="https://github.com/xuegangliu/blog/2017/01/09/docker%E5%9F%BA%E7%A1%80/"/>
+    <id>https://github.com/xuegangliu/blog/2017/01/09/docker基础/</id>
+    <published>2017-01-09T14:08:37.000Z</published>
+    <updated>2017-01-09T14:08:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h1><ul><li>service docker start </li><li>systemctl start docker</li><li>systemctl enable docker</li></ul><h2 id="Docker-中国官方镜像加速可通过-registry-docker-cn-com"><a href="#Docker-中国官方镜像加速可通过-registry-docker-cn-com" class="headerlink" title="Docker 中国官方镜像加速可通过 registry.docker-cn.com"></a>Docker 中国官方镜像加速可通过 registry.docker-cn.com</h2><p><code>docker --registry-mirror=https://registry.docker-cn.com daemon</code></p><ul><li>为了永久性保留更改，您可以修改 /etc/docker/daemon.json 文件并添加上 registry-mirrors 键值。</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;https://registry.docker-cn.com&quot;]</span><br><span class="line">&#125;</span><br><span class="line">docker --registry-mirror=https://registry.docker-cn.com daemon</span><br><span class="line"></span><br><span class="line">docker run --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag</span><br></pre></td></tr></table></figure><h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><ul><li>ALTER USER ‘root‘@’%’ IDENTIFIED WITH mysql_native_password BY ‘你的密码’;<br>FLUSH PRIVILEGES;</li></ul><h2 id="mongo"><a href="#mongo" class="headerlink" title="mongo"></a>mongo</h2><ul><li>docker pull  mongo </li><li>docker run  –name some-mongo   -p 27017:27017   -d mongo   –auth     //这里的–name 放在前面并映射端口</li><li>docker    exec  -it  容器ID   /bin/bash     //进入容器</li><li>mongo  </li><li>use admin</li><li>db.createUser({user:”root”,pwd:”root”,roles:[{role:’root’,db:’admin’}]})   //创建用户,此用户创建成功,则后续操作都需要用户认证</li><li>exit  </li></ul><h2 id="ftp"><a href="#ftp" class="headerlink" title="ftp"></a>ftp</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull docker.io/fauria/vsftpd</span><br><span class="line">docker run -d -v /home/vsftpd:/home/vsftpd -p 20:20 -p 21:21 -p 21100-21110:21100-21110 -e FTP_USER=test -e FTP_PASS=test --name vsftpd fauria/vsftpd</span><br></pre></td></tr></table></figure><ul><li>会以登录用户名 (test) 创建一个目录 (/home/vsftpd/test) 作为 ftp 根目录</li><li>测试时发现不加 -p 20:20 依然可以正常操作</li></ul><h2 id="sftp"><a href="#sftp" class="headerlink" title="sftp"></a>sftp</h2><ul><li>使用命令sudo docker pull luzifer/sftp-share</li><li>构建docker run -d -p 2022:22 -e USER=myuser -e PASS=myverysecretpassword luzifer/sftp-share</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;docker&quot;&gt;&lt;a href=&quot;#docker&quot; class=&quot;headerlink&quot; title=&quot;docker&quot;&gt;&lt;/a&gt;docker&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;service docker start &lt;/li&gt;
+&lt;li&gt;systemctl start d
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://github.com/xuegangliu/blog/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://github.com/xuegangliu/blog/tags/Linux/"/>
+    
+      <category term="Docker" scheme="https://github.com/xuegangliu/blog/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Oracle常用Sql</title>
+    <link href="https://github.com/xuegangliu/blog/2016/12/04/Oracle%E5%B8%B8%E7%94%A8Sql/"/>
+    <id>https://github.com/xuegangliu/blog/2016/12/04/Oracle常用Sql/</id>
+    <published>2016-12-04T10:03:46.000Z</published>
+    <updated>2016-12-04T10:03:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Oracle-常用SQL"><a href="#Oracle-常用SQL" class="headerlink" title="Oracle 常用SQL"></a>Oracle 常用SQL</h1><h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">--新建表：</span><br><span class="line">    create table table1( id varchar(300) primary key, name varchar(200) not null);</span><br><span class="line">--插入数据   </span><br><span class="line">    insert into table1 (id,name) values (&apos;aa&apos;,&apos;bb&apos;);</span><br><span class="line">--更新数据   </span><br><span class="line">    update table1 set id = &apos;bb&apos; where id=&apos;cc&apos;;</span><br><span class="line">--删除数据   </span><br><span class="line">    delete from table1 where id =&apos;cc&apos;;</span><br><span class="line">--删除表    </span><br><span class="line">    drop table table1;</span><br><span class="line">--修改表名： </span><br><span class="line">    alter table table1 rename to table2</span><br><span class="line">--表数据复制：</span><br><span class="line">    insert into table1 (select * from table2);</span><br><span class="line">--复制表结构： </span><br><span class="line">    create table table1 select * from table2 where 1&gt;1;</span><br><span class="line">--复制表结构和数据：</span><br><span class="line">    create table table1 select * from table2;</span><br><span class="line">--复制指定字段： </span><br><span class="line">    create table table1 as select id, name from table2 where 1&gt;1;</span><br><span class="line">--条件查询： </span><br><span class="line">    select id,name (case gender when 0 then &apos;男&apos; when 1 then ‘女’ end  ) gender from  table1</span><br></pre></td></tr></table></figure><h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">--绝对值：abs()</span><br><span class="line">   select abs(-2) value from dual;          --(2)</span><br><span class="line">--取整函数（大）：ceil（）</span><br><span class="line">   select ceil(-2.001) value from dual;       --(-2)</span><br><span class="line">--取整函数（小）：floor（）</span><br><span class="line">   select floor(-2.001) value from dual;       --(-3)</span><br><span class="line">--取整函数（截取）：trunc（）</span><br><span class="line">   select trunc(-2.001) value from dual;       -- (-2)</span><br><span class="line">--四舍五入：round（）</span><br><span class="line">   select round(1.234564,4) value from dual;       --(1.2346)</span><br><span class="line">--取平方：Power（m,n）</span><br><span class="line">   select power(4,2) value from dual;       --(16)</span><br><span class="line">--取平方根:SQRT()</span><br><span class="line">   select sqrt(16) value from dual;       --(4)</span><br><span class="line">--取随机数:dbms_random(minvalue,maxvalue)</span><br><span class="line">   select dbms_random.value() from dual;  (默认是0到1之间)</span><br><span class="line">　select dbms_random.value(2,4) value from dual;  （2-4之间随机数）</span><br><span class="line">--取符号：Sign()</span><br><span class="line">　　select sign(-3) value from dual; --(-1)</span><br><span class="line">　　select sign(3) value from dual; --(1)</span><br><span class="line">--取集合的最大值:greatest(value)</span><br><span class="line">   select greatest(-1,3,5,7,9) value from dual;       --(9)</span><br><span class="line">--取集合的最小值:least(value)</span><br><span class="line">   select least(-1,3,5,7,9) value from dual;       --(-1)</span><br><span class="line">--处理Null值：nvl(空值，代替值)</span><br><span class="line">   select  nvl(null,10) value from dual;       --(10)</span><br><span class="line">   select nvl(score,10) score from student;</span><br></pre></td></tr></table></figure><h2 id="rownum相关"><a href="#rownum相关" class="headerlink" title="rownum相关"></a>rownum相关</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">--rownum小于某个数时可以直接作为查询条件（注意oracle不支持select top）</span><br><span class="line">select * from student where rownum &lt;3;</span><br><span class="line">--查询rownum大于某个数值,需要使用子查询，并且rownum需要有别名</span><br><span class="line">select * from(select rownum rn ,id,name from student) where rn&gt;2;</span><br><span class="line">select * from (select rownum rn, student.* from student) where rn &gt;3;</span><br><span class="line">--区间查询</span><br><span class="line">select * from (select rownum rn, student.* from student) where rn &gt;3 and rn&lt;6;</span><br><span class="line">--排序+前n条</span><br><span class="line">select * from (select rownum rn, t.* from ( select d.* from DJDRUVER d order  by drivernumber)t )p where p.rn&lt;10;</span><br><span class="line">--排序+区间查询1</span><br><span class="line">select * from (select rownum rn, t.* from ( select d.* from DJDRIVER d order by DJDRIVER_DRIVERTIMES)t )p where p.rn&lt;9 and p.rn&gt;6;</span><br><span class="line">--排序+区间查询2</span><br><span class="line">select * from (select rownum rn, t.* from ( select d.* from DJDRIVER d order by DJDRIVER_DRIVERTIMES)t where rownum&lt;9 )p where p.rn&gt;6;--效率远高于方式一</span><br></pre></td></tr></table></figure><h2 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">--效率低</span><br><span class="line">select * from (select rownum rn, d.* from DJDRIVER d  )p where p.rn&lt;=20 and p.rn&gt;=10;</span><br><span class="line">select * from (select rownum rn, d.* from DJDRIVER d  )p where p.rn between 10 and 20;</span><br><span class="line">--效率高 </span><br><span class="line">select * from (select rownum rn, d.* from DJDRIVER d where rownum&lt;=20 )p where p.rn&gt;=10;</span><br><span class="line"></span><br><span class="line">--排序+区间查询1（效率低）</span><br><span class="line">select * from (select rownum rn, t.* from ( select d.* from DJDRIVER d order by DJDRIVER_DRIVERTIMES)t )p where p.rn&lt;=20 and p.rn&gt;=10;</span><br><span class="line">select * from (select rownum rn, t.* from ( select d.* from DJDRIVER d order by DJDRIVER_DRIVERTIMES)t )p where p.rn between 10 and 20;</span><br><span class="line">--排序+区间查询2（效率高） </span><br><span class="line">select * from (select rownum rn, t.* from ( select d.* from DJDRIVER d order by DJDRIVER_DRIVERTIMES)t where rownum&lt;=20 )p where p.rn&gt;=10;</span><br></pre></td></tr></table></figure><h2 id="时间处理"><a href="#时间处理" class="headerlink" title="时间处理"></a>时间处理</h2><p>日期<br>年 yyyy yyy yy year<br>月 month mm mon month<br>日+星期  dd ddd(一年中第几天) dy day<br>小时  hh hh24<br>分 mi<br>秒 ss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">select to_char(sysdate,&apos;yyyy-mm-dd hh24:mi:ss&apos;)currenttime, </span><br><span class="line">       to_char(sysdate,&apos;yyyy&apos;) year,</span><br><span class="line">       to_char(sysdate,&apos;mm&apos;) month,</span><br><span class="line">       to_char(sysdate,&apos;dd&apos;) day,</span><br><span class="line">       to_char(sysdate,&apos;day&apos;) week,</span><br><span class="line">       to_char(sysdate,&apos;hh24&apos;)hour,</span><br><span class="line">       to_char(sysdate,&apos;mi&apos;) minute,</span><br><span class="line">       to_char(sysdate,&apos;ss&apos;) second</span><br><span class="line">from dual;</span><br><span class="line"></span><br><span class="line">months_between(to_date(&apos;03-31-2014&apos;,&apos;MM-DD-YYYY&apos;),to_date(&apos;12-31-2013&apos;,&apos;MM-DD-YYYY&apos;)) </span><br><span class="line"></span><br><span class="line">next_day(sysdate,6)</span><br></pre></td></tr></table></figure></p><p><a href="https://www.cnblogs.com/wishyouhappy/p/3700683.html" target="_blank" rel="noopener">oracle基本sql</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Oracle-常用SQL&quot;&gt;&lt;a href=&quot;#Oracle-常用SQL&quot; class=&quot;headerlink&quot; title=&quot;Oracle 常用SQL&quot;&gt;&lt;/a&gt;Oracle 常用SQL&lt;/h1&gt;&lt;h2 id=&quot;基本&quot;&gt;&lt;a href=&quot;#基本&quot; class=&quot;
+      
+    
+    </summary>
+    
+      <category term="Oracle" scheme="https://github.com/xuegangliu/blog/categories/Oracle/"/>
+    
+    
+      <category term="Oracle" scheme="https://github.com/xuegangliu/blog/tags/Oracle/"/>
+    
+      <category term="SQL" scheme="https://github.com/xuegangliu/blog/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim使用</title>
+    <link href="https://github.com/xuegangliu/blog/2016/11/09/Vim%E4%BD%BF%E7%94%A8/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/09/Vim使用/</id>
+    <published>2016-11-09T15:10:43.000Z</published>
+    <updated>2016-11-09T15:10:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vim-基本使用"><a href="#vim-基本使用" class="headerlink" title="vim 基本使用"></a>vim 基本使用</h1><p><img src="/images/linux/vim.gif" alt="键盘图"></p><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>刚刚启动 vi/vim，便进入了命令模式。此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。以下是常用的几个命令：</p><ul><li>i 切换到输入模式，以输入字符。</li><li>x 删除当前光标所在处的字符。</li><li>: 切换到底线命令模式，以在最底一行输入命令。</li><li>若想要编辑文本：启动Vim，进入了命令模式，按下i，切换到输入模式。</li><li>命令模式只有一些最基本的命令，因此仍要依靠底线命令模式输入更多命令。</li></ul><h2 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h2><p>命令模式下按下i就进入了输入模式。在输入模式中，可以使用以下按键：</p><ul><li>字符按键以及Shift组合，输入字符</li><li>ENTER，回车键，换行</li><li>BACK SPACE，退格键，删除光标前一个字符</li><li>DEL，删除键，删除光标后一个字符</li><li>方向键，在文本中移动光标</li><li>HOME/END，移动光标到行首/行尾</li><li>Page Up/Page Down，上/下翻页</li><li>Insert，切换光标为输入/替换模式，光标将变成竖线/下划线</li><li>ESC，退出输入模式，切换到命令模式</li></ul><h2 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h2><p>在命令模式下按下:（英文冒号）就进入了底线命令模式。底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。在底线命令模式中，基本的命令有（已经省略了冒号）：</p><ul><li>q 退出程序</li><li>w 保存文件</li><li>ESC键可随时退出底线命令模式。</li></ul><p><img src="/images/linux/vim01.png" alt="模式切换"></p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><h3 id="一般模式可用的光标移动、复制粘贴、搜索替换等"><a href="#一般模式可用的光标移动、复制粘贴、搜索替换等" class="headerlink" title="一般模式可用的光标移动、复制粘贴、搜索替换等"></a>一般模式可用的光标移动、复制粘贴、搜索替换等</h3><h4 id="移动光标的方法"><a href="#移动光标的方法" class="headerlink" title="移动光标的方法"></a>移动光标的方法</h4><ul><li>h 或 向左箭头键(←)    光标向左移动一个字符</li><li>j 或 向下箭头键(↓)    光标向下移动一个字符</li><li>k 或 向上箭头键(↑)    光标向上移动一个字符</li><li>l 或 向右箭头键(→)    光标向右移动一个字符</li><li>如果想要进行多次移动的话，例如向下移动 30 行，可以使用 “30j” 或 “30↓” 的组合按键， 亦即加上想要进行的次数(数字)后，按下动作即可！</li><li>[Ctrl] + [f]    屏幕『向下』移动一页，相当于 - - - [Page Down]按键 (常用)</li><li>[Ctrl] + [b]    屏幕『向上』移动一页，相当于 - - - [Page Up] 按键 (常用)</li><li>[Ctrl] + [d]    屏幕『向下』移动半页</li><li>[Ctrl] + [u]    屏幕『向上』移动半页</li><li><ul><li>光标移动到非空格符的下一行</li></ul></li><li><ul><li>光标移动到非空格符的上一行</li></ul></li><li>n<space>    那个 n 表示『数字』，例如 20 。按下数字后再按空格键，光标会向右移动这一行的 n 个字符。例如 20<space> 则光标会向后面移动 20 个字符距离。</space></space></li><li>0 或功能键[Home]    这是数字『 0 』：移动到这一行的最前面字符处 (常用)</li><li>$ 或功能键[End]    移动到这一行的最后面字符处(常用)</li><li>H    光标移动到这个屏幕的最上方那一行的第一个字符</li><li>M    光标移动到这个屏幕的中央那一行的第一个字符</li><li>L    光标移动到这个屏幕的最下方那一行的第一个字符</li><li>G    移动到这个档案的最后一行(常用)</li><li>nG    n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)</li><li>gg    移动到这个档案的第一行，相当于 1G 啊！ (常用)</li><li>n<enter>    n 为数字。光标向下移动 n 行(常用)</enter></li></ul><h4 id="搜索替换"><a href="#搜索替换" class="headerlink" title="搜索替换"></a>搜索替换</h4><ul><li>/word    向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！ (常用)</li><li>?word    向光标之上寻找一个字符串名称为 word 的字符串。</li><li>n    这个 n 是英文按键。代表重复前一个搜寻的动作。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字符串，则按下 n 后，会向下继续搜寻下一个名称为 vbird 的字符串。如果是执行 ?vbird 的话，那么按下 n 则会向上继续搜寻名称为 vbird 的字符串！</li><li>N    这个 N 是英文按键。与 n 刚好相反，为『反向』进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示『向上』搜寻 vbird 。</li><li>使用 /word 配合 n 及 N 是非常有帮助的！可以让你重复的找到一些你搜寻的关键词！</li><li>:n1,n2s/word1/word2/g    n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 ！举例来说，在 100 到 200 行之间搜寻 vbird 并取代为 VBIRD 则：</li><li>『:100,200s/vbird/VBIRD/g』。(常用)</li><li>:1,$s/word1/word2/g    从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！(常用)</li><li>:1,$s/word1/word2/gc    从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代！(常用)</li></ul><h4 id="删除、复制与贴上"><a href="#删除、复制与贴上" class="headerlink" title="删除、复制与贴上"></a>删除、复制与贴上</h4><ul><li>x, X    在一行字当中，x 为向后删除一个字符 (相当于 [del] 按键)， X 为向前删除一个字符(相当于 [backspace] 亦即是退格键) (常用)</li><li>nx    n 为数字，连续向后删除 n 个字符。举例来说，我要连续删除 10 个字符， 『10x』。</li><li>dd    删除游标所在的那一整行(常用)</li><li>ndd    n 为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行 (常用)</li><li>d1G    删除光标所在到第一行的所有数据</li><li>dG    删除光标所在到最后一行的所有数据</li><li>d$    删除游标所在处，到该行的最后一个字符</li><li>d0    那个是数字的 0 ，删除游标所在处，到该行的最前面一个字符</li><li>yy    复制游标所在的那一行(常用)</li><li>nyy    n 为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行(常用)</li><li>y1G    复制游标所在行到第一行的所有数据</li><li>yG    复制游标所在行到最后一行的所有数据</li><li>y0    复制光标所在的那个字符到该行行首的所有数据</li><li>y$    复制光标所在的那个字符到该行行尾的所有数据</li><li>p, P    p 为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行！ 举例来说，我目前光标在第 20 行，且已经复制了 10 行数据。则按下 p 后， 那 10 行数据会贴在原本的 20 行之后，亦即由 21 行开始贴。但如果是按下 P 呢？ 那么原本的第 20 行会被推到变成 30 行。 (常用)</li><li>J    将光标所在行与下一行的数据结合成同一行</li><li>c    重复删除多个数据，例如向下删除 10 行，[ 10cj ]</li><li>u    复原前一个动作。(常用)</li><li>[Ctrl]+r    重做上一个动作。(常用)</li><li>这个 u 与 [Ctrl]+r 是很常用的指令！一个是复原，另一个则是重做一次～ 利用这两个功能按键，你的编辑，嘿嘿！很快乐的啦！</li><li>.    不要怀疑！这就是小数点！意思是重复前一个动作的意思。 如果你想要重复删除、重复贴上等等动作，按下小数点『.』就好了！ (常用)</li></ul><h3 id="一般模式切换到编辑模式的可用的按钮说明"><a href="#一般模式切换到编辑模式的可用的按钮说明" class="headerlink" title="一般模式切换到编辑模式的可用的按钮说明"></a>一般模式切换到编辑模式的可用的按钮说明</h3><p>进入输入或取代的编辑模式</p><ul><li>i, I    进入输入模式(Insert mode)：i 为『从目前光标所在处输入』， I 为『在目前所在行的第一个非空格符处开始输入』。 (常用)</li><li>a, A    进入输入模式(Insert mode)：a 为『从目前光标所在的下一个字符处开始输入』， A 为『从光标所在行的最后一个字符处开始输入』。(常用)</li><li>o, O    进入输入模式(Insert mode)：这是英文字母 o 的大小写。o 为『在目前光标所在的下一行处输入新的一行』； O 为在目前光标所在处的上一行输入新的一行！(常用)</li><li>r, R    进入取代模式(Replace mode)：r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；(常用)<br><code>在 vi 画面的左下角处会出现『--INSERT--』或『--REPLACE--』的字样 才能输入</code></li><li>[Esc]    退出编辑模式，回到一般模式中(常用)</li></ul><h3 id="一般模式切换到指令行模式的可用的按钮说明"><a href="#一般模式切换到指令行模式的可用的按钮说明" class="headerlink" title="一般模式切换到指令行模式的可用的按钮说明"></a>一般模式切换到指令行模式的可用的按钮说明</h3><p>指令行的储存、离开等指令</p><ul><li>:w    将编辑的数据写入硬盘档案中(常用)</li><li>:w!    若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关啊！</li><li>:q    离开 vi (常用)</li><li>:q!    若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br>注意一下啊，那个惊叹号 (!) 在 vi 当中，常常具有『强制』的意思～</li><li>:wq    储存后离开，若为 :wq! 则为强制储存后离开 (常用)<br>ZZ    这是大写的 Z 喔！若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开！</li><li>:w [filename]    将编辑的数据储存成另一个档案（类似另存新档）</li><li>:r [filename]    在编辑的数据中，读入另一个档案的数据。亦即将 『filename』 这个档案内容加到游标所在行后面</li><li>:n1,n2 w [filename]    将 n1 到 n2 的内容储存成 filename 这个档案。</li><li>:! command    暂时离开 vi 到指令行模式下执行 command 的显示结果！例如<br>『:! ls /home』即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！</li></ul><h3 id="vim-环境的变更"><a href="#vim-环境的变更" class="headerlink" title="vim 环境的变更"></a>vim 环境的变更</h3><ul><li>:set nu    显示行号，设定之后，会在每一行的前缀显示该行的行号</li><li>:set nonu    与 set nu 相反，为取消行号！</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;vim-基本使用&quot;&gt;&lt;a href=&quot;#vim-基本使用&quot; class=&quot;headerlink&quot; title=&quot;vim 基本使用&quot;&gt;&lt;/a&gt;vim 基本使用&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/linux/vim.gif&quot; alt=&quot;键盘图&quot;&gt;&lt;/p
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://github.com/xuegangliu/blog/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://github.com/xuegangliu/blog/tags/Linux/"/>
+    
+      <category term="Vim" scheme="https://github.com/xuegangliu/blog/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux工具</title>
+    <link href="https://github.com/xuegangliu/blog/2016/11/09/Linux%E5%B7%A5%E5%85%B7/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/09/Linux工具/</id>
+    <published>2016-11-09T15:07:29.000Z</published>
+    <updated>2016-11-09T15:07:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="程序构建"><a href="#程序构建" class="headerlink" title="程序构建"></a>程序构建</h2><h3 id="1-配置-gt-2-编译-gt-3-安装"><a href="#1-配置-gt-2-编译-gt-3-安装" class="headerlink" title="1.配置 -&gt; 2.编译 -&gt; 3.安装"></a>1.配置 -&gt; 2.编译 -&gt; 3.安装</h3><ol><li>配置做的工作主要是检查当前环境是否满足要安装软件的依赖关系，以及设置程序安装所需要的初始化信息，比如安装路径，需要安装哪些组件；配置完成，会生成makefile文件供第二步make使用；</li><li>编译是对源文件进行编译链接生成可执行程序；</li><li>安装做的工作就简单多了，就是将生成的可执行文件拷贝到配置时设置的初始路径下；</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./configure --help</span><br><span class="line">./configure --prefix=/usr/local/snmp</span><br><span class="line">make -f myMakefile</span><br><span class="line">make install</span><br></pre></td></tr></table></figure><hr><h2 id="程序调试"><a href="#程序调试" class="headerlink" title="程序调试"></a>程序调试</h2><h3 id="gdb-程序交互调试"><a href="#gdb-程序交互调试" class="headerlink" title="gdb 程序交互调试"></a>gdb 程序交互调试</h3><hr><h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">top</span><br><span class="line">free</span><br><span class="line">vmstat</span><br></pre></td></tr></table></figure><p>进入交互模式后:<br>输入M，进程列表按内存使用大小降序排序，便于我们观察最大内存使用者使用有问题（检测内存泄漏问题）;<br>输入P，进程列表按CPU使用大小降序排序，便于我们观察最耗CPU资源的使用者是否有问题；<br>top第三行显示当前系统的，其中有两个值很关键:<br>%id：空闲CPU时间百分比，如果这个值过低，表明系统CPU存在瓶颈；<br>%wa：等待I/O的CPU时间百分比，如果这个值过高，表明IO存在瓶颈；</p><h3 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h3><p>如果IO存在性能瓶颈，top工具中的%wa会偏高；<br>进一步分析使用iostat工具<br>如果%iowait的值过高，表示硬盘存在I/O瓶颈。<br>如果 %util 接近 100%，说明产生的I/O请求太多，I/O系统已经满负荷，该磁盘可能存在瓶颈。<br>如果 svctm 比较接近 await，说明 I/O 几乎没有等待时间；<br>如果 await 远大于 svctm，说明I/O 队列太长，io响应太慢，则需要进行必要优化。<br>如果avgqu-sz比较大，也表示有大量io在等待。</p><h3 id="分析进程调用"><a href="#分析进程调用" class="headerlink" title="分析进程调用"></a>分析进程调用</h3><ul><li>pstack用来跟踪进程栈<blockquote><p>pstack [pid]</p></blockquote></li><li>strace用来跟踪进程中的系统调用</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;程序构建&quot;&gt;&lt;a href=&quot;#程序构建&quot; class=&quot;headerlink&quot; title=&quot;程序构建&quot;&gt;&lt;/a&gt;程序构建&lt;/h2&gt;&lt;h3 id=&quot;1-配置-gt-2-编译-gt-3-安装&quot;&gt;&lt;a href=&quot;#1-配置-gt-2-编译-gt-3-安装&quot; cla
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://github.com/xuegangliu/blog/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://github.com/xuegangliu/blog/tags/Linux/"/>
+    
+      <category term="Tools" scheme="https://github.com/xuegangliu/blog/tags/Tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python基础</title>
+    <link href="https://github.com/xuegangliu/blog/2016/11/08/Python%E5%9F%BA%E7%A1%80/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/08/Python基础/</id>
+    <published>2016-11-08T14:49:38.000Z</published>
+    <updated>2016-11-08T14:49:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="python3"><a href="#python3" class="headerlink" title="python3"></a>python3</h1><ul><li>规定 缩进规定、多行语句(+)</li><li>指定源码编码<br><code># -*- coding: utf-8 -*-</code> <code>#coding=utf8</code></li></ul><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 方法1</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">注释方法2</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">注释方法3</span><br><span class="line">&quot;&quot;&quot;</span><br></pre></td></tr></table></figure><h1 id="标准数据类型"><a href="#标准数据类型" class="headerlink" title="标准数据类型"></a>标准数据类型</h1><ul><li>Number 数字(int、bool、float、complex) ,不可变 </li><li>String 字符串, 不可变, 序列<ul><li>‘’’aa’’’ “””bbb”””  \转义字符 r不转义 索引从0开始，从-1倒序</li></ul></li><li>List 列表, <code>[]</code> ,序列, 有序</li><li>Tuple 元组 ,不可变 ,<code>()</code>, 序列</li><li>Set 集合 <code>{xx}</code> 或者 <code>set()</code></li><li>Dictionary 字典, 无序, <code>{key:value}</code></li></ul><h2 id="类型判断注意"><a href="#类型判断注意" class="headerlink" title="类型判断注意"></a>类型判断注意</h2><ul><li>tpye() 不会认为子类是一种父类类型</li><li>isinstance()会认为子类是一种父类类型</li></ul><ul><li>is 用于判断两个变量引用对象是否为同一个， == 用于判断引用变量的值是否相等。</li></ul><h1 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h1><ul><li>模块导入 <code>import</code> 与 <code>from xx import a,b,c</code></li></ul><h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><ul><li>类属性与方法<ul><li>__private_attrs：两个下划线开头，声明该属性为私有</li><li>类的方法 第一个参数必须为self</li><li>__private_method：两个下划线开头，私有方法</li></ul></li><li>类的专有方法：<ul><li><strong>init</strong> : 构造函数，在生成对象时调用</li><li><strong>del</strong> : 析构函数，释放对象时使用</li><li><strong>repr</strong> : 打印，转换</li><li><strong>setitem</strong> : 按照索引赋值</li><li><strong>getitem</strong>: 按照索引获取值</li><li><strong>len</strong>: 获得长度</li><li><strong>cmp</strong>: 比较运算</li><li><strong>call</strong>: 函数调用</li><li><strong>add</strong>: 加运算</li><li><strong>sub</strong>: 减运算</li><li><strong>mul</strong>: 乘运算</li><li><strong>div</strong>: 除运算</li><li><strong>mod</strong>: 求余运算</li><li><strong>pow</strong>: 乘方</li></ul></li></ul><h1 id="错误异常"><a href="#错误异常" class="headerlink" title="错误异常"></a>错误异常</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">   </span><br><span class="line">   break</span><br><span class="line">except ValueError:</span><br><span class="line">   //</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;python3&quot;&gt;&lt;a href=&quot;#python3&quot; class=&quot;headerlink&quot; title=&quot;python3&quot;&gt;&lt;/a&gt;python3&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;规定 缩进规定、多行语句(+)&lt;/li&gt;
+&lt;li&gt;指定源码编码&lt;br&gt;&lt;code&gt;# -
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://github.com/xuegangliu/blog/categories/Python/"/>
+    
+    
+      <category term="Shell" scheme="https://github.com/xuegangliu/blog/tags/Shell/"/>
+    
+      <category term="Python" scheme="https://github.com/xuegangliu/blog/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java反射基础</title>
+    <link href="https://github.com/xuegangliu/blog/2016/07/28/Java%E5%8F%8D%E5%B0%84%E5%9F%BA%E7%A1%80/"/>
+    <id>https://github.com/xuegangliu/blog/2016/07/28/Java反射基础/</id>
+    <published>2016-07-28T10:30:12.000Z</published>
+    <updated>2016-07-28T10:30:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Java-反射"><a href="#Java-反射" class="headerlink" title="Java 反射"></a>Java 反射</h1><p>在运行中，可以使程序创建和控制任何类的对象。</p><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ol><li>性能: 对类的逻辑结构信息获取后，然后对这些类进行操作（所以相对于源码方式速度较低）</li><li>模糊程序内部处理逻辑等</li></ol><h2 id="Java-reflection"><a href="#Java-reflection" class="headerlink" title="Java reflection"></a>Java reflection</h2><p>使类和数据结构按名称动态检索相关的信息并可以操作这些信息。</p><p>java.lang.reflect.*(Field,Method,Constructor)<br>java.lang.Class</p><h2 id="反射的实现方式"><a href="#反射的实现方式" class="headerlink" title="反射的实现方式"></a>反射的实现方式</h2><ol><li>通过对象的getClass()，例如：String.getClass</li><li>通过对象实例方法获取，例如：String.classs</li><li>通过Class.forName(“java.lang.String”),加载时，会将对应的静态方法加载</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Java-反射&quot;&gt;&lt;a href=&quot;#Java-反射&quot; class=&quot;headerlink&quot; title=&quot;Java 反射&quot;&gt;&lt;/a&gt;Java 反射&lt;/h1&gt;&lt;p&gt;在运行中，可以使程序创建和控制任何类的对象。&lt;/p&gt;
+&lt;h2 id=&quot;缺点&quot;&gt;&lt;a href=&quot;#缺
+      
+    
+    </summary>
+    
+      <category term="Java基础" scheme="https://github.com/xuegangliu/blog/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
+    
+  </entry>
+  
+</feed>
