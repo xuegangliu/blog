@@ -36,6 +36,7 @@ deploy:
   github_token: $token
   # 将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起
   local_dir: public
+  keep-history: true
   #fqdn: $CUSTOM_DOMAIN
   name: xuegangliu
   email: 1453860636@qq.com
