@@ -21,7 +21,7 @@ categories: Java
     -m 输出JVM启动时传给主类main()的参数。
     -l 输出主类全名。如果进程执行的是jar包，则输出包名。
     -v 输出JVM启动时JVM参数。
-![jps](/images/java/jps.png)
+![jps](/book/images/java/jps.png)
 
 ## jinfo
     -flag name 打印给定name对应的命令行参数值。
@@ -29,7 +29,7 @@ categories: Java
     -flag name=value 更改name对应的命令行参数值为value。
     -flags 打印传给JVM的命令参数值。
     -sysprops 打印系统属性值。
-![jps](/images/java/jinfo.png)
+![jps](/book/images/java/jinfo.png)
 
 ## 链接
 [介绍](https://blog.csdn.net/dream361/article/details/77975381)

@@ -9,7 +9,7 @@ categories: Linux
 ---
 # vim 基本使用
 
-![键盘图](/images/linux/vim.gif)
+![键盘图](/book/images/linux/vim.gif)
 
 ## 命令模式
 刚刚启动 vi/vim，便进入了命令模式。此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。以下是常用的几个命令：
@@ -37,7 +37,7 @@ categories: Linux
 - w 保存文件
 - ESC键可随时退出底线命令模式。
 
-![模式切换](/images/linux/vim01.png)
+![模式切换](/book/images/linux/vim01.png)
 
 ## 快捷键
 ### 一般模式可用的光标移动、复制粘贴、搜索替换等
