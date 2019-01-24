@@ -44,8 +44,8 @@
   
   <entry>
     <title>travis配置</title>
-    <link href="https://github.com/xuegangliu/blog/2019/01/08/travis%E6%9E%84%E5%BB%BA/"/>
-    <id>https://github.com/xuegangliu/blog/2019/01/08/travis构建/</id>
+    <link href="https://github.com/xuegangliu/blog/2019/01/08/tools/travis%E6%9E%84%E5%BB%BA/"/>
+    <id>https://github.com/xuegangliu/blog/2019/01/08/tools/travis构建/</id>
     <published>2019-01-08T16:52:37.000Z</published>
     <updated>2019-01-08T16:52:37.000Z</updated>
     
@@ -126,8 +126,8 @@
   
   <entry>
     <title>JVM命令工具</title>
-    <link href="https://github.com/xuegangliu/blog/2018/02/09/JVM%E5%91%BD%E4%BB%A4%E5%B7%A5%E5%85%B7/"/>
-    <id>https://github.com/xuegangliu/blog/2018/02/09/JVM命令工具/</id>
+    <link href="https://github.com/xuegangliu/blog/2018/02/09/tools/JVM%E5%91%BD%E4%BB%A4%E5%B7%A5%E5%85%B7/"/>
+    <id>https://github.com/xuegangliu/blog/2018/02/09/tools/JVM命令工具/</id>
     <published>2018-02-09T15:14:30.000Z</published>
     <updated>2018-03-02T11:25:33.000Z</updated>
     
@@ -156,8 +156,8 @@
   
   <entry>
     <title>Tomcat调优</title>
-    <link href="https://github.com/xuegangliu/blog/2018/01/09/Tomcat%E8%B0%83%E4%BC%98/"/>
-    <id>https://github.com/xuegangliu/blog/2018/01/09/Tomcat调优/</id>
+    <link href="https://github.com/xuegangliu/blog/2018/01/09/server/Tomcat%E8%B0%83%E4%BC%98/"/>
+    <id>https://github.com/xuegangliu/blog/2018/01/09/server/Tomcat调优/</id>
     <published>2018-01-09T15:16:45.000Z</published>
     <updated>2018-01-09T15:16:45.000Z</updated>
     
@@ -321,8 +321,8 @@
   
   <entry>
     <title>Vim使用</title>
-    <link href="https://github.com/xuegangliu/blog/2016/11/09/Vim%E4%BD%BF%E7%94%A8/"/>
-    <id>https://github.com/xuegangliu/blog/2016/11/09/Vim使用/</id>
+    <link href="https://github.com/xuegangliu/blog/2016/11/09/tools/Vim%E4%BD%BF%E7%94%A8/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/09/tools/Vim使用/</id>
     <published>2016-11-09T15:10:43.000Z</published>
     <updated>2016-11-09T15:10:43.000Z</updated>
     
@@ -348,8 +348,8 @@
   
   <entry>
     <title>Linux工具</title>
-    <link href="https://github.com/xuegangliu/blog/2016/11/09/Linux%E5%B7%A5%E5%85%B7/"/>
-    <id>https://github.com/xuegangliu/blog/2016/11/09/Linux工具/</id>
+    <link href="https://github.com/xuegangliu/blog/2016/11/09/tools/Linux%E5%B7%A5%E5%85%B7/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/09/tools/Linux工具/</id>
     <published>2016-11-09T15:07:29.000Z</published>
     <updated>2016-11-09T15:07:29.000Z</updated>
     
