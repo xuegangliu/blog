@@ -61,4 +61,5 @@ categories: tools
 - `git stash save "comment info"` 保存到栈中,当前目录和版本库目录一直,将修改的信息保存起来 
 - `git stash list`  查看保存的信息
 - `git stash pop`   取出最后一次保存的信息 
-- `git stash applay 相应的栈内信息描述` 取出相应的保存信息 
+- `git stash applay 相应的栈内stash@{number}` 取出相应的保存信息 
+- `git stash drop 相应的栈内stash@{number}` 删除之前保存的信息
