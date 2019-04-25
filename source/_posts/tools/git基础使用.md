@@ -56,3 +56,9 @@ categories: tools
     - 3) 编辑“.git/config”文件，将子模块的相关配置节点删除掉
     - 4) 手动删除子模块残留的目录
     - 5）忽略一些文件、文件夹不提交在仓库根目录下创建名称为“.gitignore”的文件，写入不需要的文件夹名或文件，每个元素占一行即可，如target,bin,*.db
+    
+### 5) 修改文件后,切换分支
+- `git stash save "comment info"` 保存到栈中,当前目录和版本库目录一直,将修改的信息保存起来 
+- `git stash list`  查看保存的信息
+- `git stash pop`   取出最后一次保存的信息 
+- `git stash applay 相应的栈内信息描述` 取出相应的保存信息 

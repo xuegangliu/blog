@@ -4,6 +4,14 @@ date: 2016-11-08 17:39:07
 updated: 2019-01-09 14:08:37
 tags:
 ---
+
+<center>
+    <h5>个人链接</h5>
+    <ul>
+        <li><a href='https://xuegangliu.github.io/book'>book</a></li>
+    </ul>
+</center>
+
 # 友情链接
 
 ## blog大牛
