@@ -3,9 +3,9 @@ comments: true
 date: 2018-02-09 15:14:30
 updated: 2018-03-02 11:25:33
 tags:
-  - Java
-  - JVM
-categories: Java
+  - java_jvm_cmd
+categories:
+  - java
 ---
 # 命令工具
 - jps：进程列表

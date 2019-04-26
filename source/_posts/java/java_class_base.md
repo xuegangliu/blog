@@ -3,8 +3,10 @@ comments: true
 date: 2016-07-28 10:30:12
 updated: 2016-07-28 10:30:12
 tags:
-  - Java
-categories: Java基础
+  - java_base
+  - knowledge
+categories:
+  - java
 ---
 
 # Java 反射

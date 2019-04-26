@@ -3,9 +3,10 @@ comments: true
 date: 2018-01-09 10:13:23
 updated: 2018-01-09 10:13:23
 tags:
-  - Java
-  - JVM
-categories: Java
+  - knowledge
+  - java_jvm
+categories:
+ - java
 ---
 # jvm参数
 ## JVM 类型以及编译器模式

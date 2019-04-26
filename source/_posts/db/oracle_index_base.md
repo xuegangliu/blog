@@ -2,9 +2,10 @@ title: Oracle索引
 date: 2016-12-4 10:03:46
 updated: 2016-12-4 10:03:46
 tags:
-  - Oracle
-  - SQL
-categories: Oracle
+  - oracle
+  - knowledge
+categories:
+  - database
 ---
 
 # Oracle索引

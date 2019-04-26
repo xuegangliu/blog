@@ -3,9 +3,10 @@ comments: true
 date: 2018-11-09 15:19:01
 updated: 2018-11-09 15:19:01
 tags:
-  - Java
-  - JVM
-categories: Java
+  - knowledge
+  - java_jvm
+categories:
+  - java
 ---
 
 # JVM性能调优

@@ -3,9 +3,10 @@ comments: true
 date: 2016-11-09 15:07:29
 updated: 2016-11-09 15:07:29
 tags:
-  - Linux
-  - Tools
-categories: Linux
+  - knowledge
+  - bug_test
+categories:
+  - linux
 ---
 
 ## 程序构建

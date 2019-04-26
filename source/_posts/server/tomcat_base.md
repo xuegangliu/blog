@@ -2,8 +2,9 @@ title: tomcat服务
 date: 2016-07-28 10:30:12
 updated: 2016-07-28 10:30:12
 tags:
-  - Java
-categories: 服务
+  - tomcat
+categories:
+  - server
 ---
 
 # Tomcat服务

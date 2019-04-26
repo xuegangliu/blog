@@ -3,9 +3,9 @@ comments: true
 date: 2016-11-09 15:10:43
 updated: 2016-11-09 15:10:43
 tags:
-  - Linux
-  - Vim
-categories: Linux
+  - vim
+categories:
+  - linux
 ---
 # vim 基本使用
 

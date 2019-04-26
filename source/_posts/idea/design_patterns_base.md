@@ -1,11 +1,12 @@
-title: 设计模式
+title: 设计模式介绍
 comments: true
 date: 2017-07-19 13:33:02
 updated: 2017-07-13 15:33:02
 tags:
-  - Java
-  - 设计模式
-categories: Java
+  - knowledge
+  - design_patterns
+categories:
+  - idea
 ---
 # 设计模式(Design pattern)
 

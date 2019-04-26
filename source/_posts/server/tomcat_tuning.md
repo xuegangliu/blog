@@ -3,9 +3,9 @@ comments: true
 date: 2018-01-09 15:16:45
 updated: 2018-01-09 15:16:45
 tags:
-  - Tomcat
-  - Java
-categories: Tomcat
+  - tomcat
+categories:
+  - server
 ---
 
 ## 1.tomcat内存配置

@@ -1,18 +1,18 @@
-title: Ubuntu基础命令
+title: Ubuntu结构
 comments: true
 date: 2018-11-09 15:28:01
 updated: 2018-11-09 15:28:01
 tags:
-  - Linux
-  - Ubuntu
-categories: Linux
+  - ubuntu
+categories:
+  - linux
 ---
 ## 目录结构
 
-![目录结构1](dir1.png)
-![目录结构2](dir2.png)
-![目录结构2](dir3.png)
-![目录结构2](dir4.png)
+![目录结构1](/book/images/linux/dir1.png)
+![目录结构2](/book/images/linux/dir2.png)
+![目录结构2](/book/images/linux/dir3.png)
+![目录结构2](/book/images/linux/dir4.png)
 
 ## 软件包管理
 Ubuntu更新软件时的软件源配置文件是/etc/apt/sources.list。

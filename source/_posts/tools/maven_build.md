@@ -3,8 +3,8 @@ date: 2016-11-09 15:10:43
 updated: 2016-11-09 15:10:43
 tags:
   - maven
+categories:
   - tools
-categories: tools
 ---
 # Maven构建
 

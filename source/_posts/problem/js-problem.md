@@ -3,9 +3,10 @@ comments: true
 date: 2017-07-19 13:33:02
 updated: 2017-07-13 15:33:02
 tags:
+  - simple
   - javascript
-  - js
-categories: javascript
+categories:
+  - problem
 ---
 # 问题记录
 ------

@@ -3,9 +3,10 @@ comments: true
 date: 2016-12-4 10:03:46
 updated: 2016-12-4 10:03:46
 tags:
-  - Oracle
-  - SQL
-categories: Oracle
+  - oracle
+  - sql
+categories: 
+  - database
 ---
 # Oracle 常用SQL
 

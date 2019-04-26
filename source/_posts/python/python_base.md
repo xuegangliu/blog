@@ -3,9 +3,9 @@ date: 2016-11-08 14:49:38
 updated: 2016-11-08 14:49:38
 comments: true
 tags: 
-  - Shell
-  - Python
-categories: Python
+  - python_base
+categories:
+  - python
 ---
 
 # python3

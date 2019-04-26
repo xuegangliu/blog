@@ -2,9 +2,9 @@ title: idea快捷键
 date: 2016-11-09 15:10:43
 updated: 2016-11-09 15:10:43
 tags:
-  - idea
+  - IntelliJ_IDEA
+categories:
   - tools
-categories: tools
 ---
 # 开发工具
 

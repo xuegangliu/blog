@@ -5,7 +5,9 @@ updated: 2014-11-28 10:30:12
 tags:
   - school
   - project
-categories: project
+  - self
+categories:
+  - links
 ---
 
 # Project

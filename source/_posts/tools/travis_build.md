@@ -1,11 +1,11 @@
-title: travis配置
+title: travis构建配置
 comments: true
 date: 2019-01-08 16:52:37
 updated: 2019-01-08 16:52:37
 tags:
-  - build
-  - Travis
-categories: Travis
+  - travis
+categories:
+  - tools
 ---
 
 # travis

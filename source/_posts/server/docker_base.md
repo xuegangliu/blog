@@ -3,9 +3,9 @@ comments: true
 date: 2017-01-09 14:08:37
 updated: 2017-01-09 14:08:37
 tags:
-  - Linux
-  - Docker
-categories: Linux
+  - docker
+categories:
+  - server
 ---
 
 # docker

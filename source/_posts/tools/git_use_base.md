@@ -3,8 +3,8 @@ date: 2016-11-09 15:10:43
 updated: 2016-11-09 15:10:43
 tags:
   - git
+categories:
   - tools
-categories: tools
 ---
 
 # git 常用命令(含删除文件)
