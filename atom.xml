@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>设计原则</title>
-    <link href="https://github.com/xuegangliu/blog/2019/01/10/other/design-principles/"/>
-    <id>https://github.com/xuegangliu/blog/2019/01/10/other/design-principles/</id>
+    <title>设计模式原则</title>
+    <link href="https://github.com/xuegangliu/blog/2019/01/10/idea/design-principles/"/>
+    <id>https://github.com/xuegangliu/blog/2019/01/10/idea/design-principles/</id>
     <published>2019-01-10T10:36:25.000Z</published>
     <updated>2019-01-10T10:36:25.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="面向对象原则"><a href="#面向对象原则" class="headerlink" title="面向对象原则"></a>面向对象原则</h2><p>Java编程最基本的原则就是要追求高内聚和低耦合的解决方案和代码模块设计<br>SOLID原则：S.O.L.I.D是面向对象设计和编程(OOD&amp;OOP)中几个重要编码原则(Programming Priciple)的首字母缩写。</p><table><thead><tr><th>English</th><th>中文</th></tr></thead><tbody><tr><td>SRP The Single Responsibility Principle</td><td>单一责任原则</td></tr><tr><td>OCP The Open Closed Principle</td><td>开放封闭原则</td></tr><tr><td>LSP The Liskov Substitution Principle</td><td>里氏替换原则</td></tr><tr><td>ISP The Interface Segregation Principle</td><td>接口分离原则</td></tr><tr><td>DIP The Dependency Inversion Principle</td><td>依赖倒置原则</td></tr></tbody></table><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul><li><ol><li>单一责任原则（SRP）[单类单功能]<br> 当需要修改某个类的时候原因有且只有一个。换句话说就是让一个类只做一种类型责任，当这个类需要承当其他类型的责任的时候，就需要分解这个类。 类被修改的几率很大，因此应该专注于单一的功能。如果你把多个功能放在同一个类中，功能之间就形成了关联，改变其中一个功能，有可能中止另一个功能，这时就需要新一轮的测试来避免可能出现的问题，非常耗时耗力。</li></ol></li><li><ol start="2"><li>开放封闭原则（OCP）[新扩展，旧不变]<br>软件实体应该是可扩展，而不可修改的。也就是说，对扩展是开放的，而对修改是封闭的。这个原则是诸多面向对象编程原则中最抽象、最难理解的一个。<ul><li>(1)通过增加代码来扩展功能，而不是修改已经存在的代码。</li><li>(2)若客户模块和服务模块遵循同一个接口来设计，则客户模块可以不关心服务模块的类型，服务模块可以方便扩展服务(代码)。</li><li>(3)OCP支持替换的服务，而不用修改客户模块。</li></ul></li></ol></li><li><ol start="3"><li>里氏替换原则（LSP）<br>当一个子类的实例应该能够替换任何其超类的实例时，它们之间才具有is-A关系<br>客户模块不应关心服务模块的是如何工作的；同样的接口模块之间，可以在不知道服务模块代码的情况下，进行替换。即接口或父类出现的地方，实现接口的类或子类可以代入。</li></ol></li><li><ol start="4"><li>接口分离原则（ISP）[解决多余]<br>不能强迫用户去依赖那些他们不使用的接口。换句话说，使用多个专门的接口比使用单一的总接口总要好。<br>客户模块不应该依赖大的接口，应该裁减为小的接口给客户模块使用，以减少依赖性。如Java中一个类实现多个接口，不同的接口给不用的客户模块使用，而不是提供给客户模块一个大的接口。</li></ol></li><li><ol start="5"><li>依赖注入或倒置原则（DIP）<ul><li><ol><li>高层模块不应该依赖于低层模块，二者都应该依赖于抽象 </li></ol></li><li><ol start="2"><li>抽象不应该依赖于细节，细节应该依赖于抽象<br>这个设计原则的亮点在于任何被DI框架注入的类很容易用mock对象进行测试和维护，因为对象创建代码集中在框架中，客户端代码也不混乱。有很多方式可以实现依赖倒置，比如像AspectJ等的AOP（Aspect Oriented programming）框架使用的字节码技术，或Spring框架使用的代理等。</li></ol></li><li>(1).高层模块不要依赖低层模块；</li><li>(2).高层和低层模块都要依赖于抽象；</li><li>(3).抽象不要依赖于具体实现；<br>-(4).具体实现要依赖于抽象；</li><li>(5).抽象和接口使模块之间的依赖分离。</li></ul></li></ol></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="面向对象原则"><a href="#面向对象原则" class="headerlink" title="面向对象原则"></a>面向对象原则</h2><p>Java编程最基本的原则就是要追求高内聚和低耦合的解决方案和代码模块设计<br>SOLID原则：S.O.L.I.D是面向对象设计和编程(OOD&amp;OOP)中几个重要编码原则(Programming Priciple)的首字母缩写。</p><table><thead><tr><th>English</th><th>中文</th></tr></thead><tbody><tr><td>SRP The Single Responsibility Principle</td><td>单一责任原则</td></tr><tr><td>OCP The Open Closed Principle</td><td>开放封闭原则</td></tr><tr><td>LSP The Liskov Substitution Principle</td><td>里氏替换原则</td></tr><tr><td>ISP The Interface Segregation Principle</td><td>接口分离原则</td></tr><tr><td>DIP The Dependency Inversion Principle</td><td>依赖倒置原则</td></tr></tbody></table><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul><li><ol><li>单一责任原则（SRP）[单类单功能]<br> 当需要修改某个类的时候原因有且只有一个。换句话说就是让一个类只做一种类型责任，当这个类需要承当其他类型的责任的时候，就需要分解这个类。 类被修改的几率很大，因此应该专注于单一的功能。如果你把多个功能放在同一个类中，功能之间就形成了关联，改变其中一个功能，有可能中止另一个功能，这时就需要新一轮的测试来避免可能出现的问题，非常耗时耗力。</li></ol></li><li><ol start="2"><li>开放封闭原则（OCP）[新扩展，旧不变]<br>软件实体应该是可扩展，而不可修改的。也就是说，对扩展是开放的，而对修改是封闭的。这个原则是诸多面向对象编程原则中最抽象、最难理解的一个。<ul><li>(1)通过增加代码来扩展功能，而不是修改已经存在的代码。</li><li>(2)若客户模块和服务模块遵循同一个接口来设计，则客户模块可以不关心服务模块的类型，服务模块可以方便扩展服务(代码)。</li><li>(3)OCP支持替换的服务，而不用修改客户模块。</li></ul></li></ol></li><li><ol start="3"><li>里氏替换原则（LSP）<br>当一个子类的实例应该能够替换任何其超类的实例时，它们之间才具有is-A关系<br>客户模块不应关心服务模块的是如何工作的；同样的接口模块之间，可以在不知道服务模块代码的情况下，进行替换。即接口或父类出现的地方，实现接口的类或子类可以代入。</li></ol></li><li><ol start="4"><li>接口分离原则（ISP）[解决多余]<br>不能强迫用户去依赖那些他们不使用的接口。换句话说，使用多个专门的接口比使用单一的总接口总要好。<br>客户模块不应该依赖大的接口，应该裁减为小的接口给客户模块使用，以减少依赖性。如Java中一个类实现多个接口，不同的接口给不用的客户模块使用，而不是提供给客户模块一个大的接口。</li></ol></li><li><ol start="5"><li>依赖注入或倒置原则（DIP）<ul><li><ol><li>高层模块不应该依赖于低层模块，二者都应该依赖于抽象 </li></ol></li><li><ol start="2"><li>抽象不应该依赖于细节，细节应该依赖于抽象<br>这个设计原则的亮点在于任何被DI框架注入的类很容易用mock对象进行测试和维护，因为对象创建代码集中在框架中，客户端代码也不混乱。有很多方式可以实现依赖倒置，比如像AspectJ等的AOP（Aspect Oriented programming）框架使用的字节码技术，或Spring框架使用的代理等。</li></ol></li><li>(1).高层模块不要依赖低层模块；</li><li>(2).高层和低层模块都要依赖于抽象；</li><li>(3).抽象不要依赖于具体实现； </li><li>(4).具体实现要依赖于抽象；</li><li>(5).抽象和接口使模块之间的依赖分离。</li></ul></li></ol></li></ul>]]></content>
     
     <summary type="html">
     
@@ -34,17 +34,19 @@
     
     </summary>
     
-      <category term="design" scheme="https://github.com/xuegangliu/blog/categories/design/"/>
+      <category term="idea" scheme="https://github.com/xuegangliu/blog/categories/idea/"/>
     
     
-      <category term="design" scheme="https://github.com/xuegangliu/blog/tags/design/"/>
+      <category term="knowledge" scheme="https://github.com/xuegangliu/blog/tags/knowledge/"/>
+    
+      <category term="design_patterns" scheme="https://github.com/xuegangliu/blog/tags/design-patterns/"/>
     
   </entry>
   
   <entry>
     <title>github_emoji</title>
-    <link href="https://github.com/xuegangliu/blog/2019/01/10/other/github_emoji/"/>
-    <id>https://github.com/xuegangliu/blog/2019/01/10/other/github_emoji/</id>
+    <link href="https://github.com/xuegangliu/blog/2019/01/10/tools/github_emoji/"/>
+    <id>https://github.com/xuegangliu/blog/2019/01/10/tools/github_emoji/</id>
     <published>2019-01-10T10:36:25.000Z</published>
     <updated>2019-01-10T10:36:25.000Z</updated>
     
@@ -60,17 +62,19 @@
     
     </summary>
     
-      <category term="emoji" scheme="https://github.com/xuegangliu/blog/categories/emoji/"/>
+      <category term="tools" scheme="https://github.com/xuegangliu/blog/categories/tools/"/>
     
+    
+      <category term="emoji" scheme="https://github.com/xuegangliu/blog/tags/emoji/"/>
     
       <category term="github" scheme="https://github.com/xuegangliu/blog/tags/github/"/>
     
   </entry>
   
   <entry>
-    <title>travis配置</title>
-    <link href="https://github.com/xuegangliu/blog/2019/01/08/tools/travis%E6%9E%84%E5%BB%BA/"/>
-    <id>https://github.com/xuegangliu/blog/2019/01/08/tools/travis构建/</id>
+    <title>travis构建配置</title>
+    <link href="https://github.com/xuegangliu/blog/2019/01/08/tools/travis_build/"/>
+    <id>https://github.com/xuegangliu/blog/2019/01/08/tools/travis_build/</id>
     <published>2019-01-08T16:52:37.000Z</published>
     <updated>2019-01-08T16:52:37.000Z</updated>
     
@@ -86,46 +90,17 @@
     
     </summary>
     
-      <category term="Travis" scheme="https://github.com/xuegangliu/blog/categories/Travis/"/>
+      <category term="tools" scheme="https://github.com/xuegangliu/blog/categories/tools/"/>
     
     
-      <category term="build" scheme="https://github.com/xuegangliu/blog/tags/build/"/>
-    
-      <category term="Travis" scheme="https://github.com/xuegangliu/blog/tags/Travis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu结构</title>
-    <link href="https://github.com/xuegangliu/blog/2018/11/09/system/Ubuntu%E7%BB%93%E6%9E%84/"/>
-    <id>https://github.com/xuegangliu/blog/2018/11/09/system/Ubuntu结构/</id>
-    <published>2018-11-09T15:28:01.000Z</published>
-    <updated>2018-11-09T15:28:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p><img src="/book/images/linux/dir1.png" alt="目录结构1"><br><img src="/book/images/linux/dir2.png" alt="目录结构2"><br><img src="/book/images/linux/dir3.png" alt="目录结构2"><br><img src="/book/images/linux/dir4.png" alt="目录结构2"></p><h2 id="软件包管理"><a href="#软件包管理" class="headerlink" title="软件包管理"></a>软件包管理</h2><p>Ubuntu更新软件时的软件源配置文件是/etc/apt/sources.list。<br>ubuntu的官方软件源分为4类：</p><ul><li>main：这个是官方维护的基本库。</li><li>restricted：官方维护的其他自由软件。</li><li>universe：自由软件，但是官方不维护。</li><li>multiverse：非自由软件，官方不维护。</li></ul><p>apt<br>apt是一套完整的软件包管理方案。除了最常用apt-get之外，还包括了一系列的客户端和服务器软件。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-cache search gstreamer 搜索名字中包含gstreamer的软件包。</span><br><span class="line">sudo add-apt-repository ppa:tualatrix/ppa添加新的软件源。</span><br></pre></td></tr></table></figure></p><h3 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo  apt-get install foo</span><br><span class="line">dpkg -i *.deb</span><br><span class="line">wget http://*</span><br></pre></td></tr></table></figure><h3 id="卸载命令"><a href="#卸载命令" class="headerlink" title="卸载命令"></a>卸载命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get --purge remove foo</span><br><span class="line">sudo  apt-get remove  foo</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/book/images/linux/dir1.png&quot; alt=&quot;目录结构1&quot;&gt;&lt;br&gt;&lt;img sr
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://github.com/xuegangliu/blog/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="https://github.com/xuegangliu/blog/tags/Linux/"/>
-    
-      <category term="Ubuntu" scheme="https://github.com/xuegangliu/blog/tags/Ubuntu/"/>
+      <category term="travis" scheme="https://github.com/xuegangliu/blog/tags/travis/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu基础命令</title>
-    <link href="https://github.com/xuegangliu/blog/2018/11/09/system/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://github.com/xuegangliu/blog/2018/11/09/system/基本使用命令/</id>
+    <link href="https://github.com/xuegangliu/blog/2018/11/09/linux/shell_base/"/>
+    <id>https://github.com/xuegangliu/blog/2018/11/09/linux/shell_base/</id>
     <published>2018-11-09T15:28:01.000Z</published>
     <updated>2018-11-09T15:28:01.000Z</updated>
     
@@ -140,19 +115,42 @@
     
     </summary>
     
-      <category term="Linux" scheme="https://github.com/xuegangliu/blog/categories/Linux/"/>
+      <category term="linux" scheme="https://github.com/xuegangliu/blog/categories/linux/"/>
     
     
-      <category term="Linux" scheme="https://github.com/xuegangliu/blog/tags/Linux/"/>
+      <category term="shell" scheme="https://github.com/xuegangliu/blog/tags/shell/"/>
     
-      <category term="Ubuntu" scheme="https://github.com/xuegangliu/blog/tags/Ubuntu/"/>
+  </entry>
+  
+  <entry>
+    <title>Ubuntu结构</title>
+    <link href="https://github.com/xuegangliu/blog/2018/11/09/linux/ubuntu_base/"/>
+    <id>https://github.com/xuegangliu/blog/2018/11/09/linux/ubuntu_base/</id>
+    <published>2018-11-09T15:28:01.000Z</published>
+    <updated>2018-11-09T15:28:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p><img src="/book/images/linux/dir1.png" alt="目录结构1"><br><img src="/book/images/linux/dir2.png" alt="目录结构2"><br><img src="/book/images/linux/dir3.png" alt="目录结构2"><br><img src="/book/images/linux/dir4.png" alt="目录结构2"></p><h2 id="软件包管理"><a href="#软件包管理" class="headerlink" title="软件包管理"></a>软件包管理</h2><p>Ubuntu更新软件时的软件源配置文件是/etc/apt/sources.list。<br>ubuntu的官方软件源分为4类：</p><ul><li>main：这个是官方维护的基本库。</li><li>restricted：官方维护的其他自由软件。</li><li>universe：自由软件，但是官方不维护。</li><li>multiverse：非自由软件，官方不维护。</li></ul><p>apt<br>apt是一套完整的软件包管理方案。除了最常用apt-get之外，还包括了一系列的客户端和服务器软件。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-cache search gstreamer 搜索名字中包含gstreamer的软件包。</span><br><span class="line">sudo add-apt-repository ppa:tualatrix/ppa添加新的软件源。</span><br></pre></td></tr></table></figure></p><h3 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo  apt-get install foo</span><br><span class="line">dpkg -i *.deb</span><br><span class="line">wget http://*</span><br></pre></td></tr></table></figure><h3 id="卸载命令"><a href="#卸载命令" class="headerlink" title="卸载命令"></a>卸载命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get --purge remove foo</span><br><span class="line">sudo  apt-get remove  foo</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/book/images/linux/dir1.png&quot; alt=&quot;目录结构1&quot;&gt;&lt;br&gt;&lt;img sr
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="https://github.com/xuegangliu/blog/categories/linux/"/>
+    
+    
+      <category term="ubuntu" scheme="https://github.com/xuegangliu/blog/tags/ubuntu/"/>
     
   </entry>
   
   <entry>
     <title>JVM性能调优</title>
-    <link href="https://github.com/xuegangliu/blog/2018/11/09/java/JVM%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/"/>
-    <id>https://github.com/xuegangliu/blog/2018/11/09/java/JVM性能调优/</id>
+    <link href="https://github.com/xuegangliu/blog/2018/11/09/java/jvm_tuning/"/>
+    <id>https://github.com/xuegangliu/blog/2018/11/09/java/jvm_tuning/</id>
     <published>2018-11-09T15:19:01.000Z</published>
     <updated>2018-11-09T15:19:01.000Z</updated>
     
@@ -167,19 +165,19 @@
     
     </summary>
     
-      <category term="Java" scheme="https://github.com/xuegangliu/blog/categories/Java/"/>
+      <category term="java" scheme="https://github.com/xuegangliu/blog/categories/java/"/>
     
     
-      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
+      <category term="knowledge" scheme="https://github.com/xuegangliu/blog/tags/knowledge/"/>
     
-      <category term="JVM" scheme="https://github.com/xuegangliu/blog/tags/JVM/"/>
+      <category term="java_jvm" scheme="https://github.com/xuegangliu/blog/tags/java-jvm/"/>
     
   </entry>
   
   <entry>
     <title>JVM命令工具</title>
-    <link href="https://github.com/xuegangliu/blog/2018/02/09/tools/JVM%E5%91%BD%E4%BB%A4%E5%B7%A5%E5%85%B7/"/>
-    <id>https://github.com/xuegangliu/blog/2018/02/09/tools/JVM命令工具/</id>
+    <link href="https://github.com/xuegangliu/blog/2018/02/09/java/jvm_tools_cmd/"/>
+    <id>https://github.com/xuegangliu/blog/2018/02/09/java/jvm_tools_cmd/</id>
     <published>2018-02-09T15:14:30.000Z</published>
     <updated>2018-03-02T11:25:33.000Z</updated>
     
@@ -197,19 +195,17 @@
     
     </summary>
     
-      <category term="Java" scheme="https://github.com/xuegangliu/blog/categories/Java/"/>
+      <category term="java" scheme="https://github.com/xuegangliu/blog/categories/java/"/>
     
     
-      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
-    
-      <category term="JVM" scheme="https://github.com/xuegangliu/blog/tags/JVM/"/>
+      <category term="java_jvm_cmd" scheme="https://github.com/xuegangliu/blog/tags/java-jvm-cmd/"/>
     
   </entry>
   
   <entry>
     <title>Tomcat调优</title>
-    <link href="https://github.com/xuegangliu/blog/2018/01/09/server/Tomcat%E8%B0%83%E4%BC%98/"/>
-    <id>https://github.com/xuegangliu/blog/2018/01/09/server/Tomcat调优/</id>
+    <link href="https://github.com/xuegangliu/blog/2018/01/09/server/tomcat_tuning/"/>
+    <id>https://github.com/xuegangliu/blog/2018/01/09/server/tomcat_tuning/</id>
     <published>2018-01-09T15:16:45.000Z</published>
     <updated>2018-01-09T15:16:45.000Z</updated>
     
@@ -225,19 +221,17 @@
     
     </summary>
     
-      <category term="Tomcat" scheme="https://github.com/xuegangliu/blog/categories/Tomcat/"/>
+      <category term="server" scheme="https://github.com/xuegangliu/blog/categories/server/"/>
     
     
-      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
-    
-      <category term="Tomcat" scheme="https://github.com/xuegangliu/blog/tags/Tomcat/"/>
+      <category term="tomcat" scheme="https://github.com/xuegangliu/blog/tags/tomcat/"/>
     
   </entry>
   
   <entry>
     <title>JVM参数</title>
-    <link href="https://github.com/xuegangliu/blog/2018/01/09/java/JVM%E5%8F%82%E6%95%B0/"/>
-    <id>https://github.com/xuegangliu/blog/2018/01/09/java/JVM参数/</id>
+    <link href="https://github.com/xuegangliu/blog/2018/01/09/java/jvm_params/"/>
+    <id>https://github.com/xuegangliu/blog/2018/01/09/java/jvm_params/</id>
     <published>2018-01-09T10:13:23.000Z</published>
     <updated>2018-01-09T10:13:23.000Z</updated>
     
@@ -252,19 +246,46 @@
     
     </summary>
     
-      <category term="Java" scheme="https://github.com/xuegangliu/blog/categories/Java/"/>
+      <category term="java" scheme="https://github.com/xuegangliu/blog/categories/java/"/>
     
     
-      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
+      <category term="knowledge" scheme="https://github.com/xuegangliu/blog/tags/knowledge/"/>
     
-      <category term="JVM" scheme="https://github.com/xuegangliu/blog/tags/JVM/"/>
+      <category term="java_jvm" scheme="https://github.com/xuegangliu/blog/tags/java-jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式介绍</title>
+    <link href="https://github.com/xuegangliu/blog/2017/07/19/idea/design_patterns_base/"/>
+    <id>https://github.com/xuegangliu/blog/2017/07/19/idea/design_patterns_base/</id>
+    <published>2017-07-19T13:33:02.000Z</published>
+    <updated>2017-07-13T15:33:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="设计模式-Design-pattern"><a href="#设计模式-Design-pattern" class="headerlink" title="设计模式(Design pattern)"></a>设计模式(Design pattern)</h1><h2 id="设计模式简介"><a href="#设计模式简介" class="headerlink" title="设计模式简介"></a>设计模式简介</h2><ol><li><strong>设计模式(Design pattern)</strong> 代表了最佳的实践，通常被有经验的面向对象的软件开发人员所采用。</li><li><strong>设计模式</strong>是软件开发人员在软件开发过程中面临的一般问题的解决方案。</li><li>这些解决方案是众多软件开发人员经过相当长的一段时间的试验和错误总结出来的。</li><li><strong>设计模式</strong>是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结。</li><li>使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 </li><li>毫无疑问，设计模式于己于他人于系统都是多赢的，设计模式使代码编制真正工程化，设计模式是软件工程的基石，如同大厦的一块块砖石一样。</li><li>项目中合理地运用设计模式可以完美地解决很多问题，每种模式在现实中都有相应的原理来与之对应，每种模式都描述了一个在我们周围不断重复发生的问题，以及该问题的核心解决方案，这也是设计模式能被广泛应用的原因。</li></ol><h2 id="设计模式原则"><a href="#设计模式原则" class="headerlink" title="设计模式原则"></a><strong>设计模式原则</strong></h2><ul><li><em>开闭原则（Open Close Principle）</em></li></ul><p>开闭原则的意思是：对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。简言之，是为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。</p><ul><li><em>里氏代换原则（Liskov Substitution Principle）</em></li></ul><p>里氏代换原则是面向对象设计的基本原则之一。 里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现。LSP 是继承复用的基石，只有当派生类可以替换掉基类，且软件单位的功能不受到影响时，基类才能真正被复用，而派生类也能够在基类的基础上增加新的行为。里氏代换原则是对开闭原则的补充。实现开闭原则的关键步骤就是抽象化，而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。</p><ul><li><em>依赖倒转原则（Dependence Inversion Principle）</em></li></ul><p>这个原则是开闭原则的基础，具体内容：针对接口编程，依赖于抽象而不依赖于具体。</p><ul><li><em>接口隔离原则（Interface Segregation Principle）</em></li></ul><p>这个原则的意思是：使用多个隔离的接口，比使用单个接口要好。它还有另外一个意思是：降低类之间的耦合度。由此可见，其实设计模式就是从大型软件架构出发、便于升级和维护的软件设计思想，它强调降低依赖，降低耦合。</p><ul><li><p><em>迪米特法则，又称最少知道原则（Demeter Principle）</em></p><p>最少知道原则是指：一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立。</p></li><li><p><em>合成复用原则（Composite Reuse Principle）</em></p><p>合成复用原则是指：尽量使用合成/聚合的方式，而不是使用继承。</p></li></ul><h2 id="设计模式的使用"><a href="#设计模式的使用" class="headerlink" title="设计模式的使用"></a>设计模式的使用</h2><ul><li>开发人员的共同平台</li></ul><p>设计模式提供了一个标准的术语系统，且具体到特定的情景。例如，单例设计模式意味着使用单个对象，这样所有熟悉单例设计模式的开发人员都能使用单个对象，并且可以通过这种方式告诉对方，程序使用的是单例模式。</p><ul><li>最佳的实践  </li></ul><p>设计模式已经经历了很长一段时间的发展，它们提供了软件开发过程中面临的一般问题的最佳解决方案。学习这些模式有助于经验不足的开发人员通过一种简单快捷的方式来学习软件设计。</p><hr><h1 id="设计模式类型"><a href="#设计模式类型" class="headerlink" title="设计模式类型"></a>设计模式类型</h1><p><strong>创建型模式</strong></p><p>这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用新的运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。</p><ul><li><em>工厂模式（Factory Pattern）</em></li><li><em>抽象工厂模式（Abstract Factory Pattern）</em>  </li><li><em>单例模式（Singleton Pattern）</em> </li><li><em>建造者模式（Builder Pattern）</em> </li><li><em>原型模式（Prototype Pattern）</em></li></ul><p><strong>结构型模式</strong></p><p>这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。    </p><ul><li><em>适配器模式（Adapter Pattern）</em>  </li><li><em>桥接模式（Bridge Pattern）</em></li><li><em>过滤器模式（Filter、Criteria Pattern）</em></li><li><em>组合模式（Composite Pattern）</em></li><li><em>装饰器模式（Decorator Pattern）</em></li><li><em>外观模式（Facade Pattern）</em></li><li><em>享元模式（Flyweight Pattern）</em></li><li><em>代理模式（Proxy Pattern）</em></li></ul><p><strong>行为型模式</strong></p><p>这些设计模式特别关注对象之间的通信。    </p><ul><li><em>责任链模式（Chain of Responsibility Pattern）</em></li><li><em>命令模式（Command Pattern）</em></li><li><em>解释器模式（Interpreter Pattern）</em></li><li><em>迭代器模式（Iterator Pattern）</em></li><li><em>中介者模式（Mediator Pattern）</em></li><li><em>备忘录模式（Memento Pattern）</em></li><li><em>观察者模式（Observer Pattern）</em></li><li><em>状态模式（State Pattern）</em></li><li><em>空对象模式（Null Object Pattern）</em></li><li><em>策略模式（Strategy Pattern）</em></li><li><em>模板模式（Template Pattern）</em></li><li><em>访问者模式（Visitor Pattern）</em></li></ul><p><strong>J2EE 模式</strong></p><p>这些设计模式特别关注表示层。这些模式是由 Sun Java Center 鉴定的。    </p><ul><li><em>MVC 模式（MVC Pattern）</em></li><li><em>业务代表模式（Business Delegate Pattern）</em></li><li><em>组合实体模式（Composite Entity Pattern）</em></li><li><em>数据访问对象模式（Data Access Object Pattern）</em></li><li><em>前端控制器模式（Front Controller Pattern）</em></li><li><em>拦截过滤器模式（Intercepting Filter Pattern）</em></li><li><em>服务定位器模式（Service Locator Pattern）</em></li><li><em>传输对象模式（Transfer Object Pattern）</em></li></ul><h2 id="设计模式直接的关系"><a href="#设计模式直接的关系" class="headerlink" title="设计模式直接的关系"></a>设计模式直接的关系</h2><p><img src="/blog/images/java/design-patterns.jpg" alt="设计模式图"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;设计模式-Design-pattern&quot;&gt;&lt;a href=&quot;#设计模式-Design-pattern&quot; class=&quot;headerlink&quot; title=&quot;设计模式(Design pattern)&quot;&gt;&lt;/a&gt;设计模式(Design pattern)&lt;/h1&gt;&lt;h2
+      
+    
+    </summary>
+    
+      <category term="idea" scheme="https://github.com/xuegangliu/blog/categories/idea/"/>
+    
+    
+      <category term="knowledge" scheme="https://github.com/xuegangliu/blog/tags/knowledge/"/>
+    
+      <category term="design_patterns" scheme="https://github.com/xuegangliu/blog/tags/design-patterns/"/>
     
   </entry>
   
   <entry>
     <title>前端问题</title>
-    <link href="https://github.com/xuegangliu/blog/2017/07/19/javascript/js-problem/"/>
-    <id>https://github.com/xuegangliu/blog/2017/07/19/javascript/js-problem/</id>
+    <link href="https://github.com/xuegangliu/blog/2017/07/19/problem/js-problem/"/>
+    <id>https://github.com/xuegangliu/blog/2017/07/19/problem/js-problem/</id>
     <published>2017-07-19T13:33:02.000Z</published>
     <updated>2017-07-13T15:33:02.000Z</updated>
     
@@ -283,46 +304,19 @@
     
     </summary>
     
-      <category term="javascript" scheme="https://github.com/xuegangliu/blog/categories/javascript/"/>
+      <category term="problem" scheme="https://github.com/xuegangliu/blog/categories/problem/"/>
     
+    
+      <category term="simple" scheme="https://github.com/xuegangliu/blog/tags/simple/"/>
     
       <category term="javascript" scheme="https://github.com/xuegangliu/blog/tags/javascript/"/>
-    
-      <category term="js" scheme="https://github.com/xuegangliu/blog/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式</title>
-    <link href="https://github.com/xuegangliu/blog/2017/07/19/other/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://github.com/xuegangliu/blog/2017/07/19/other/设计模式/</id>
-    <published>2017-07-19T13:33:02.000Z</published>
-    <updated>2017-07-13T15:33:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="设计模式-Design-pattern"><a href="#设计模式-Design-pattern" class="headerlink" title="设计模式(Design pattern)"></a>设计模式(Design pattern)</h1><h2 id="设计模式简介"><a href="#设计模式简介" class="headerlink" title="设计模式简介"></a>设计模式简介</h2><ol><li><strong>设计模式(Design pattern)</strong> 代表了最佳的实践，通常被有经验的面向对象的软件开发人员所采用。</li><li><strong>设计模式</strong>是软件开发人员在软件开发过程中面临的一般问题的解决方案。</li><li>这些解决方案是众多软件开发人员经过相当长的一段时间的试验和错误总结出来的。</li><li><strong>设计模式</strong>是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结。</li><li>使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 </li><li>毫无疑问，设计模式于己于他人于系统都是多赢的，设计模式使代码编制真正工程化，设计模式是软件工程的基石，如同大厦的一块块砖石一样。</li><li>项目中合理地运用设计模式可以完美地解决很多问题，每种模式在现实中都有相应的原理来与之对应，每种模式都描述了一个在我们周围不断重复发生的问题，以及该问题的核心解决方案，这也是设计模式能被广泛应用的原因。</li></ol><h2 id="设计模式原则"><a href="#设计模式原则" class="headerlink" title="设计模式原则"></a><strong>设计模式原则</strong></h2><ul><li><em>开闭原则（Open Close Principle）</em></li></ul><p>开闭原则的意思是：对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。简言之，是为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。</p><ul><li><em>里氏代换原则（Liskov Substitution Principle）</em></li></ul><p>里氏代换原则是面向对象设计的基本原则之一。 里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现。LSP 是继承复用的基石，只有当派生类可以替换掉基类，且软件单位的功能不受到影响时，基类才能真正被复用，而派生类也能够在基类的基础上增加新的行为。里氏代换原则是对开闭原则的补充。实现开闭原则的关键步骤就是抽象化，而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。</p><ul><li><em>依赖倒转原则（Dependence Inversion Principle）</em></li></ul><p>这个原则是开闭原则的基础，具体内容：针对接口编程，依赖于抽象而不依赖于具体。</p><ul><li><em>接口隔离原则（Interface Segregation Principle）</em></li></ul><p>这个原则的意思是：使用多个隔离的接口，比使用单个接口要好。它还有另外一个意思是：降低类之间的耦合度。由此可见，其实设计模式就是从大型软件架构出发、便于升级和维护的软件设计思想，它强调降低依赖，降低耦合。</p><ul><li><p><em>迪米特法则，又称最少知道原则（Demeter Principle）</em></p><p>最少知道原则是指：一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立。</p></li><li><p><em>合成复用原则（Composite Reuse Principle）</em></p><p>合成复用原则是指：尽量使用合成/聚合的方式，而不是使用继承。</p></li></ul><h2 id="设计模式的使用"><a href="#设计模式的使用" class="headerlink" title="设计模式的使用"></a>设计模式的使用</h2><ul><li>开发人员的共同平台</li></ul><p>设计模式提供了一个标准的术语系统，且具体到特定的情景。例如，单例设计模式意味着使用单个对象，这样所有熟悉单例设计模式的开发人员都能使用单个对象，并且可以通过这种方式告诉对方，程序使用的是单例模式。</p><ul><li>最佳的实践  </li></ul><p>设计模式已经经历了很长一段时间的发展，它们提供了软件开发过程中面临的一般问题的最佳解决方案。学习这些模式有助于经验不足的开发人员通过一种简单快捷的方式来学习软件设计。</p><hr><h1 id="设计模式类型"><a href="#设计模式类型" class="headerlink" title="设计模式类型"></a>设计模式类型</h1><p><strong>创建型模式</strong></p><p>这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用新的运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。</p><ul><li><em>工厂模式（Factory Pattern）</em></li><li><em>抽象工厂模式（Abstract Factory Pattern）</em>  </li><li><em>单例模式（Singleton Pattern）</em> </li><li><em>建造者模式（Builder Pattern）</em> </li><li><em>原型模式（Prototype Pattern）</em></li></ul><p><strong>结构型模式</strong></p><p>这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。    </p><ul><li><em>适配器模式（Adapter Pattern）</em>  </li><li><em>桥接模式（Bridge Pattern）</em></li><li><em>过滤器模式（Filter、Criteria Pattern）</em></li><li><em>组合模式（Composite Pattern）</em></li><li><em>装饰器模式（Decorator Pattern）</em></li><li><em>外观模式（Facade Pattern）</em></li><li><em>享元模式（Flyweight Pattern）</em></li><li><em>代理模式（Proxy Pattern）</em></li></ul><p><strong>行为型模式</strong></p><p>这些设计模式特别关注对象之间的通信。    </p><ul><li><em>责任链模式（Chain of Responsibility Pattern）</em></li><li><em>命令模式（Command Pattern）</em></li><li><em>解释器模式（Interpreter Pattern）</em></li><li><em>迭代器模式（Iterator Pattern）</em></li><li><em>中介者模式（Mediator Pattern）</em></li><li><em>备忘录模式（Memento Pattern）</em></li><li><em>观察者模式（Observer Pattern）</em></li><li><em>状态模式（State Pattern）</em></li><li><em>空对象模式（Null Object Pattern）</em></li><li><em>策略模式（Strategy Pattern）</em></li><li><em>模板模式（Template Pattern）</em></li><li><em>访问者模式（Visitor Pattern）</em></li></ul><p><strong>J2EE 模式</strong></p><p>这些设计模式特别关注表示层。这些模式是由 Sun Java Center 鉴定的。    </p><ul><li><em>MVC 模式（MVC Pattern）</em></li><li><em>业务代表模式（Business Delegate Pattern）</em></li><li><em>组合实体模式（Composite Entity Pattern）</em></li><li><em>数据访问对象模式（Data Access Object Pattern）</em></li><li><em>前端控制器模式（Front Controller Pattern）</em></li><li><em>拦截过滤器模式（Intercepting Filter Pattern）</em></li><li><em>服务定位器模式（Service Locator Pattern）</em></li><li><em>传输对象模式（Transfer Object Pattern）</em></li></ul><h2 id="设计模式直接的关系"><a href="#设计模式直接的关系" class="headerlink" title="设计模式直接的关系"></a>设计模式直接的关系</h2><p><img src="/blog/images/java/design-patterns.jpg" alt="设计模式图"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;设计模式-Design-pattern&quot;&gt;&lt;a href=&quot;#设计模式-Design-pattern&quot; class=&quot;headerlink&quot; title=&quot;设计模式(Design pattern)&quot;&gt;&lt;/a&gt;设计模式(Design pattern)&lt;/h1&gt;&lt;h2
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="https://github.com/xuegangliu/blog/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="https://github.com/xuegangliu/blog/tags/Java/"/>
-    
-      <category term="设计模式" scheme="https://github.com/xuegangliu/blog/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>docker基础</title>
-    <link href="https://github.com/xuegangliu/blog/2017/01/09/system/docker%E5%9F%BA%E7%A1%80/"/>
-    <id>https://github.com/xuegangliu/blog/2017/01/09/system/docker基础/</id>
+    <link href="https://github.com/xuegangliu/blog/2017/01/09/server/docker_base/"/>
+    <id>https://github.com/xuegangliu/blog/2017/01/09/server/docker_base/</id>
     <published>2017-01-09T14:08:37.000Z</published>
     <updated>2017-01-09T14:08:37.000Z</updated>
     
@@ -339,19 +333,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="https://github.com/xuegangliu/blog/categories/Linux/"/>
+      <category term="server" scheme="https://github.com/xuegangliu/blog/categories/server/"/>
     
     
-      <category term="Linux" scheme="https://github.com/xuegangliu/blog/tags/Linux/"/>
-    
-      <category term="Docker" scheme="https://github.com/xuegangliu/blog/tags/Docker/"/>
+      <category term="docker" scheme="https://github.com/xuegangliu/blog/tags/docker/"/>
     
   </entry>
   
   <entry>
     <title>Oracle常用Sql</title>
-    <link href="https://github.com/xuegangliu/blog/2016/12/04/db/Oracle%E5%B8%B8%E7%94%A8Sql/"/>
-    <id>https://github.com/xuegangliu/blog/2016/12/04/db/Oracle常用Sql/</id>
+    <link href="https://github.com/xuegangliu/blog/2016/12/04/db/oracle_base_sql/"/>
+    <id>https://github.com/xuegangliu/blog/2016/12/04/db/oracle_base_sql/</id>
     <published>2016-12-04T10:03:46.000Z</published>
     <updated>2016-12-04T10:03:46.000Z</updated>
     
@@ -366,19 +358,19 @@
     
     </summary>
     
-      <category term="Oracle" scheme="https://github.com/xuegangliu/blog/categories/Oracle/"/>
+      <category term="database" scheme="https://github.com/xuegangliu/blog/categories/database/"/>
     
     
-      <category term="Oracle" scheme="https://github.com/xuegangliu/blog/tags/Oracle/"/>
+      <category term="oracle" scheme="https://github.com/xuegangliu/blog/tags/oracle/"/>
     
-      <category term="SQL" scheme="https://github.com/xuegangliu/blog/tags/SQL/"/>
+      <category term="sql" scheme="https://github.com/xuegangliu/blog/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>Oracle索引</title>
-    <link href="https://github.com/xuegangliu/blog/2016/12/04/db/Oracle%E7%B4%A2%E5%BC%95/"/>
-    <id>https://github.com/xuegangliu/blog/2016/12/04/db/Oracle索引/</id>
+    <link href="https://github.com/xuegangliu/blog/2016/12/04/db/oracle_index_base/"/>
+    <id>https://github.com/xuegangliu/blog/2016/12/04/db/oracle_index_base/</id>
     <published>2016-12-04T10:03:46.000Z</published>
     <updated>2016-12-04T10:03:46.000Z</updated>
     
@@ -393,19 +385,119 @@
     
     </summary>
     
-      <category term="Oracle" scheme="https://github.com/xuegangliu/blog/categories/Oracle/"/>
+      <category term="database" scheme="https://github.com/xuegangliu/blog/categories/database/"/>
     
     
-      <category term="Oracle" scheme="https://github.com/xuegangliu/blog/tags/Oracle/"/>
+      <category term="oracle" scheme="https://github.com/xuegangliu/blog/tags/oracle/"/>
     
-      <category term="SQL" scheme="https://github.com/xuegangliu/blog/tags/SQL/"/>
+      <category term="knowledge" scheme="https://github.com/xuegangliu/blog/tags/knowledge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim使用</title>
+    <link href="https://github.com/xuegangliu/blog/2016/11/09/linux/vim_use/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/09/linux/vim_use/</id>
+    <published>2016-11-09T15:10:43.000Z</published>
+    <updated>2016-11-09T15:10:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vim-基本使用"><a href="#vim-基本使用" class="headerlink" title="vim 基本使用"></a>vim 基本使用</h1><p><img src="/book/images/linux/vim.gif" alt="键盘图"></p><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>刚刚启动 vi/vim，便进入了命令模式。此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。以下是常用的几个命令：</p><ul><li>i 切换到输入模式，以输入字符。</li><li>x 删除当前光标所在处的字符。</li><li>: 切换到底线命令模式，以在最底一行输入命令。</li><li>若想要编辑文本：启动Vim，进入了命令模式，按下i，切换到输入模式。</li><li>命令模式只有一些最基本的命令，因此仍要依靠底线命令模式输入更多命令。</li></ul><h2 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h2><p>命令模式下按下i就进入了输入模式。在输入模式中，可以使用以下按键：</p><ul><li>字符按键以及Shift组合，输入字符</li><li>ENTER，回车键，换行</li><li>BACK SPACE，退格键，删除光标前一个字符</li><li>DEL，删除键，删除光标后一个字符</li><li>方向键，在文本中移动光标</li><li>HOME/END，移动光标到行首/行尾</li><li>Page Up/Page Down，上/下翻页</li><li>Insert，切换光标为输入/替换模式，光标将变成竖线/下划线</li><li>ESC，退出输入模式，切换到命令模式</li></ul><h2 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h2><p>在命令模式下按下:（英文冒号）就进入了底线命令模式。底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。在底线命令模式中，基本的命令有（已经省略了冒号）：</p><ul><li>q 退出程序</li><li>w 保存文件</li><li>ESC键可随时退出底线命令模式。</li></ul><p><img src="/book/images/linux/vim01.png" alt="模式切换"></p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><h3 id="一般模式可用的光标移动、复制粘贴、搜索替换等"><a href="#一般模式可用的光标移动、复制粘贴、搜索替换等" class="headerlink" title="一般模式可用的光标移动、复制粘贴、搜索替换等"></a>一般模式可用的光标移动、复制粘贴、搜索替换等</h3><h4 id="移动光标的方法"><a href="#移动光标的方法" class="headerlink" title="移动光标的方法"></a>移动光标的方法</h4><ul><li>h 或 向左箭头键(←)    光标向左移动一个字符</li><li>j 或 向下箭头键(↓)    光标向下移动一个字符</li><li>k 或 向上箭头键(↑)    光标向上移动一个字符</li><li>l 或 向右箭头键(→)    光标向右移动一个字符</li><li>如果想要进行多次移动的话，例如向下移动 30 行，可以使用 “30j” 或 “30↓” 的组合按键， 亦即加上想要进行的次数(数字)后，按下动作即可！</li><li>[Ctrl] + [f]    屏幕『向下』移动一页，相当于 - - - [Page Down]按键 (常用)</li><li>[Ctrl] + [b]    屏幕『向上』移动一页，相当于 - - - [Page Up] 按键 (常用)</li><li>[Ctrl] + [d]    屏幕『向下』移动半页</li><li>[Ctrl] + [u]    屏幕『向上』移动半页</li><li><ul><li>光标移动到非空格符的下一行</li></ul></li><li><ul><li>光标移动到非空格符的上一行</li></ul></li><li>n<space>    那个 n 表示『数字』，例如 20 。按下数字后再按空格键，光标会向右移动这一行的 n 个字符。例如 20<space> 则光标会向后面移动 20 个字符距离。</space></space></li><li>0 或功能键[Home]    这是数字『 0 』：移动到这一行的最前面字符处 (常用)</li><li>$ 或功能键[End]    移动到这一行的最后面字符处(常用)</li><li>H    光标移动到这个屏幕的最上方那一行的第一个字符</li><li>M    光标移动到这个屏幕的中央那一行的第一个字符</li><li>L    光标移动到这个屏幕的最下方那一行的第一个字符</li><li>G    移动到这个档案的最后一行(常用)</li><li>nG    n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)</li><li>gg    移动到这个档案的第一行，相当于 1G 啊！ (常用)</li><li>n<enter>    n 为数字。光标向下移动 n 行(常用)</enter></li></ul><h4 id="搜索替换"><a href="#搜索替换" class="headerlink" title="搜索替换"></a>搜索替换</h4><ul><li>/word    向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！ (常用)</li><li>?word    向光标之上寻找一个字符串名称为 word 的字符串。</li><li>n    这个 n 是英文按键。代表重复前一个搜寻的动作。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字符串，则按下 n 后，会向下继续搜寻下一个名称为 vbird 的字符串。如果是执行 ?vbird 的话，那么按下 n 则会向上继续搜寻名称为 vbird 的字符串！</li><li>N    这个 N 是英文按键。与 n 刚好相反，为『反向』进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示『向上』搜寻 vbird 。</li><li>使用 /word 配合 n 及 N 是非常有帮助的！可以让你重复的找到一些你搜寻的关键词！</li><li>:n1,n2s/word1/word2/g    n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 ！举例来说，在 100 到 200 行之间搜寻 vbird 并取代为 VBIRD 则：</li><li>『:100,200s/vbird/VBIRD/g』。(常用)</li><li>:1,$s/word1/word2/g    从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！(常用)</li><li>:1,$s/word1/word2/gc    从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代！(常用)</li></ul><h4 id="删除、复制与贴上"><a href="#删除、复制与贴上" class="headerlink" title="删除、复制与贴上"></a>删除、复制与贴上</h4><ul><li>x, X    在一行字当中，x 为向后删除一个字符 (相当于 [del] 按键)， X 为向前删除一个字符(相当于 [backspace] 亦即是退格键) (常用)</li><li>nx    n 为数字，连续向后删除 n 个字符。举例来说，我要连续删除 10 个字符， 『10x』。</li><li>dd    删除游标所在的那一整行(常用)</li><li>ndd    n 为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行 (常用)</li><li>d1G    删除光标所在到第一行的所有数据</li><li>dG    删除光标所在到最后一行的所有数据</li><li>d$    删除游标所在处，到该行的最后一个字符</li><li>d0    那个是数字的 0 ，删除游标所在处，到该行的最前面一个字符</li><li>yy    复制游标所在的那一行(常用)</li><li>nyy    n 为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行(常用)</li><li>y1G    复制游标所在行到第一行的所有数据</li><li>yG    复制游标所在行到最后一行的所有数据</li><li>y0    复制光标所在的那个字符到该行行首的所有数据</li><li>y$    复制光标所在的那个字符到该行行尾的所有数据</li><li>p, P    p 为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行！ 举例来说，我目前光标在第 20 行，且已经复制了 10 行数据。则按下 p 后， 那 10 行数据会贴在原本的 20 行之后，亦即由 21 行开始贴。但如果是按下 P 呢？ 那么原本的第 20 行会被推到变成 30 行。 (常用)</li><li>J    将光标所在行与下一行的数据结合成同一行</li><li>c    重复删除多个数据，例如向下删除 10 行，[ 10cj ]</li><li>u    复原前一个动作。(常用)</li><li>[Ctrl]+r    重做上一个动作。(常用)</li><li>这个 u 与 [Ctrl]+r 是很常用的指令！一个是复原，另一个则是重做一次～ 利用这两个功能按键，你的编辑，嘿嘿！很快乐的啦！</li><li>.    不要怀疑！这就是小数点！意思是重复前一个动作的意思。 如果你想要重复删除、重复贴上等等动作，按下小数点『.』就好了！ (常用)</li></ul><h3 id="一般模式切换到编辑模式的可用的按钮说明"><a href="#一般模式切换到编辑模式的可用的按钮说明" class="headerlink" title="一般模式切换到编辑模式的可用的按钮说明"></a>一般模式切换到编辑模式的可用的按钮说明</h3><p>进入输入或取代的编辑模式</p><ul><li>i, I    进入输入模式(Insert mode)：i 为『从目前光标所在处输入』， I 为『在目前所在行的第一个非空格符处开始输入』。 (常用)</li><li>a, A    进入输入模式(Insert mode)：a 为『从目前光标所在的下一个字符处开始输入』， A 为『从光标所在行的最后一个字符处开始输入』。(常用)</li><li>o, O    进入输入模式(Insert mode)：这是英文字母 o 的大小写。o 为『在目前光标所在的下一行处输入新的一行』； O 为在目前光标所在处的上一行输入新的一行！(常用)</li><li>r, R    进入取代模式(Replace mode)：r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；(常用)<br><code>在 vi 画面的左下角处会出现『--INSERT--』或『--REPLACE--』的字样 才能输入</code></li><li>[Esc]    退出编辑模式，回到一般模式中(常用)</li></ul><h3 id="一般模式切换到指令行模式的可用的按钮说明"><a href="#一般模式切换到指令行模式的可用的按钮说明" class="headerlink" title="一般模式切换到指令行模式的可用的按钮说明"></a>一般模式切换到指令行模式的可用的按钮说明</h3><p>指令行的储存、离开等指令</p><ul><li>:w    将编辑的数据写入硬盘档案中(常用)</li><li>:w!    若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关啊！</li><li>:q    离开 vi (常用)</li><li>:q!    若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br>注意一下啊，那个惊叹号 (!) 在 vi 当中，常常具有『强制』的意思～</li><li>:wq    储存后离开，若为 :wq! 则为强制储存后离开 (常用)<br>ZZ    这是大写的 Z 喔！若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开！</li><li>:w [filename]    将编辑的数据储存成另一个档案（类似另存新档）</li><li>:r [filename]    在编辑的数据中，读入另一个档案的数据。亦即将 『filename』 这个档案内容加到游标所在行后面</li><li>:n1,n2 w [filename]    将 n1 到 n2 的内容储存成 filename 这个档案。</li><li>:! command    暂时离开 vi 到指令行模式下执行 command 的显示结果！例如<br>『:! ls /home』即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！</li></ul><h3 id="vim-环境的变更"><a href="#vim-环境的变更" class="headerlink" title="vim 环境的变更"></a>vim 环境的变更</h3><ul><li>:set nu    显示行号，设定之后，会在每一行的前缀显示该行的行号</li><li>:set nonu    与 set nu 相反，为取消行号！</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;vim-基本使用&quot;&gt;&lt;a href=&quot;#vim-基本使用&quot; class=&quot;headerlink&quot; title=&quot;vim 基本使用&quot;&gt;&lt;/a&gt;vim 基本使用&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/book/images/linux/vim.gif&quot; alt=&quot;键盘图
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="https://github.com/xuegangliu/blog/categories/linux/"/>
+    
+    
+      <category term="vim" scheme="https://github.com/xuegangliu/blog/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>公司高阶职位名称</title>
+    <link href="https://github.com/xuegangliu/blog/2016/11/09/others/work-name/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/09/others/work-name/</id>
+    <published>2016-11-09T15:10:43.000Z</published>
+    <updated>2016-11-09T15:10:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="公司高阶职位名称简介"><a href="#公司高阶职位名称简介" class="headerlink" title="公司高阶职位名称简介"></a>公司高阶职位名称简介</h1><p>CIO、CEO、CFO、COO、CTO、CKO、CPO、CGO都是属于公司的高阶职位。</p><ul><li><p>CIO（Chief Information Officer 首席信息官）</p><p>  主要负责制定公司的信息政策、标准、程序的方法，并对全公司的信息资源进行管理和控制。</p></li><li><p>CEO（Chief Executive Officer 首席执行官）</p><p>  主要负责企业日常经营管理决策。</p></li><li><p>CFO（Chief Financial Officer 首席财务官）</p><p>  全面负责企业财务管理。</p></li><li><p>COO（Chief Operating Officer 首席运营官）</p><p>  具体负责公司的日常运营。</p></li><li><p>CTO（Chief Technology Officer 首席技术官）</p><p>  企业内负责技术的最高负责人，由于互联网的迅猛发展，有时CT0和CIO是同一个人。</p></li></ul><ul><li><p>CKO（Chief Knowledge Officer 首席知识官）</p><p>  主要负责企业内部的知识管理等相关工作</p></li><li><p>CPO（Chief Procurement Officer 首席采购官）</p><p>  负责企业采购方面的全面工作。</p></li><li><p>CGO（Chief Game Officer 首席游戏官）</p><p>  这个主要是游戏公司或网吧里设置的岗位或系统，一般企业里没有这样的岗。当然，也不排除一些前卫的公司针对90后特意设置这样的岗位。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;公司高阶职位名称简介&quot;&gt;&lt;a href=&quot;#公司高阶职位名称简介&quot; class=&quot;headerlink&quot; title=&quot;公司高阶职位名称简介&quot;&gt;&lt;/a&gt;公司高阶职位名称简介&lt;/h1&gt;&lt;p&gt;CIO、CEO、CFO、COO、CTO、CKO、CPO、CGO都是属于公司的
+      
+    
+    </summary>
+    
+      <category term="others" scheme="https://github.com/xuegangliu/blog/categories/others/"/>
+    
+    
+      <category term="work" scheme="https://github.com/xuegangliu/blog/tags/work/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>idea快捷键</title>
+    <link href="https://github.com/xuegangliu/blog/2016/11/09/tools/IDEA_use/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/09/tools/IDEA_use/</id>
+    <published>2016-11-09T15:10:43.000Z</published>
+    <updated>2016-11-09T15:10:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><h2 id="IntelliJ-Idea"><a href="#IntelliJ-Idea" class="headerlink" title="IntelliJ Idea"></a>IntelliJ Idea</h2><h3 id="实用快捷键"><a href="#实用快捷键" class="headerlink" title="实用快捷键:"></a>实用快捷键:</h3><ul><li>Ctrl+/ 或 Ctrl+Shift+/ 注释（// 或者/<em>…</em>/ ）</li><li>Ctrl+D 复制行</li><li>Ctrl+X 删除行</li><li>快速修复 alt+enter (modify/cast)</li><li>代码提示 alt+/</li><li>ctr+G 定位某一行</li><li>Shift+F6 重构-重命名</li><li>Ctrl+R 替换文本</li><li>Ctrl+F 查找文本</li><li>Ctrl+E 最近打开的文件</li><li>Ctrl+J 自动代码</li><li>组织导入 ctr+alt+O</li><li>格式化代码 ctr+alt+L</li><li>大小写转化 ctr+shift+U</li></ul><h3 id="IntelliJ-Idea-常用快捷键列表"><a href="#IntelliJ-Idea-常用快捷键列表" class="headerlink" title="IntelliJ Idea 常用快捷键列表"></a>IntelliJ Idea 常用快捷键列表</h3><ul><li>Alt+回车 导入包,自动修正</li><li>Ctrl+N   查找类</li><li>Ctrl+Shift+N 查找文件</li><li>Ctrl+Alt+L  格式化代码</li><li>Ctrl+Alt+O 优化导入的类和包</li><li>Alt+Insert 生成代码(如get,set方法,构造函数等)</li><li>Ctrl+E或者Alt+Shift+C  最近更改的代码</li><li>Ctrl+R 替换文本</li><li>Ctrl+F 查找文本</li><li>Ctrl+Shift+Space 自动补全代码</li><li>Ctrl+空格 代码提示</li><li>Ctrl+Alt+Space 类名或接口名提示</li><li>Ctrl+P 方法参数提示</li><li>Ctrl+Shift+Alt+N 查找类中的方法或变量</li><li>Alt+Shift+C 对比最近修改的代码</li><li>Shift+F6  重构-重命名</li><li>Ctrl+Shift+先上键</li><li>Ctrl+X 删除行</li><li>Ctrl+D 复制行</li><li>Ctrl+/ 或 Ctrl+Shift+/  注释（// 或者/<em>…</em>/ ）</li><li>Ctrl+J  自动代码</li><li>Ctrl+E 最近打开的文件</li><li>Ctrl+H 显示类结构图</li><li>Ctrl+Q 显示注释文档</li><li>Alt+F1 查找代码所在位置</li><li>Alt+1 快速打开或隐藏工程面板</li><li>Ctrl+Alt+ left/right 返回至上次浏览的位置</li><li>Alt+ left/right 切换代码视图</li><li>Alt+ Up/Down 在方法间快速移动定位</li><li>Ctrl+Shift+Up/Down 代码向上/下移动。</li><li>F2 或Shift+F2 高亮错误或警告快速定位</li><li>代码标签输入完成后，按Tab，生成代码。</li><li>选中文本，按Ctrl+Shift+F7 ，高亮显示所有该文本，按Esc高亮消失。</li><li>Ctrl+W 选中代码，连续按会有其他效果</li><li>选中文本，按Alt+F3 ，逐个往下查找相同文本，并高亮显示。</li><li>Ctrl+Up/Down 光标跳转到第一行或最后一行下</li><li>Ctrl+B 快速打开光标处的类或方法 </li></ul><h3 id="1-IDEA内存优化"><a href="#1-IDEA内存优化" class="headerlink" title="1. IDEA内存优化"></a>1. IDEA内存优化</h3><p>因机器本身的配置而配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\IntelliJ IDEA 8\bin\idea.exe.vmoptions  </span><br><span class="line">-----------------------------------------  </span><br><span class="line">-Xms64m  </span><br><span class="line">-Xmx256m  </span><br><span class="line">-XX:MaxPermSize=92m  </span><br><span class="line">-ea  </span><br><span class="line">-server  </span><br><span class="line">-Dsun.awt.keepWorkingSetOnMinimize=true</span><br></pre></td></tr></table></figure></p><h3 id="2-查询快捷键"><a href="#2-查询快捷键" class="headerlink" title="2. 查询快捷键"></a>2. 查询快捷键</h3><ul><li>CTRL+N   查找类 </li><li>CTRL+SHIFT+N  查找文件 </li><li>CTRL+SHIFT+ALT+N 查找类中的方法或变量 </li><li>CIRL+B   找变量的来源 </li><li>CTRL+ALT+B  找所有的子类 </li><li>CTRL+SHIFT+B  找变量的类 </li><li>CTRL+G   定位行 </li><li>CTRL+F   在当前窗口查找文本 </li><li>CTRL+SHIFT+F  在指定窗口查找文本 </li><li>CTRL+R   在 当前窗口替换文本 </li><li>CTRL+SHIFT+R  在指定窗口替换文本 </li><li>ALT+SHIFT+C  查找修改的文件 </li><li>CTRL+E   最近打开的文件 </li><li>F3   向下查找关键字出现位置 </li><li>SHIFT+F3  向上一个关键字出现位置 </li><li>F4   查找变量来源 </li><li>CTRL+ALT+F7  选中的字符查找工程出现的地方 </li><li>CTRL+SHIFT+O  弹出显示查找内容</li></ul><h3 id="3-自动代码"><a href="#3-自动代码" class="headerlink" title="3. 自动代码"></a>3. 自动代码</h3><ul><li>ALT+回车  导入包,自动修正 </li><li>CTRL+ALT+L  格式化代码 </li><li>CTRL+ALT+I  自动缩进 </li><li>CTRL+ALT+O  优化导入的类和包 </li><li>ALT+INSERT  生成代码(如GET,SET方法,构造函数等) </li><li>CTRL+E 最近更改的代码 </li><li>CTRL+SHIFT+SPACE 自动补全代码 </li><li>CTRL+空格  代码提示 </li><li>CTRL+ALT+SPACE  类名或接口名提示 </li><li>CTRL+P   方法参数提示 </li><li>CTRL+J   自动代码 </li><li>CTRL+ALT+T  把选中的代码放在 TRY{} IF{} ELSE{} 里</li></ul><h3 id="4-复制快捷方式"><a href="#4-复制快捷方式" class="headerlink" title="4. 复制快捷方式"></a>4. 复制快捷方式</h3><ul><li>CTRL+D   复制行 </li><li>CTRL+X   剪切,删除行  </li></ul><h3 id="5-其他快捷方式"><a href="#5-其他快捷方式" class="headerlink" title="5. 其他快捷方式"></a>5. 其他快捷方式</h3><ul><li>CIRL+U   大小写切换 </li><li>CTRL+Z   倒退 </li><li>CTRL+SHIFT+Z  向前 </li><li>CTRL+ALT+F12  资源管理器打开文件夹 </li><li>ALT+F1   查找文件所在目录位置 </li><li>SHIFT+ALT+INSERT 竖编辑模式 </li><li>CTRL+/   注释//   </li><li>CTRL+SHIFT+/  注释/<em>…</em>/ </li><li>CTRL+W   选中代码，连续按会有其他效果 </li><li>CTRL+B   快速打开光标处的类或方法 </li><li>ALT+ ←/→  切换代码视图 </li><li>CTRL+ALT ←/→  返回上次编辑的位置 </li><li>ALT+ ↑/↓  在方法间快速移动定位 </li><li>SHIFT+F6  重构-重命名 </li><li>CTRL+H   显示类结构图 </li><li>CTRL+Q   显示注释文档 </li><li>ALT+1   快速打开或隐藏工程面板 </li><li>CTRL+SHIFT+UP/DOWN 代码向上/下移动。 </li><li>CTRL+UP/DOWN  光标跳转到第一行或最后一行下 </li><li>ESC   光标返回编辑框 </li><li>SHIFT+ESC  光标返回编辑框,关闭无用的窗口 </li><li>F1   帮助千万别按,很卡! </li><li>CTRL+F4   非常重要下班都用</li></ul><h2 id="Eclipse"><a href="#Eclipse" class="headerlink" title="Eclipse"></a>Eclipse</h2><ul><li>Ctrl + 2,L  补全  自己改为Alt + q</li><li>选中按F4 或 Ctrl + t   进入层次视图—–体系结构</li><li>Alt+/    内容补全</li><li>Ctrl + 1  帮助</li><li>Ctrl + d  删除当前行</li><li>Ctrl + M  最大化当前的Edit或View (再按则反之)</li><li>Ctrl + f  查找/替换</li><li>Ctrl + 点击   进入源码</li><li>Alt + Shift + r   改名</li><li>Ctrl + Shift + o   快速导包</li><li>Ctrl + Shift + r   打开源</li><li>Ctr + Shift + f   格式化代码</li><li>Ctrl + Shift + x   变大写</li><li>Ctrl + Shift + x   变小写</li><li>Ctrl + Shift + t   类查询</li><li>syso + Alt + /   输出</li><li>Alt + ←   前一个编辑的页面</li><li>Alt + →   下一个编辑的页面</li><li>Alt + 上箭头    上移</li><li>Alt + 下箭头    下移</li><li>Ctrl + /    单行注释</li><li>Ctrl + Shift + /   多行注释</li><li>Ctrl + Shift + \   取消注释</li><li>Ctrl + Shift + c   适用于各种文档的注释</li><li>Ctrl + Alt + 上箭头/下箭头   上复制/下复制</li><li>Alt + Shift + s   源操作</li><li>Alt + Shift + t   方法操作</li><li>Alt + Shift + z   语句操作</li><li>Alt + Shift + m   提取方法</li><li>Alt + Shift + L      提取本地变量</li><li>Alt + 1   packageExporer显示</li><li>Alt + 2   console显示</li><li>Alt + 3   Outline显示</li><li>小绿圆圈——&gt;方法</li><li>小绿三角——&gt;属性</li><li>带土红色 s —–&gt;静态</li><li>Alt + 4   navigator导航显示</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; title=&quot;开发工具&quot;&gt;&lt;/a&gt;开发工具&lt;/h1&gt;&lt;h2 id=&quot;IntelliJ-Idea&quot;&gt;&lt;a href=&quot;#IntelliJ-Idea&quot; class=&quot;headerlink
+      
+    
+    </summary>
+    
+      <category term="tools" scheme="https://github.com/xuegangliu/blog/categories/tools/"/>
+    
+    
+      <category term="IntelliJ_IDEA" scheme="https://github.com/xuegangliu/blog/tags/IntelliJ-IDEA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git基础使用</title>
+    <link href="https://github.com/xuegangliu/blog/2016/11/09/tools/git_use_base/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/09/tools/git_use_base/</id>
+    <published>2016-11-09T15:10:43.000Z</published>
+    <updated>2016-11-09T15:10:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git-常用命令-含删除文件"><a href="#git-常用命令-含删除文件" class="headerlink" title="git 常用命令(含删除文件)"></a>git 常用命令(含删除文件)</h1><h2 id="Git常用操作命令收集："><a href="#Git常用操作命令收集：" class="headerlink" title="Git常用操作命令收集："></a>Git常用操作命令收集：</h2><h3 id="1-远程仓库相关命令"><a href="#1-远程仓库相关命令" class="headerlink" title="1) 远程仓库相关命令"></a>1) 远程仓库相关命令</h3><ul><li>检出仓库：$ git clone git://github.com/jquery/jquery.git</li><li>查看远程仓库：$ git remote -v</li><li>添加远程仓库：$ git remote add [name] [url]</li><li>删除远程仓库：$ git remote rm [name]</li><li>修改远程仓库：$ git remote set-url –push[name][newUrl]</li><li>拉取远程仓库：$ git pull [remoteName] [localBranchName]</li><li>推送远程仓库：$ git push [remoteName] [localBranchName]</li></ul><h3 id="2）分支-branch-操作相关命令"><a href="#2）分支-branch-操作相关命令" class="headerlink" title="2）分支(branch)操作相关命令"></a>2）分支(branch)操作相关命令</h3><ul><li>查看本地分支：$ git branch</li><li>查看远程分支：$ git branch -r</li><li>创建本地分支：$ git branch [name] —-注意新分支创建后不会自动切换为当前分支</li><li>切换分支：$ git checkout [name]</li><li>创建新分支并立即切换到新分支：$ git checkout -b [name]</li><li>删除分支：$ git branch -d [name] —- -d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项</li><li>合并分支：$ git merge [name] —-将名称为[name]的分支与当前分支合并</li><li>创建远程分支(本地分支push到远程)：$ git push origin [name]</li><li>删除远程分支：$ git push origin :heads/[name]</li><li>我从master分支创建了一个issue5560分支，做了一些修改后，使用git push origin master提交，但是显示的结果却是’Everything up-to-date’，发生问题的原因是git push origin master 在没有track远程分支的本地分支中默认提交的master分支，因为master分支默认指向了origin master 分支，这里要使用git push origin issue5560：master 就可以把issue5560推送到远程的master分支了。</li><li><p>如果想把本地的某个分支test提交到远程仓库，并作为远程仓库的master分支，或者作为另外一个名叫test的分支，那么可以这么做。</p></li><li><p>$ git push origin test:master         // 提交本地test分支作为远程的master分支 //好像只写这一句，远程的github就会自动创建一个test分支</p></li><li><p>$ git push origin test:test              // 提交本地test分支作为远程的test分支</p></li><li><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。</p></li><li><p>$ git push origin :test              // 刚提交到远程的test将被删除，但是本地还会保存的，不用担心</p></li></ul><h3 id="3）版本-tag-操作相关命令"><a href="#3）版本-tag-操作相关命令" class="headerlink" title="3）版本(tag)操作相关命令"></a>3）版本(tag)操作相关命令</h3><ul><li>查看版本：$ git tag</li><li>创建版本：$ git tag [name]</li><li>删除版本：$ git tag -d [name]</li><li>查看远程版本：$ git tag -r</li><li>创建远程版本(本地版本push到远程)：$ git push origin [name]</li><li>删除远程版本：$ git push origin :refs/tags/[name]</li></ul><h3 id="4-子模块-submodule-相关操作命令"><a href="#4-子模块-submodule-相关操作命令" class="headerlink" title="4) 子模块(submodule)相关操作命令"></a>4) 子模块(submodule)相关操作命令</h3><ul><li>添加子模块：$ git submodule add [url] [path]如：$ git submodule add git://github.com/soberh/ui-libs.git src/main/webapp/ui-libs</li><li>初始化子模块：$ git submodule init —-只在首次检出仓库时运行一次就行</li><li>更新子模块：$ git submodule update —-每次更新或切换分支后都需要运行一下</li><li>删除子模块：（分4步走哦）<ul><li>1)$ git rm –cached [path]</li><li>2) 编辑“.gitmodules”文件，将子模块的相关配置节点删除掉</li><li>3) 编辑“.git/config”文件，将子模块的相关配置节点删除掉</li><li>4) 手动删除子模块残留的目录</li><li>5）忽略一些文件、文件夹不提交在仓库根目录下创建名称为“.gitignore”的文件，写入不需要的文件夹名或文件，每个元素占一行即可，如target,bin,*.db</li></ul></li></ul><h3 id="5-修改文件后-切换分支"><a href="#5-修改文件后-切换分支" class="headerlink" title="5) 修改文件后,切换分支"></a>5) 修改文件后,切换分支</h3><ul><li><code>git stash save &quot;comment info&quot;</code> 保存到栈中,当前目录和版本库目录一直,将修改的信息保存起来 </li><li><code>git stash list</code>  查看保存的信息</li><li><code>git stash pop</code>   取出最后一次保存的信息 </li><li><code>git stash applay 相应的栈内stash@{number}</code> 取出相应的保存信息 </li><li><code>git stash drop 相应的栈内stash@{number}</code> 删除之前保存的信息</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;git-常用命令-含删除文件&quot;&gt;&lt;a href=&quot;#git-常用命令-含删除文件&quot; class=&quot;headerlink&quot; title=&quot;git 常用命令(含删除文件)&quot;&gt;&lt;/a&gt;git 常用命令(含删除文件)&lt;/h1&gt;&lt;h2 id=&quot;Git常用操作命令收集：&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="tools" scheme="https://github.com/xuegangliu/blog/categories/tools/"/>
+    
+    
+      <category term="git" scheme="https://github.com/xuegangliu/blog/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>Maven构建</title>
-    <link href="https://github.com/xuegangliu/blog/2016/11/09/tools/Maven%E6%9E%84%E5%BB%BA/"/>
-    <id>https://github.com/xuegangliu/blog/2016/11/09/tools/Maven构建/</id>
+    <link href="https://github.com/xuegangliu/blog/2016/11/09/tools/maven_build/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/09/tools/maven_build/</id>
     <published>2016-11-09T15:10:43.000Z</published>
     <updated>2016-11-09T15:10:43.000Z</updated>
     
@@ -425,120 +517,12 @@
     
       <category term="maven" scheme="https://github.com/xuegangliu/blog/tags/maven/"/>
     
-      <category term="tools" scheme="https://github.com/xuegangliu/blog/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim使用</title>
-    <link href="https://github.com/xuegangliu/blog/2016/11/09/tools/Vim%E4%BD%BF%E7%94%A8/"/>
-    <id>https://github.com/xuegangliu/blog/2016/11/09/tools/Vim使用/</id>
-    <published>2016-11-09T15:10:43.000Z</published>
-    <updated>2016-11-09T15:10:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="vim-基本使用"><a href="#vim-基本使用" class="headerlink" title="vim 基本使用"></a>vim 基本使用</h1><p><img src="/book/images/linux/vim.gif" alt="键盘图"></p><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>刚刚启动 vi/vim，便进入了命令模式。此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。以下是常用的几个命令：</p><ul><li>i 切换到输入模式，以输入字符。</li><li>x 删除当前光标所在处的字符。</li><li>: 切换到底线命令模式，以在最底一行输入命令。</li><li>若想要编辑文本：启动Vim，进入了命令模式，按下i，切换到输入模式。</li><li>命令模式只有一些最基本的命令，因此仍要依靠底线命令模式输入更多命令。</li></ul><h2 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h2><p>命令模式下按下i就进入了输入模式。在输入模式中，可以使用以下按键：</p><ul><li>字符按键以及Shift组合，输入字符</li><li>ENTER，回车键，换行</li><li>BACK SPACE，退格键，删除光标前一个字符</li><li>DEL，删除键，删除光标后一个字符</li><li>方向键，在文本中移动光标</li><li>HOME/END，移动光标到行首/行尾</li><li>Page Up/Page Down，上/下翻页</li><li>Insert，切换光标为输入/替换模式，光标将变成竖线/下划线</li><li>ESC，退出输入模式，切换到命令模式</li></ul><h2 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h2><p>在命令模式下按下:（英文冒号）就进入了底线命令模式。底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。在底线命令模式中，基本的命令有（已经省略了冒号）：</p><ul><li>q 退出程序</li><li>w 保存文件</li><li>ESC键可随时退出底线命令模式。</li></ul><p><img src="/book/images/linux/vim01.png" alt="模式切换"></p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><h3 id="一般模式可用的光标移动、复制粘贴、搜索替换等"><a href="#一般模式可用的光标移动、复制粘贴、搜索替换等" class="headerlink" title="一般模式可用的光标移动、复制粘贴、搜索替换等"></a>一般模式可用的光标移动、复制粘贴、搜索替换等</h3><h4 id="移动光标的方法"><a href="#移动光标的方法" class="headerlink" title="移动光标的方法"></a>移动光标的方法</h4><ul><li>h 或 向左箭头键(←)    光标向左移动一个字符</li><li>j 或 向下箭头键(↓)    光标向下移动一个字符</li><li>k 或 向上箭头键(↑)    光标向上移动一个字符</li><li>l 或 向右箭头键(→)    光标向右移动一个字符</li><li>如果想要进行多次移动的话，例如向下移动 30 行，可以使用 “30j” 或 “30↓” 的组合按键， 亦即加上想要进行的次数(数字)后，按下动作即可！</li><li>[Ctrl] + [f]    屏幕『向下』移动一页，相当于 - - - [Page Down]按键 (常用)</li><li>[Ctrl] + [b]    屏幕『向上』移动一页，相当于 - - - [Page Up] 按键 (常用)</li><li>[Ctrl] + [d]    屏幕『向下』移动半页</li><li>[Ctrl] + [u]    屏幕『向上』移动半页</li><li><ul><li>光标移动到非空格符的下一行</li></ul></li><li><ul><li>光标移动到非空格符的上一行</li></ul></li><li>n<space>    那个 n 表示『数字』，例如 20 。按下数字后再按空格键，光标会向右移动这一行的 n 个字符。例如 20<space> 则光标会向后面移动 20 个字符距离。</space></space></li><li>0 或功能键[Home]    这是数字『 0 』：移动到这一行的最前面字符处 (常用)</li><li>$ 或功能键[End]    移动到这一行的最后面字符处(常用)</li><li>H    光标移动到这个屏幕的最上方那一行的第一个字符</li><li>M    光标移动到这个屏幕的中央那一行的第一个字符</li><li>L    光标移动到这个屏幕的最下方那一行的第一个字符</li><li>G    移动到这个档案的最后一行(常用)</li><li>nG    n 为数字。移动到这个档案的第 n 行。例如 20G 则会移动到这个档案的第 20 行(可配合 :set nu)</li><li>gg    移动到这个档案的第一行，相当于 1G 啊！ (常用)</li><li>n<enter>    n 为数字。光标向下移动 n 行(常用)</enter></li></ul><h4 id="搜索替换"><a href="#搜索替换" class="headerlink" title="搜索替换"></a>搜索替换</h4><ul><li>/word    向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！ (常用)</li><li>?word    向光标之上寻找一个字符串名称为 word 的字符串。</li><li>n    这个 n 是英文按键。代表重复前一个搜寻的动作。举例来说， 如果刚刚我们执行 /vbird 去向下搜寻 vbird 这个字符串，则按下 n 后，会向下继续搜寻下一个名称为 vbird 的字符串。如果是执行 ?vbird 的话，那么按下 n 则会向上继续搜寻名称为 vbird 的字符串！</li><li>N    这个 N 是英文按键。与 n 刚好相反，为『反向』进行前一个搜寻动作。 例如 /vbird 后，按下 N 则表示『向上』搜寻 vbird 。</li><li>使用 /word 配合 n 及 N 是非常有帮助的！可以让你重复的找到一些你搜寻的关键词！</li><li>:n1,n2s/word1/word2/g    n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 ！举例来说，在 100 到 200 行之间搜寻 vbird 并取代为 VBIRD 则：</li><li>『:100,200s/vbird/VBIRD/g』。(常用)</li><li>:1,$s/word1/word2/g    从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！(常用)</li><li>:1,$s/word1/word2/gc    从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！且在取代前显示提示字符给用户确认 (confirm) 是否需要取代！(常用)</li></ul><h4 id="删除、复制与贴上"><a href="#删除、复制与贴上" class="headerlink" title="删除、复制与贴上"></a>删除、复制与贴上</h4><ul><li>x, X    在一行字当中，x 为向后删除一个字符 (相当于 [del] 按键)， X 为向前删除一个字符(相当于 [backspace] 亦即是退格键) (常用)</li><li>nx    n 为数字，连续向后删除 n 个字符。举例来说，我要连续删除 10 个字符， 『10x』。</li><li>dd    删除游标所在的那一整行(常用)</li><li>ndd    n 为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行 (常用)</li><li>d1G    删除光标所在到第一行的所有数据</li><li>dG    删除光标所在到最后一行的所有数据</li><li>d$    删除游标所在处，到该行的最后一个字符</li><li>d0    那个是数字的 0 ，删除游标所在处，到该行的最前面一个字符</li><li>yy    复制游标所在的那一行(常用)</li><li>nyy    n 为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行(常用)</li><li>y1G    复制游标所在行到第一行的所有数据</li><li>yG    复制游标所在行到最后一行的所有数据</li><li>y0    复制光标所在的那个字符到该行行首的所有数据</li><li>y$    复制光标所在的那个字符到该行行尾的所有数据</li><li>p, P    p 为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行！ 举例来说，我目前光标在第 20 行，且已经复制了 10 行数据。则按下 p 后， 那 10 行数据会贴在原本的 20 行之后，亦即由 21 行开始贴。但如果是按下 P 呢？ 那么原本的第 20 行会被推到变成 30 行。 (常用)</li><li>J    将光标所在行与下一行的数据结合成同一行</li><li>c    重复删除多个数据，例如向下删除 10 行，[ 10cj ]</li><li>u    复原前一个动作。(常用)</li><li>[Ctrl]+r    重做上一个动作。(常用)</li><li>这个 u 与 [Ctrl]+r 是很常用的指令！一个是复原，另一个则是重做一次～ 利用这两个功能按键，你的编辑，嘿嘿！很快乐的啦！</li><li>.    不要怀疑！这就是小数点！意思是重复前一个动作的意思。 如果你想要重复删除、重复贴上等等动作，按下小数点『.』就好了！ (常用)</li></ul><h3 id="一般模式切换到编辑模式的可用的按钮说明"><a href="#一般模式切换到编辑模式的可用的按钮说明" class="headerlink" title="一般模式切换到编辑模式的可用的按钮说明"></a>一般模式切换到编辑模式的可用的按钮说明</h3><p>进入输入或取代的编辑模式</p><ul><li>i, I    进入输入模式(Insert mode)：i 为『从目前光标所在处输入』， I 为『在目前所在行的第一个非空格符处开始输入』。 (常用)</li><li>a, A    进入输入模式(Insert mode)：a 为『从目前光标所在的下一个字符处开始输入』， A 为『从光标所在行的最后一个字符处开始输入』。(常用)</li><li>o, O    进入输入模式(Insert mode)：这是英文字母 o 的大小写。o 为『在目前光标所在的下一行处输入新的一行』； O 为在目前光标所在处的上一行输入新的一行！(常用)</li><li>r, R    进入取代模式(Replace mode)：r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；(常用)<br><code>在 vi 画面的左下角处会出现『--INSERT--』或『--REPLACE--』的字样 才能输入</code></li><li>[Esc]    退出编辑模式，回到一般模式中(常用)</li></ul><h3 id="一般模式切换到指令行模式的可用的按钮说明"><a href="#一般模式切换到指令行模式的可用的按钮说明" class="headerlink" title="一般模式切换到指令行模式的可用的按钮说明"></a>一般模式切换到指令行模式的可用的按钮说明</h3><p>指令行的储存、离开等指令</p><ul><li>:w    将编辑的数据写入硬盘档案中(常用)</li><li>:w!    若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关啊！</li><li>:q    离开 vi (常用)</li><li>:q!    若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。<br>注意一下啊，那个惊叹号 (!) 在 vi 当中，常常具有『强制』的意思～</li><li>:wq    储存后离开，若为 :wq! 则为强制储存后离开 (常用)<br>ZZ    这是大写的 Z 喔！若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开！</li><li>:w [filename]    将编辑的数据储存成另一个档案（类似另存新档）</li><li>:r [filename]    在编辑的数据中，读入另一个档案的数据。亦即将 『filename』 这个档案内容加到游标所在行后面</li><li>:n1,n2 w [filename]    将 n1 到 n2 的内容储存成 filename 这个档案。</li><li>:! command    暂时离开 vi 到指令行模式下执行 command 的显示结果！例如<br>『:! ls /home』即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！</li></ul><h3 id="vim-环境的变更"><a href="#vim-环境的变更" class="headerlink" title="vim 环境的变更"></a>vim 环境的变更</h3><ul><li>:set nu    显示行号，设定之后，会在每一行的前缀显示该行的行号</li><li>:set nonu    与 set nu 相反，为取消行号！</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;vim-基本使用&quot;&gt;&lt;a href=&quot;#vim-基本使用&quot; class=&quot;headerlink&quot; title=&quot;vim 基本使用&quot;&gt;&lt;/a&gt;vim 基本使用&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/book/images/linux/vim.gif&quot; alt=&quot;键盘图
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://github.com/xuegangliu/blog/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="https://github.com/xuegangliu/blog/tags/Linux/"/>
-    
-      <category term="Vim" scheme="https://github.com/xuegangliu/blog/tags/Vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git基础使用</title>
-    <link href="https://github.com/xuegangliu/blog/2016/11/09/tools/git%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"/>
-    <id>https://github.com/xuegangliu/blog/2016/11/09/tools/git基础使用/</id>
-    <published>2016-11-09T15:10:43.000Z</published>
-    <updated>2016-11-09T15:10:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="git-常用命令-含删除文件"><a href="#git-常用命令-含删除文件" class="headerlink" title="git 常用命令(含删除文件)"></a>git 常用命令(含删除文件)</h1><h2 id="Git常用操作命令收集："><a href="#Git常用操作命令收集：" class="headerlink" title="Git常用操作命令收集："></a>Git常用操作命令收集：</h2><h3 id="1-远程仓库相关命令"><a href="#1-远程仓库相关命令" class="headerlink" title="1) 远程仓库相关命令"></a>1) 远程仓库相关命令</h3><ul><li>检出仓库：$ git clone git://github.com/jquery/jquery.git</li><li>查看远程仓库：$ git remote -v</li><li>添加远程仓库：$ git remote add [name] [url]</li><li>删除远程仓库：$ git remote rm [name]</li><li>修改远程仓库：$ git remote set-url –push[name][newUrl]</li><li>拉取远程仓库：$ git pull [remoteName] [localBranchName]</li><li>推送远程仓库：$ git push [remoteName] [localBranchName]</li></ul><h3 id="2）分支-branch-操作相关命令"><a href="#2）分支-branch-操作相关命令" class="headerlink" title="2）分支(branch)操作相关命令"></a>2）分支(branch)操作相关命令</h3><ul><li>查看本地分支：$ git branch</li><li>查看远程分支：$ git branch -r</li><li>创建本地分支：$ git branch [name] —-注意新分支创建后不会自动切换为当前分支</li><li>切换分支：$ git checkout [name]</li><li>创建新分支并立即切换到新分支：$ git checkout -b [name]</li><li>删除分支：$ git branch -d [name] —- -d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项</li><li>合并分支：$ git merge [name] —-将名称为[name]的分支与当前分支合并</li><li>创建远程分支(本地分支push到远程)：$ git push origin [name]</li><li>删除远程分支：$ git push origin :heads/[name]</li><li>我从master分支创建了一个issue5560分支，做了一些修改后，使用git push origin master提交，但是显示的结果却是’Everything up-to-date’，发生问题的原因是git push origin master 在没有track远程分支的本地分支中默认提交的master分支，因为master分支默认指向了origin master 分支，这里要使用git push origin issue5560：master 就可以把issue5560推送到远程的master分支了。</li><li><p>如果想把本地的某个分支test提交到远程仓库，并作为远程仓库的master分支，或者作为另外一个名叫test的分支，那么可以这么做。</p></li><li><p>$ git push origin test:master         // 提交本地test分支作为远程的master分支 //好像只写这一句，远程的github就会自动创建一个test分支</p></li><li><p>$ git push origin test:test              // 提交本地test分支作为远程的test分支</p></li><li><p>如果想删除远程的分支呢？类似于上面，如果:左边的分支为空，那么将删除:右边的远程的分支。</p></li><li><p>$ git push origin :test              // 刚提交到远程的test将被删除，但是本地还会保存的，不用担心</p></li></ul><h3 id="3）版本-tag-操作相关命令"><a href="#3）版本-tag-操作相关命令" class="headerlink" title="3）版本(tag)操作相关命令"></a>3）版本(tag)操作相关命令</h3><ul><li>查看版本：$ git tag</li><li>创建版本：$ git tag [name]</li><li>删除版本：$ git tag -d [name]</li><li>查看远程版本：$ git tag -r</li><li>创建远程版本(本地版本push到远程)：$ git push origin [name]</li><li>删除远程版本：$ git push origin :refs/tags/[name]</li></ul><h3 id="4-子模块-submodule-相关操作命令"><a href="#4-子模块-submodule-相关操作命令" class="headerlink" title="4) 子模块(submodule)相关操作命令"></a>4) 子模块(submodule)相关操作命令</h3><ul><li>添加子模块：$ git submodule add [url] [path]如：$ git submodule add git://github.com/soberh/ui-libs.git src/main/webapp/ui-libs</li><li>初始化子模块：$ git submodule init —-只在首次检出仓库时运行一次就行</li><li>更新子模块：$ git submodule update —-每次更新或切换分支后都需要运行一下</li><li>删除子模块：（分4步走哦）<ul><li>1)$ git rm –cached [path]</li><li>2) 编辑“.gitmodules”文件，将子模块的相关配置节点删除掉</li><li>3) 编辑“.git/config”文件，将子模块的相关配置节点删除掉</li><li>4) 手动删除子模块残留的目录</li><li>5）忽略一些文件、文件夹不提交在仓库根目录下创建名称为“.gitignore”的文件，写入不需要的文件夹名或文件，每个元素占一行即可，如target,bin,*.db</li></ul></li></ul><h3 id="5-修改文件后-切换分支"><a href="#5-修改文件后-切换分支" class="headerlink" title="5) 修改文件后,切换分支"></a>5) 修改文件后,切换分支</h3><ul><li><code>git stash save &quot;comment info&quot;</code> 保存到栈中,当前目录和版本库目录一直,将修改的信息保存起来 </li><li><code>git stash list</code>  查看保存的信息</li><li><code>git stash pop</code>   取出最后一次保存的信息 </li><li><code>git stash applay 相应的栈内信息描述</code> 取出相应的保存信息 </li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;git-常用命令-含删除文件&quot;&gt;&lt;a href=&quot;#git-常用命令-含删除文件&quot; class=&quot;headerlink&quot; title=&quot;git 常用命令(含删除文件)&quot;&gt;&lt;/a&gt;git 常用命令(含删除文件)&lt;/h1&gt;&lt;h2 id=&quot;Git常用操作命令收集：&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="tools" scheme="https://github.com/xuegangliu/blog/categories/tools/"/>
-    
-    
-      <category term="tools" scheme="https://github.com/xuegangliu/blog/tags/tools/"/>
-    
-      <category term="git" scheme="https://github.com/xuegangliu/blog/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>idea快捷键</title>
-    <link href="https://github.com/xuegangliu/blog/2016/11/09/tools/idea%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>https://github.com/xuegangliu/blog/2016/11/09/tools/idea快捷键/</id>
-    <published>2016-11-09T15:10:43.000Z</published>
-    <updated>2016-11-09T15:10:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><h2 id="IntelliJ-Idea"><a href="#IntelliJ-Idea" class="headerlink" title="IntelliJ Idea"></a>IntelliJ Idea</h2><h3 id="实用快捷键"><a href="#实用快捷键" class="headerlink" title="实用快捷键:"></a>实用快捷键:</h3><ul><li>Ctrl+/ 或 Ctrl+Shift+/ 注释（// 或者/<em>…</em>/ ）</li><li>Ctrl+D 复制行</li><li>Ctrl+X 删除行</li><li>快速修复 alt+enter (modify/cast)</li><li>代码提示 alt+/</li><li>ctr+G 定位某一行</li><li>Shift+F6 重构-重命名</li><li>Ctrl+R 替换文本</li><li>Ctrl+F 查找文本</li><li>Ctrl+E 最近打开的文件</li><li>Ctrl+J 自动代码</li><li>组织导入 ctr+alt+O</li><li>格式化代码 ctr+alt+L</li><li>大小写转化 ctr+shift+U</li></ul><h3 id="IntelliJ-Idea-常用快捷键列表"><a href="#IntelliJ-Idea-常用快捷键列表" class="headerlink" title="IntelliJ Idea 常用快捷键列表"></a>IntelliJ Idea 常用快捷键列表</h3><ul><li>Alt+回车 导入包,自动修正</li><li>Ctrl+N   查找类</li><li>Ctrl+Shift+N 查找文件</li><li>Ctrl+Alt+L  格式化代码</li><li>Ctrl+Alt+O 优化导入的类和包</li><li>Alt+Insert 生成代码(如get,set方法,构造函数等)</li><li>Ctrl+E或者Alt+Shift+C  最近更改的代码</li><li>Ctrl+R 替换文本</li><li>Ctrl+F 查找文本</li><li>Ctrl+Shift+Space 自动补全代码</li><li>Ctrl+空格 代码提示</li><li>Ctrl+Alt+Space 类名或接口名提示</li><li>Ctrl+P 方法参数提示</li><li>Ctrl+Shift+Alt+N 查找类中的方法或变量</li><li>Alt+Shift+C 对比最近修改的代码</li><li>Shift+F6  重构-重命名</li><li>Ctrl+Shift+先上键</li><li>Ctrl+X 删除行</li><li>Ctrl+D 复制行</li><li>Ctrl+/ 或 Ctrl+Shift+/  注释（// 或者/<em>…</em>/ ）</li><li>Ctrl+J  自动代码</li><li>Ctrl+E 最近打开的文件</li><li>Ctrl+H 显示类结构图</li><li>Ctrl+Q 显示注释文档</li><li>Alt+F1 查找代码所在位置</li><li>Alt+1 快速打开或隐藏工程面板</li><li>Ctrl+Alt+ left/right 返回至上次浏览的位置</li><li>Alt+ left/right 切换代码视图</li><li>Alt+ Up/Down 在方法间快速移动定位</li><li>Ctrl+Shift+Up/Down 代码向上/下移动。</li><li>F2 或Shift+F2 高亮错误或警告快速定位</li><li>代码标签输入完成后，按Tab，生成代码。</li><li>选中文本，按Ctrl+Shift+F7 ，高亮显示所有该文本，按Esc高亮消失。</li><li>Ctrl+W 选中代码，连续按会有其他效果</li><li>选中文本，按Alt+F3 ，逐个往下查找相同文本，并高亮显示。</li><li>Ctrl+Up/Down 光标跳转到第一行或最后一行下</li><li>Ctrl+B 快速打开光标处的类或方法 </li></ul><h3 id="1-IDEA内存优化"><a href="#1-IDEA内存优化" class="headerlink" title="1. IDEA内存优化"></a>1. IDEA内存优化</h3><p>因机器本身的配置而配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\IntelliJ IDEA 8\bin\idea.exe.vmoptions  </span><br><span class="line">-----------------------------------------  </span><br><span class="line">-Xms64m  </span><br><span class="line">-Xmx256m  </span><br><span class="line">-XX:MaxPermSize=92m  </span><br><span class="line">-ea  </span><br><span class="line">-server  </span><br><span class="line">-Dsun.awt.keepWorkingSetOnMinimize=true</span><br></pre></td></tr></table></figure></p><h3 id="2-查询快捷键"><a href="#2-查询快捷键" class="headerlink" title="2. 查询快捷键"></a>2. 查询快捷键</h3><ul><li>CTRL+N   查找类 </li><li>CTRL+SHIFT+N  查找文件 </li><li>CTRL+SHIFT+ALT+N 查找类中的方法或变量 </li><li>CIRL+B   找变量的来源 </li><li>CTRL+ALT+B  找所有的子类 </li><li>CTRL+SHIFT+B  找变量的类 </li><li>CTRL+G   定位行 </li><li>CTRL+F   在当前窗口查找文本 </li><li>CTRL+SHIFT+F  在指定窗口查找文本 </li><li>CTRL+R   在 当前窗口替换文本 </li><li>CTRL+SHIFT+R  在指定窗口替换文本 </li><li>ALT+SHIFT+C  查找修改的文件 </li><li>CTRL+E   最近打开的文件 </li><li>F3   向下查找关键字出现位置 </li><li>SHIFT+F3  向上一个关键字出现位置 </li><li>F4   查找变量来源 </li><li>CTRL+ALT+F7  选中的字符查找工程出现的地方 </li><li>CTRL+SHIFT+O  弹出显示查找内容</li></ul><h3 id="3-自动代码"><a href="#3-自动代码" class="headerlink" title="3. 自动代码"></a>3. 自动代码</h3><ul><li>ALT+回车  导入包,自动修正 </li><li>CTRL+ALT+L  格式化代码 </li><li>CTRL+ALT+I  自动缩进 </li><li>CTRL+ALT+O  优化导入的类和包 </li><li>ALT+INSERT  生成代码(如GET,SET方法,构造函数等) </li><li>CTRL+E 最近更改的代码 </li><li>CTRL+SHIFT+SPACE 自动补全代码 </li><li>CTRL+空格  代码提示 </li><li>CTRL+ALT+SPACE  类名或接口名提示 </li><li>CTRL+P   方法参数提示 </li><li>CTRL+J   自动代码 </li><li>CTRL+ALT+T  把选中的代码放在 TRY{} IF{} ELSE{} 里</li></ul><h3 id="4-复制快捷方式"><a href="#4-复制快捷方式" class="headerlink" title="4. 复制快捷方式"></a>4. 复制快捷方式</h3><ul><li>CTRL+D   复制行 </li><li>CTRL+X   剪切,删除行  </li></ul><h3 id="5-其他快捷方式"><a href="#5-其他快捷方式" class="headerlink" title="5. 其他快捷方式"></a>5. 其他快捷方式</h3><ul><li>CIRL+U   大小写切换 </li><li>CTRL+Z   倒退 </li><li>CTRL+SHIFT+Z  向前 </li><li>CTRL+ALT+F12  资源管理器打开文件夹 </li><li>ALT+F1   查找文件所在目录位置 </li><li>SHIFT+ALT+INSERT 竖编辑模式 </li><li>CTRL+/   注释//   </li><li>CTRL+SHIFT+/  注释/<em>…</em>/ </li><li>CTRL+W   选中代码，连续按会有其他效果 </li><li>CTRL+B   快速打开光标处的类或方法 </li><li>ALT+ ←/→  切换代码视图 </li><li>CTRL+ALT ←/→  返回上次编辑的位置 </li><li>ALT+ ↑/↓  在方法间快速移动定位 </li><li>SHIFT+F6  重构-重命名 </li><li>CTRL+H   显示类结构图 </li><li>CTRL+Q   显示注释文档 </li><li>ALT+1   快速打开或隐藏工程面板 </li><li>CTRL+SHIFT+UP/DOWN 代码向上/下移动。 </li><li>CTRL+UP/DOWN  光标跳转到第一行或最后一行下 </li><li>ESC   光标返回编辑框 </li><li>SHIFT+ESC  光标返回编辑框,关闭无用的窗口 </li><li>F1   帮助千万别按,很卡! </li><li>CTRL+F4   非常重要下班都用</li></ul><h2 id="Eclipse"><a href="#Eclipse" class="headerlink" title="Eclipse"></a>Eclipse</h2><ul><li>Ctrl + 2,L  补全  自己改为Alt + q</li><li>选中按F4 或 Ctrl + t   进入层次视图—–体系结构</li><li>Alt+/    内容补全</li><li>Ctrl + 1  帮助</li><li>Ctrl + d  删除当前行</li><li>Ctrl + M  最大化当前的Edit或View (再按则反之)</li><li>Ctrl + f  查找/替换</li><li>Ctrl + 点击   进入源码</li><li>Alt + Shift + r   改名</li><li>Ctrl + Shift + o   快速导包</li><li>Ctrl + Shift + r   打开源</li><li>Ctr + Shift + f   格式化代码</li><li>Ctrl + Shift + x   变大写</li><li>Ctrl + Shift + x   变小写</li><li>Ctrl + Shift + t   类查询</li><li>syso + Alt + /   输出</li><li>Alt + ←   前一个编辑的页面</li><li>Alt + →   下一个编辑的页面</li><li>Alt + 上箭头    上移</li><li>Alt + 下箭头    下移</li><li>Ctrl + /    单行注释</li><li>Ctrl + Shift + /   多行注释</li><li>Ctrl + Shift + \   取消注释</li><li>Ctrl + Shift + c   适用于各种文档的注释</li><li>Ctrl + Alt + 上箭头/下箭头   上复制/下复制</li><li>Alt + Shift + s   源操作</li><li>Alt + Shift + t   方法操作</li><li>Alt + Shift + z   语句操作</li><li>Alt + Shift + m   提取方法</li><li>Alt + Shift + L      提取本地变量</li><li>Alt + 1   packageExporer显示</li><li>Alt + 2   console显示</li><li>Alt + 3   Outline显示</li><li>小绿圆圈——&gt;方法</li><li>小绿三角——&gt;属性</li><li>带土红色 s —–&gt;静态</li><li>Alt + 4   navigator导航显示</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; title=&quot;开发工具&quot;&gt;&lt;/a&gt;开发工具&lt;/h1&gt;&lt;h2 id=&quot;IntelliJ-Idea&quot;&gt;&lt;a href=&quot;#IntelliJ-Idea&quot; class=&quot;headerlink
-      
-    
-    </summary>
-    
-      <category term="tools" scheme="https://github.com/xuegangliu/blog/categories/tools/"/>
-    
-    
-      <category term="tools" scheme="https://github.com/xuegangliu/blog/tags/tools/"/>
-    
-      <category term="idea" scheme="https://github.com/xuegangliu/blog/tags/idea/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>公司高阶职位名称</title>
-    <link href="https://github.com/xuegangliu/blog/2016/11/09/work/work-name/"/>
-    <id>https://github.com/xuegangliu/blog/2016/11/09/work/work-name/</id>
-    <published>2016-11-09T15:10:43.000Z</published>
-    <updated>2016-11-09T15:10:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="公司高阶职位名称简介"><a href="#公司高阶职位名称简介" class="headerlink" title="公司高阶职位名称简介"></a>公司高阶职位名称简介</h1><p>CIO、CEO、CFO、COO、CTO、CKO、CPO、CGO都是属于公司的高阶职位。</p><ul><li><p>CIO（Chief Information Officer 首席信息官）</p><p>  主要负责制定公司的信息政策、标准、程序的方法，并对全公司的信息资源进行管理和控制。</p></li><li><p>CEO（Chief Executive Officer 首席执行官）</p><p>  主要负责企业日常经营管理决策。</p></li><li><p>CFO（Chief Financial Officer 首席财务官）</p><p>  全面负责企业财务管理。</p></li><li><p>COO（Chief Operating Officer 首席运营官）</p><p>  具体负责公司的日常运营。</p></li><li><p>CTO（Chief Technology Officer 首席技术官）</p><p>  企业内负责技术的最高负责人，由于互联网的迅猛发展，有时CT0和CIO是同一个人。</p></li></ul><ul><li><p>CKO（Chief Knowledge Officer 首席知识官）</p><p>  主要负责企业内部的知识管理等相关工作</p></li><li><p>CPO（Chief Procurement Officer 首席采购官）</p><p>  负责企业采购方面的全面工作。</p></li><li><p>CGO（Chief Game Officer 首席游戏官）</p><p>  这个主要是游戏公司或网吧里设置的岗位或系统，一般企业里没有这样的岗。当然，也不排除一些前卫的公司针对90后特意设置这样的岗位。</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;公司高阶职位名称简介&quot;&gt;&lt;a href=&quot;#公司高阶职位名称简介&quot; class=&quot;headerlink&quot; title=&quot;公司高阶职位名称简介&quot;&gt;&lt;/a&gt;公司高阶职位名称简介&lt;/h1&gt;&lt;p&gt;CIO、CEO、CFO、COO、CTO、CKO、CPO、CGO都是属于公司的
-      
-    
-    </summary>
-    
-      <category term="work" scheme="https://github.com/xuegangliu/blog/categories/work/"/>
-    
-    
-      <category term="work" scheme="https://github.com/xuegangliu/blog/tags/work/"/>
-    
   </entry>
   
   <entry>
     <title>Linux工具</title>
-    <link href="https://github.com/xuegangliu/blog/2016/11/09/tools/Linux%E5%B7%A5%E5%85%B7/"/>
-    <id>https://github.com/xuegangliu/blog/2016/11/09/tools/Linux工具/</id>
+    <link href="https://github.com/xuegangliu/blog/2016/11/09/linux/linux_tools/"/>
+    <id>https://github.com/xuegangliu/blog/2016/11/09/linux/linux_tools/</id>
     <published>2016-11-09T15:07:29.000Z</published>
     <updated>2016-11-09T15:07:29.000Z</updated>
     
@@ -553,12 +537,12 @@
     
     </summary>
     
-      <category term="Linux" scheme="https://github.com/xuegangliu/blog/categories/Linux/"/>
+      <category term="linux" scheme="https://github.com/xuegangliu/blog/categories/linux/"/>
     
     
-      <category term="Linux" scheme="https://github.com/xuegangliu/blog/tags/Linux/"/>
+      <category term="knowledge" scheme="https://github.com/xuegangliu/blog/tags/knowledge/"/>
     
-      <category term="Tools" scheme="https://github.com/xuegangliu/blog/tags/Tools/"/>
+      <category term="bug_test" scheme="https://github.com/xuegangliu/blog/tags/bug-test/"/>
     
   </entry>
   
