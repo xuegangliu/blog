@@ -1,6 +1,6 @@
 # 文档分类
 
-#### tags
+## tags
 
 ##### 书
 - book
@@ -40,6 +40,7 @@
 
 ##### 理论
 - design_patterns
+- design
 
 ##### tools
 - git
@@ -58,7 +59,7 @@
 - ubuntu
 - shell
 
-#### categories
+## categories
 - links(链接)
 - database(数据库)
 - java(Java)

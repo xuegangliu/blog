@@ -63,3 +63,6 @@ categories:
 - `git stash pop`   取出最后一次保存的信息 
 - `git stash applay 相应的栈内stash@{number}` 取出相应的保存信息 
 - `git stash drop 相应的栈内stash@{number}` 删除之前保存的信息
+
+### 6) 创建新分支,无提交历史
+`git checkout --orphan name`
