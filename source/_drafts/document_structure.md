@@ -59,6 +59,11 @@
 - ubuntu
 - shell
 
+##### work
+- pay
+- communication
+- highway
+
 ## categories
 - links(链接)
 - database(数据库)
@@ -70,6 +75,7 @@
 - linux
 - server
 - others
+- work
 
 #### 域名
 - liuxuegang.xyz
