@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://github.com/xuegangliu/blog/blog/2019/05/08/db/database_bigdata/</loc>
+    <lastmod>2019-05-08</lastmod>
+  </url>  <url>
     <loc>https://github.com/xuegangliu/blog/blog/2019/01/10/idea/design-principles/</loc>
     <lastmod>2019-01-10</lastmod>
   </url>  <url>
@@ -9,6 +12,9 @@
   </url>  <url>
     <loc>https://github.com/xuegangliu/blog/blog/2019/01/08/tools/travis_build/</loc>
     <lastmod>2019-01-08</lastmod>
+  </url>  <url>
+    <loc>https://github.com/xuegangliu/blog/blog/2018/11/26/work/hrtpayment/</loc>
+    <lastmod>2018-11-26</lastmod>
   </url>  <url>
     <loc>https://github.com/xuegangliu/blog/blog/2018/11/09/linux/shell_base/</loc>
     <lastmod>2018-11-09</lastmod>
@@ -33,6 +39,9 @@
   </url>  <url>
     <loc>https://github.com/xuegangliu/blog/blog/2017/07/19/problem/js-problem/</loc>
     <lastmod>2017-07-13</lastmod>
+  </url>  <url>
+    <loc>https://github.com/xuegangliu/blog/blog/2017/06/08/work/asiainfo/</loc>
+    <lastmod>2017-06-08</lastmod>
   </url>  <url>
     <loc>https://github.com/xuegangliu/blog/blog/2017/01/09/server/docker_base/</loc>
     <lastmod>2017-01-09</lastmod>
@@ -63,6 +72,9 @@
   </url>  <url>
     <loc>https://github.com/xuegangliu/blog/blog/2016/11/08/python/python_base/</loc>
     <lastmod>2016-11-08</lastmod>
+  </url>  <url>
+    <loc>https://github.com/xuegangliu/blog/blog/2016/08/08/work/sinoiov/</loc>
+    <lastmod>2016-08-08</lastmod>
   </url>  <url>
     <loc>https://github.com/xuegangliu/blog/blog/2016/07/28/java/java_class_base/</loc>
     <lastmod>2016-07-28</lastmod>
