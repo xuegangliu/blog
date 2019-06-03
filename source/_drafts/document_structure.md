@@ -13,6 +13,7 @@
 ##### 文档定义
 - knowledge
 - bug_test
+- document
 
 ##### 项目
 - self
