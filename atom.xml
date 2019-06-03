@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://github.com/xuegangliu/blog/"/>
-  <updated>2019-05-30T09:33:43.000Z</updated>
+  <updated>2019-06-03T13:16:43.000Z</updated>
   <id>https://github.com/xuegangliu/blog/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试文档编写</title>
+    <link href="https://github.com/xuegangliu/blog/2019/06/03/problem/bug_doc/"/>
+    <id>https://github.com/xuegangliu/blog/2019/06/03/problem/bug_doc/</id>
+    <published>2019-06-03T13:16:43.000Z</published>
+    <updated>2019-06-03T13:16:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Bug 描述</strong><br>A clear and concise description of what the bug is.</p><p><strong>复现</strong><br>复现步骤:</p><ol><li>Go to ‘…’</li><li>Click on ‘….’</li><li>Scroll down to ‘….’</li><li>See error</li></ol><p><strong>预期结果</strong><br>A clear and concise description of what you expected to happen.</p><p><strong>截图</strong><br>If applicable, add screenshots to help explain your problem.</p><p><strong>附加信息</strong><br>Add any other context about the problem here.</p><h2 id="单机服务卸流"><a href="#单机服务卸流" class="headerlink" title="单机服务卸流"></a>单机服务卸流</h2><ul><li>漏桶算法</li></ul><p>将流量放入桶中，漏桶同时也按照一定的速率流出，如果流量过快的话就会溢出(漏桶并不会提高流出速率)。溢出的流量则直接丢弃。</p><ul><li>令牌桶算法</li></ul><p>会以一个恒定的速率向固定容量大小桶中放入令牌，当有流量来时则取走一个或多个令牌。当桶中没有令牌则将当前请求丢弃或阻塞。</p><hr><details><br>  <summary>Click to expand</summary><br>  whatever<br></details><details><br>  <summary>Summary</summary><br>  <code><br>  js<br>  const x = 1<br><br>  </code><br></details>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;Bug 描述&lt;/strong&gt;&lt;br&gt;A clear and concise description of what the bug is.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;复现&lt;/strong&gt;&lt;br&gt;复现步骤:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to ‘…’
+      
+    
+    </summary>
+    
+      <category term="problem" scheme="https://github.com/xuegangliu/blog/categories/problem/"/>
+    
+    
+      <category term="document" scheme="https://github.com/xuegangliu/blog/tags/document/"/>
+    
+  </entry>
   
   <entry>
     <title>idea常用的插件</title>
@@ -523,31 +551,6 @@
     
     
       <category term="vim" scheme="https://github.com/xuegangliu/blog/tags/vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>公司高阶职位名称</title>
-    <link href="https://github.com/xuegangliu/blog/2016/11/09/others/work-name/"/>
-    <id>https://github.com/xuegangliu/blog/2016/11/09/others/work-name/</id>
-    <published>2016-11-09T15:10:43.000Z</published>
-    <updated>2016-11-09T15:10:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="公司高阶职位名称简介"><a href="#公司高阶职位名称简介" class="headerlink" title="公司高阶职位名称简介"></a>公司高阶职位名称简介</h1><p>CIO、CEO、CFO、COO、CTO、CKO、CPO、CGO都是属于公司的高阶职位。</p><ul><li><p>CIO（Chief Information Officer 首席信息官）</p><p>  主要负责制定公司的信息政策、标准、程序的方法，并对全公司的信息资源进行管理和控制。</p></li><li><p>CEO（Chief Executive Officer 首席执行官）</p><p>  主要负责企业日常经营管理决策。</p></li><li><p>CFO（Chief Financial Officer 首席财务官）</p><p>  全面负责企业财务管理。</p></li><li><p>COO（Chief Operating Officer 首席运营官）</p><p>  具体负责公司的日常运营。</p></li><li><p>CTO（Chief Technology Officer 首席技术官）</p><p>  企业内负责技术的最高负责人，由于互联网的迅猛发展，有时CT0和CIO是同一个人。</p></li></ul><ul><li><p>CKO（Chief Knowledge Officer 首席知识官）</p><p>  主要负责企业内部的知识管理等相关工作</p></li><li><p>CPO（Chief Procurement Officer 首席采购官）</p><p>  负责企业采购方面的全面工作。</p></li><li><p>CGO（Chief Game Officer 首席游戏官）</p><p>  这个主要是游戏公司或网吧里设置的岗位或系统，一般企业里没有这样的岗。当然，也不排除一些前卫的公司针对90后特意设置这样的岗位。</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;公司高阶职位名称简介&quot;&gt;&lt;a href=&quot;#公司高阶职位名称简介&quot; class=&quot;headerlink&quot; title=&quot;公司高阶职位名称简介&quot;&gt;&lt;/a&gt;公司高阶职位名称简介&lt;/h1&gt;&lt;p&gt;CIO、CEO、CFO、COO、CTO、CKO、CPO、CGO都是属于公司的
-      
-    
-    </summary>
-    
-      <category term="others" scheme="https://github.com/xuegangliu/blog/categories/others/"/>
-    
-    
-      <category term="work" scheme="https://github.com/xuegangliu/blog/tags/work/"/>
     
   </entry>
   
