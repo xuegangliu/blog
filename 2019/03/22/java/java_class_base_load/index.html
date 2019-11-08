@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>Java类加载 | 俩天</title>
+  <meta name="description" content="一、类内部加载顺序 1.父类static{} 只加载一次 2.本身static{} 只加载一次 3.父类{}块 每次 4.父类构造器 每次 5.本身{}块 每次 6.本身构造器 每次    类内部加载顺序实例  代码链接        package com.lxg.problem.clazz.v1;    /**       Aa       @author xuegangliu       2">
+<meta name="keywords" content="knowledge,java_base,skills">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java类加载">
+<meta property="og:url" content="https://github.com/xuegangliu/blog/2019/03/22/java/java_class_base_load/index.html">
+<meta property="og:site_name" content="俩天的博客">
+<meta property="og:description" content="一、类内部加载顺序 1.父类static{} 只加载一次 2.本身static{} 只加载一次 3.父类{}块 每次 4.父类构造器 每次 5.本身{}块 每次 6.本身构造器 每次    类内部加载顺序实例  代码链接        package com.lxg.problem.clazz.v1;    /**       Aa       @author xuegangliu       2">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-22T10:30:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java类加载">
+<meta name="twitter:description" content="一、类内部加载顺序 1.父类static{} 只加载一次 2.本身static{} 只加载一次 3.父类{}块 每次 4.父类构造器 每次 5.本身{}块 每次 6.本身构造器 每次    类内部加载顺序实例  代码链接        package com.lxg.problem.clazz.v1;    /**       Aa       @author xuegangliu       2">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://github.com/xuegangliu/blog/2019/03/22/java/java_class_base_load/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="俩天的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+  
+  
+  
+</head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="/" target="_blank">
+          <img class="img-circle img-rotate" src="/blog/images/personLog.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">俩天</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Java/Web Developer &amp; Linux</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Beijing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/blog/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/xuegangliu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/51995812?is_hot=1" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="/blog/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/database/">database</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/idea/">idea</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/java/">java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/links/">links</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/linux/">linux</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/others/">others</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/problem/">problem</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/python/">python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/server/">server</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/tools/">tools</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/work/">work</a><span class="category-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/IntelliJ-IDEA/">IntelliJ_IDEA</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/book/">book</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/bug-test/">bug_test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/communication/">communication</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/design/">design</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/design-patterns/">design_patterns</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/docker/">docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/document/">document</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/emoji/">emoji</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/gitbook/">gitbook</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/highway/">highway</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/java-base/">java_base</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/java-jvm/">java_jvm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/java-jvm-cmd/">java_jvm_cmd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/knowledge/">knowledge</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/oracle/">oracle</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/pay/">pay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/project/">project</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/python-base/">python_base</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/school/">school</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/self/">self</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/simple/">simple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/skills/">skills</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/sql/">sql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/tomcat/">tomcat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/travis/">travis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vim/">vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/work/">work</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/blog/tags/IntelliJ-IDEA/" style="font-size: 13.33px;">IntelliJ_IDEA</a> <a href="/blog/tags/book/" style="font-size: 13px;">book</a> <a href="/blog/tags/bug-test/" style="font-size: 13px;">bug_test</a> <a href="/blog/tags/communication/" style="font-size: 13px;">communication</a> <a href="/blog/tags/design/" style="font-size: 13px;">design</a> <a href="/blog/tags/design-patterns/" style="font-size: 13.33px;">design_patterns</a> <a href="/blog/tags/docker/" style="font-size: 13px;">docker</a> <a href="/blog/tags/document/" style="font-size: 13px;">document</a> <a href="/blog/tags/emoji/" style="font-size: 13px;">emoji</a> <a href="/blog/tags/git/" style="font-size: 13px;">git</a> <a href="/blog/tags/gitbook/" style="font-size: 13px;">gitbook</a> <a href="/blog/tags/github/" style="font-size: 13px;">github</a> <a href="/blog/tags/highway/" style="font-size: 13px;">highway</a> <a href="/blog/tags/java-base/" style="font-size: 13.67px;">java_base</a> <a href="/blog/tags/java-jvm/" style="font-size: 13.33px;">java_jvm</a> <a href="/blog/tags/java-jvm-cmd/" style="font-size: 13px;">java_jvm_cmd</a> <a href="/blog/tags/javascript/" style="font-size: 13px;">javascript</a> <a href="/blog/tags/knowledge/" style="font-size: 14px;">knowledge</a> <a href="/blog/tags/maven/" style="font-size: 13px;">maven</a> <a href="/blog/tags/oracle/" style="font-size: 13.33px;">oracle</a> <a href="/blog/tags/pay/" style="font-size: 13px;">pay</a> <a href="/blog/tags/project/" style="font-size: 13px;">project</a> <a href="/blog/tags/python-base/" style="font-size: 13px;">python_base</a> <a href="/blog/tags/school/" style="font-size: 13px;">school</a> <a href="/blog/tags/self/" style="font-size: 13px;">self</a> <a href="/blog/tags/shell/" style="font-size: 13px;">shell</a> <a href="/blog/tags/simple/" style="font-size: 13px;">simple</a> <a href="/blog/tags/skills/" style="font-size: 13px;">skills</a> <a href="/blog/tags/sql/" style="font-size: 13px;">sql</a> <a href="/blog/tags/tomcat/" style="font-size: 13.33px;">tomcat</a> <a href="/blog/tags/travis/" style="font-size: 13px;">travis</a> <a href="/blog/tags/ubuntu/" style="font-size: 13px;">ubuntu</a> <a href="/blog/tags/vim/" style="font-size: 13px;">vim</a> <a href="/blog/tags/work/" style="font-size: 13px;">work</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/08/">八月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/06/">六月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">五月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">三月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/01/">一月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">十一月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/01/">一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/12/">十二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">十一月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/11/">十一月 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/blog/categories/java/">java</a>
+              </p>
+              <p class="item-title">
+                <a href="/blog/2019/11/06/java/java_5_skill/" class="title">JDK1.5新特性</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-11-06T10:30:12.000Z" itemprop="datePublished">2019-11-06</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/blog/categories/problem/">problem</a>
+              </p>
+              <p class="item-title">
+                <a href="/blog/2019/08/30/problem/work-problem/" class="title">开发中遇到的问题记录</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-08-30T10:20:53.000Z" itemprop="datePublished">2019-08-30</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/blog/categories/problem/">problem</a>
+              </p>
+              <p class="item-title">
+                <a href="/blog/2019/06/03/problem/bug_doc/" class="title">测试文档编写</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-06-03T13:16:43.000Z" itemprop="datePublished">2019-06-03</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/blog/categories/tools/">tools</a>
+              </p>
+              <p class="item-title">
+                <a href="/blog/2019/05/30/tools/IDEA_Plugins/" class="title">idea常用的插件</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-05-30T09:33:43.000Z" itemprop="datePublished">2019-05-30</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/blog/categories/database/">database</a>
+              </p>
+              <p class="item-title">
+                <a href="/blog/2019/05/08/db/database_bigdata/" class="title">数据库分库分表</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-05-08T09:45:46.000Z" itemprop="datePublished">2019-05-08</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-java/java_class_base_load" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java类加载
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/blog/2019/03/22/java/java_class_base_load/" class="article-date">
+	  <time datetime="2019-03-22T10:30:12.000Z" itemprop="datePublished">2019-03-22</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/blog/categories/java/">java</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/blog/tags/java-base/">java_base</a>, <a class="article-tag-link" href="/blog/tags/knowledge/">knowledge</a>, <a class="article-tag-link" href="/blog/tags/skills/">skills</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/2019/03/22/java/java_class_base_load/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h3 id="一、类内部加载顺序"><a href="#一、类内部加载顺序" class="headerlink" title="一、类内部加载顺序"></a>一、类内部加载顺序</h3><ul>
+<li>1.父类static{} 只加载一次</li>
+<li>2.本身static{} 只加载一次</li>
+<li>3.父类{}块 每次</li>
+<li>4.父类构造器 每次</li>
+<li>5.本身{}块 每次</li>
+<li>6.本身构造器 每次</li>
+</ul>
+<details><br>  <summary>类内部加载顺序实例</summary><br>  <a href="https://github.com/xuegangliu/javaBasic/tree/master/jbs-problem/src/main/java/com/lxg/problem/clazz/v1" target="_blank">代码链接</a><br>  <br><br>  <code><br>    package com.lxg.problem.clazz.v1;<br><br>    /<strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong><br>     <em>  Aa
+     </em> @author xuegangliu<br>     <em>  2019/3/22 14:06<br>     <strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></em>/<br>    public interface Aa {<br><br>        String VERSION=”v1.0.0”;<br><br>        /<strong><br>         <em> say
+         </em>/<br>        void say();<br><br>        /</strong><br>         <em> main
+         </em> @param args<br>         <em>/<br>        static void main(String[] args) {<br>            System.out.println(“interface Aa main()”);<br>        }<br>    }<br><br>    package com.lxg.problem.clazz.v1;<br><br>    /<strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong>
+     </em>  Bb<br>     <em> @author xuegangliu
+     </em>  2019/3/22 14:06<br>     <strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong>/<br>    public class Bb {<br>        private static String name=”Bb static prop name”;<br>        private String name1;<br><br>        static {<br>            System.out.println(“Bb static{}”);<br>        }<br><br>        {<br>            System.out.println(“Bb {}”);<br>        }<br><br>        public Bb(){<br>            System.out.println(“Bb()”);<br>        }<br><br>        public Bb(String name1){<br>            this.name1=name1;<br>            System.out.println(“Bb(String name1)”);<br>        }<br><br>        public void talk(){<br>            System.out.println(“b.talk(){}”);<br>        }<br><br>        public static void main(String[] args) {<br>            System.out.println(“———-Bb main()”);<br>            Bb t=new Bb();<br>            System.out.println(t.name1);<br>            t.talk();<br>        }<br>    }<br><br>    package com.lxg.problem.clazz.v1;<br><br><br>    /<strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong><br>     <em>  Cc
+     </em> @author xuegangliu<br>     <em>  2019/3/22 14:06<br>     <strong><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong></strong></em>/<br>    public  class Cc extends Bb implements Aa {<br><br>        private static String name = “Cc”;<br><br>        private String name1=”c”;<br><br>        static {<br>            System.out.println(“Cc static{}”+VERSION);<br>        }<br><br>        {<br>            System.out.println(“Cc {}”);<br>        }<br><br>        public Cc(){<br>            System.out.println(“Cc()”);<br>        }<br><br>        public Cc(String name1){<br>            this.name1=name1;<br>            System.out.println(“Cc(String name1)”);<br>        }<br><br>        public static void ok(){<br>            System.out.println(“Cc static Cc.ok()”);<br>        }<br><br>        @Override<br>        public void say() {<br>            System.out.println(“c.say()”);<br>        }<br><br>        @Override<br>        public void talk(){<br>            super.talk();<br>            System.out.println(“c.talk(){}”);<br>        }<br><br>        public static void main(String[] args) {<br>            // 1.父类的static{}只加载一次     Bb static{}<br>            // 2.当前类的static{}只加载一次   Cc static{}v1.0.0<br>            // 3.当前方法           —–Cc main()<br>            System.out.println(“===============Cc main()”);<br><br>            // 4.父类 {}块          Bb {}<br>            // 5.父类 构造器         Bb()<br>            // 6.当前类 {}块         Cc {}<br>            // 7.当前类 构造器       Cc()<br>            Cc c=new Cc();<br>            System.out.println(c.name1);<br>            c.say();<br>            c.talk();<br>            System.out.println(“===============”);<br>            Cc c1=new Cc();<br>        }<br>    }<br><br><br>  </code><br></details>
+
+<h3 id="二、Java-基本数据类型"><a href="#二、Java-基本数据类型" class="headerlink" title="二、Java 基本数据类型"></a>二、Java 基本数据类型</h3><ul>
+<li>内置数据类型<ul>
+<li>(byte(8位有符号,java.lang.Byte)</li>
+<li>short(16位有符号,java.lang.Short)</li>
+<li>int(32位有符号,java.lang.Integer)</li>
+<li>long(64位有符号,java.lang.Long)</li>
+<li>float(32位,java.lang.Float)</li>
+<li>double(64位,java.lang.Double)</li>
+<li>boolean(1位)</li>
+<li>char(单一的 16 位 Unicode 字符,java.lang.Character)</li>
+<li>void(java.lang.Void)</li>
+</ul>
+</li>
+</ul>
+<h3 id="三、Java数据结构（集合框架）"><a href="#三、Java数据结构（集合框架）" class="headerlink" title="三、Java数据结构（集合框架）"></a>三、Java数据结构（集合框架）</h3><ul>
+<li>接口:<ul>
+<li>java.lang.Iterable、java.util.Collection|java.util.concurrent.Callable、java.util.concurrent.Executor</li>
+<li>java.util.List</li>
+<li>java.util.Queue（单向队列）、java.util.Deque(双向队列)|java.util.concurrent.BlockingQueue,java.util.concurrent.BlockingDeque、java.util.concurrent.TransferQueue(1.7)</li>
+<li>Set、SortedSet、NavigableSet</li>
+<li>java.util.Map、java.util.SortedMap、java.util.NavigableMap|java.util.concurrent.ConcurrentMap、java.util.concurrent.ConcurrentNavigableMap</li>
+</ul>
+</li>
+<li>数组：java.util.Vector[同步]、java.util.ArrayList、java.util.LinkedList|java.util.concurrent.CopyOnWriteArrayList</li>
+<li>栈：java.util.Stack 数据入栈和出栈的时间复杂度都为O(1)[Deque接口方法可以实现stack的方法，可以代替stack]</li>
+<li>队列：java.util.PriorityQueue、java.util.ArrayDeque<ul>
+<li>不阻塞队列 ：java.util.PriorityQueue、java.util.concurrent.ConcurrentLinkedQueue</li>
+<li>阻塞队列：java.util.concurrent.ArrayBlockingQueue、java.util.concurrent.DelayQueue、java.util.concurrent.LinkedBlockingDeque、java.util.concurrent.LinkedBlockingQueue、java.util.concurrent.PriorityBlockingQueue、java.util.concurrent.SynchronousQueue</li>
+</ul>
+</li>
+<li>Set：java.util.HashSet、java.util.LinkedHashSet、java.util.TreeSet|java.util.concurrent.ConcurrentSkipListSet、java.util.concurrent.CopyOnWriteArraySet</li>
+<li>Map：java.util.HashMap、java.util.LinkedHashMap、java.util.IdentityHashMap、java.util.TreeMap、java.util.WeakHashMap、java.util.Hashtable[同步]、java.util.Properties[同步]|java.util.concurrent.ConcurrentHashMap、java.util.concurrent.ConcurrentSkipListMap</li>
+<li>工具类：java.util.Arrays、java.util.Collections|java.util.concurrent.Executors</li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://github.com/xuegangliu/blog/2019/03/22/java/java_class_base_load/" title="Java类加载" target="_blank" rel="external">https://github.com/xuegangliu/blog/2019/03/22/java/java_class_base_load/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/blog/images/personLog.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="/" target="_blank"><span class="text-dark">俩天</span><small class="ml-1x">Java/Web Developer &amp; Linux</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/blog/2019/05/08/db/database_bigdata/" title="数据库分库分表"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/blog/2019/01/10/idea/design-principles/" title="设计模式原则"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/blog/images/donate/zhifubao.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/blog/images/donate/weixin.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/xuegangliu" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/51995812?is_hot=1" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="/blog/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/blog/js/plugin.min.js"></script>
+<script src="/blog/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/blog/',
+        CONTENT_URL: '/blog/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/blog/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>

@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://github.com/xuegangliu/blog/2019/08/30/problem/work-problem/</loc>
+    <loc>https://github.com/xuegangliu/blog/categories/index.html</loc>
     
-    <lastmod>2019-08-30T10:20:53.000Z</lastmod>
+    <lastmod>2019-11-08T03:11:13.940Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://github.com/xuegangliu/blog/categories/index.html</loc>
+    <loc>https://github.com/xuegangliu/blog/2019/11/06/java/java_5_skill/</loc>
     
-    <lastmod>2019-08-30T02:25:56.269Z</lastmod>
+    <lastmod>2019-11-06T10:30:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://github.com/xuegangliu/blog/2019/08/30/problem/work-problem/</loc>
+    
+    <lastmod>2019-08-30T10:20:53.000Z</lastmod>
     
   </url>
   
@@ -33,6 +40,13 @@
     <loc>https://github.com/xuegangliu/blog/2019/05/08/db/database_bigdata/</loc>
     
     <lastmod>2019-05-08T09:45:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://github.com/xuegangliu/blog/2019/03/22/java/java_class_base_load/</loc>
+    
+    <lastmod>2019-03-22T10:30:12.000Z</lastmod>
     
   </url>
   

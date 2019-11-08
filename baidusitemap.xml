@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://github.com/xuegangliu/blog/blog/2019/11/06/java/java_5_skill/</loc>
+    <lastmod>2019-11-06</lastmod>
+  </url>  <url>
     <loc>https://github.com/xuegangliu/blog/blog/2019/08/30/problem/work-problem/</loc>
     <lastmod>2019-08-30</lastmod>
   </url>  <url>
@@ -12,6 +15,9 @@
   </url>  <url>
     <loc>https://github.com/xuegangliu/blog/blog/2019/05/08/db/database_bigdata/</loc>
     <lastmod>2019-05-08</lastmod>
+  </url>  <url>
+    <loc>https://github.com/xuegangliu/blog/blog/2019/03/22/java/java_class_base_load/</loc>
+    <lastmod>2019-03-22</lastmod>
   </url>  <url>
     <loc>https://github.com/xuegangliu/blog/blog/2019/01/10/idea/design-principles/</loc>
     <lastmod>2019-01-10</lastmod>
