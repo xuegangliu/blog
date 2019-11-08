@@ -28,6 +28,7 @@
 - java_base
 - java_jvm
 - java_jvm_cmd
+- skills
 
 ##### 前端
 - javascript
