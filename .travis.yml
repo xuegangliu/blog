@@ -44,3 +44,4 @@ deploy:
   email: 1453860636@qq.com
   on:
     branch: template
+    
