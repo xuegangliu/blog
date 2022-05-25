@@ -12,13 +12,12 @@ script:
   - hexo g
 
 after_script:
- - cd ./public
- - git init
- - git config user.name "xuegangliu"
- - git config user.email "1453860636@qq.com"
- - git add .
- - git commit -m "Update docs"
- - git push origin template:gh-pages
+#  - cd ./public
+#  - git init
+#  - git config user.name "xuegangliu"
+#  - git config user.email "1453860636@qq.com"
+#  - git add .
+#  - git commit -m "Update docs"
 #  - git push --force --quiet "https://${token}@https://github.com/xuegangliu/blog.git" template:gh-pages
 ## E: Build LifeCycle
 
@@ -32,7 +31,7 @@ branches:
 
 # GitHub Pages 部署
 deploy:
-  skip_cleanup: true
+  # skip_cleanup: true
   provider: pages
   cleanup: true
   # 在项目仪表盘的 Settings -> Environment Variables 中配置
