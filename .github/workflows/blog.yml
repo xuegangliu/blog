@@ -1,0 +1,40 @@
+name: Build hexo page
+
+on:
+  push:
+    branches:
+      - template
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Configration hexo env
+        env:
+          ACTION_DEPLOY_KEY: ${{ secrets.pri_key }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.email "xuegangliu.email@gmail.com"
+          git config --global user.name "Hell"
+      - name: Env Node.js
+        uses: actions/setup-node@v1
+        with:
+          version: 13
+      - name: Install and Build
+        run: |
+          npm install hexo-cli -g
+          npm install
+          hexo g
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages
+          folder: public

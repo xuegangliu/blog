@@ -10,3 +10,7 @@ hexo 个人博客
 [![GitHub forks](https://img.shields.io/github/forks/xuegangliu/blog.svg?style=social&label=Fork)](https://github.com/xuegangliu/blog)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+## Deploy keys gen
+```
+ssh-keygen -t rsa  -C "$(git config user.name)" -f github-deploy-key
+```

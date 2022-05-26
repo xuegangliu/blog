@@ -14,6 +14,9 @@ tags:
 
 # 友情链接
 
+## 系统链接
+- [卡拉云后台系统](https://kalacloud.com)
+
 ## blog大牛
 - [翟永超](http://blog.didispace.com/)
 - [阮一峰](http://www.ruanyifeng.com/home.html)
